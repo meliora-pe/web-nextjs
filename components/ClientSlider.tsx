@@ -36,12 +36,12 @@ const ClientSlider = ({
         },
         {
             id: 4,
-            name: 'Adriana Arias',
+            name: 'Valentina Román',
             role: '',
-            time: 'Hace 8 meses',
+            time: 'Hace 2 meses',
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/patient-4.webp',
-            message: `“Excelente atención y servicio profesional. Superaron mis expectativas.”`,
+            message: `“Realmente 10/10. Me explicó todo con detalle, me mostró fotos de mis dientes y siempre se tomó el tiempo de responder mis dudas. La comunicación fue excelente y me hizo sentir muy cómoda durante todo el proceso. Se nota que realmente le importa su trabajo y sus pacientes. Estoy muy agradecida con la Dra. Yessica y la recomiendo totalmente.”`,
         },
         {
             id: 5,

@@ -23,7 +23,7 @@ const Index = () => {
                 <section className="bg-meliora-2 py-14 lg:py-20">
                     <div className="container">
                         <div className="grid-cols-3 lg:grid">
-                            <div className="col-span-2 flex flex-col justify-center lg:ltr:pr-20 lg:rtl:pl-20" data-aos="fade-right" data-aos-duration="1000">
+                            <div className="col-span-2 flex flex-col justify-center lg:ltr:pr-20 lg:rtl:pl-20">
                                 <WidgetTwoParagraphsButton props={sections.meliora.definition} />
                             </div>
                             <div className="relative mb-8 mt-8 flex justify-center gap-5 lg:mb-0 lg:mt-0 lg:block">
