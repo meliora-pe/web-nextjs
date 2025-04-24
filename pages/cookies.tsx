@@ -4,6 +4,13 @@ import { cookies } from '../data/content';
 
 const { title, sections } = cookies;
 
+export const metadata = {
+    robots: {
+        index: false,
+        follow: true,
+    },
+};
+
 const Cookies = () => {
     return (
         <div>

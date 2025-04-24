@@ -6,6 +6,13 @@ import { termsConditions } from '../data/content';
 
 const { title, sections } = termsConditions;
 
+export const metadata = {
+    robots: {
+        index: false,
+        follow: true,
+    },
+};
+
 const Termsandcondition = () => {
     const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
 
@@ -15,7 +22,7 @@ const Termsandcondition = () => {
 
             <WidgetTopBackground props={sections.topArea} />
 
-            <div className="py-14 md:py-[100px] dark:bg-gray-dark">
+            <div className="py-14 dark:bg-gray-dark md:py-[100px]">
                 <div className="container">
                     <div className="pb-12">
                         <p className="pb-5 text-lg font-medium">
