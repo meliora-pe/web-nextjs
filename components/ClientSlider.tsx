@@ -75,11 +75,7 @@ const ClientSlider = ({
             {feedbacks.map((feedback: any) => {
                 return (
                     <SwiperSlide key={feedback.id}>
-                        <div
-                            className="relative mx-auto w-full max-w-[555px] rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none"
-                            data-aos="fade-left"
-                            data-aos-duration="1000"
-                        >
+                        <div className="relative mx-auto w-full max-w-[555px] rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none">
                             <div className="flex justify-between gap-7 p-7">
                                 <div className="flex items-center gap-2.5">
                                     <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
