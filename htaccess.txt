@@ -1,6 +1,3 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.meliora.pe [NC]
 RewriteRule ^(.*)$ http://meliora.pe/$1 [L,R=301]
-
-RewriteCond %{REQUEST_FILENAME}.webp -f
-RewriteRule \.(jpe?g|png)$ %{REQUEST_FILENAME}.webp [L]

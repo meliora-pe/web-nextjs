@@ -55,58 +55,56 @@ const ClientSlider = ({
     ],
 }) => {
     return (
-        <div
-            className="relative mx-auto w-full max-w-[555px] rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none"
-            data-aos="fade-left"
-            data-aos-duration="1000"
+        <Swiper
+            loop={true}
+            slidesPerView="auto"
+            spaceBetween={30}
+            speed={2200}
+            autoplay={{
+                delay: 6000,
+                disableOnInteraction: false,
+            }}
+            navigation={{
+                prevEl: '.feedback-slider-button-prev',
+                nextEl: '.feedback-slider-button-next',
+            }}
+            modules={[Navigation, Autoplay]}
+            dir={'ltr'}
+            key={'false'}
         >
-            <>
-                <Swiper
-                    loop={true}
-                    slidesPerView="auto"
-                    spaceBetween={30}
-                    speed={2200}
-                    autoplay={{
-                        delay: 6000,
-                        disableOnInteraction: false,
-                    }}
-                    navigation={{
-                        prevEl: '.feedback-slider-button-prev',
-                        nextEl: '.feedback-slider-button-next',
-                    }}
-                    modules={[Navigation, Autoplay]}
-                    dir={'ltr'}
-                    key={'false'}
-                >
-                    {feedbacks.map((feedback: any) => {
-                        return (
-                            <SwiperSlide key={feedback.id}>
-                                <div className="flex justify-between gap-7 p-7">
-                                    <div className="flex items-center gap-2.5">
-                                        <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
-                                            <img src={feedback.thumbnail} alt="client's picture thumbnail" className="h-full w-full object-cover" />
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2 text-lg font-bold text-black dark:text-white">{feedback.name}</h5>
-                                            <Stars points={5} />
-                                        </div>
+            {feedbacks.map((feedback: any) => {
+                return (
+                    <SwiperSlide key={feedback.id}>
+                        <div
+                            className="relative mx-auto w-full max-w-[555px] rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
+                            <div className="flex justify-between gap-7 p-7">
+                                <div className="flex items-center gap-2.5">
+                                    <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
+                                        <img src={feedback.thumbnail} alt="client's picture thumbnail" className="h-full w-full object-cover" />
                                     </div>
-                                    <img src="/assets/images/swipe-icon.svg" alt="swipe-icon" title="swipe-icon" className="h-12 w-12 animate-ping" />
-                                </div>
-                                <div className="border border-black/10 dark:border-white/10"></div>
-                                <div className="p-7">
-                                    <h3 className="text-lg font-bold italic text-black dark:text-white">{feedback.time}</h3>
-                                    <p className="mt-4 font-medium leading-7 text-[#797979]">{feedback.message}</p>
-                                    <div className="text-right">
-                                        <img src={feedback.place} className="inline-flex h-8 w-auto pt-2" alt="google maps logo" />
+                                    <div>
+                                        <h5 className="mb-2 text-lg font-bold text-black dark:text-white">{feedback.name}</h5>
+                                        <Stars points={5} />
                                     </div>
                                 </div>
-                            </SwiperSlide>
-                        );
-                    })}
-                </Swiper>
-            </>
-        </div>
+                                <img src="/assets/images/swipe-icon.svg" alt="swipe-icon" title="swipe-icon" className="h-12 w-12 animate-ping" />
+                            </div>
+                            <div className="border border-black/10 dark:border-white/10"></div>
+                            <div className="p-7">
+                                <h3 className="text-lg font-bold italic text-black dark:text-white">{feedback.time}</h3>
+                                <p className="mt-4 font-medium leading-7 text-[#797979]">{feedback.message}</p>
+                                <div className="text-right">
+                                    <img src={feedback.place} className="inline-flex h-8 w-auto pt-2" alt="google maps logo" />
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                );
+            })}
+        </Swiper>
     );
 };
 

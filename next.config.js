@@ -7,7 +7,8 @@ const nextConfig = {
         ignoreDuringBuilds: true,
     },
     images: {
-        unoptimized: true,
+        unoptimized: false,
+        formats: ['image/webp'],
     },
 };
 

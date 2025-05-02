@@ -6,8 +6,8 @@ import { appointment } from '../data/content';
 import AnimateHeight from 'react-animate-height';
 import { useState } from 'react';
 import WidgetTwoParagraphsButton from '../components/WidgetTwoParagraphsButton';
-import confetti from "canvas-confetti";
-import GoogleAnalytics from "../components/GoogleAnalyticsFile";
+import confetti from 'canvas-confetti';
+import GoogleAnalytics from '../components/GoogleAnalyticsFile';
 import { trackGAEvent } from '../lib/google-analytics';
 
 const { title, sections } = appointment;
@@ -36,13 +36,13 @@ const Appointment = () => {
             confetti(
                 Object.assign({}, defaults, {
                     particleCount,
-                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
                 })
             );
             confetti(
                 Object.assign({}, defaults, {
                     particleCount,
-                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
                 })
             );
         }, 250);
@@ -55,31 +55,35 @@ const Appointment = () => {
 
             <WidgetTopBackground props={sections.topArea} />
 
-            <section className="py-14 lg:py-22 sm:px-5 bg-white dark:bg-gray-dark">
+            <section className="lg:py-22 bg-white py-14 dark:bg-gray-dark sm:px-5">
                 <div className="container px-8">
                     <div className="flex flex-col items-center gap-16 lg:flex-row">
                         <div className="mt-6 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade-right" data-aos-duration="1000">
-                            <img src={`/assets/images/${sections.reserveNow.image.src}`} alt={sections.reserveNow.image.alt} title={sections.reserveNow.image.title} />
+                            <img
+                                src={`/assets/images/${sections.reserveNow.image.src}`}
+                                alt={sections.reserveNow.image.alt}
+                                title={sections.reserveNow.image.title}
+                            />
                         </div>
                         <div className="flex-1 text-center ltr:md:text-left rtl:md:text-right" data-aos="fade-left" data-aos-duration="1000">
                             <WidgetTwoParagraphsButton props={sections.reserveNow} />
                         </div>
                     </div>
                 </div>
-                <div className="container text-center my-4">
+                <div className="container my-4 text-center">
                     <button
                         type="button"
-                        className="relative btn bg-secondary font-raleway font-semibold  text-white hover:bg-primary sm:px-14 sm:py-5"
+                        className="btn relative bg-secondary font-raleway font-semibold  text-white hover:bg-primary sm:px-14 sm:py-5"
                         onClick={() => {
-                            setActive(active === 0 ? null : 0)
-                            handleConfetti();
+                            setActive(active === 0 ? null : 0);
+                            if (active === null) handleConfetti();
                             //trackGAEvent("key-event", "click", "open-calendar")
                         }}
                     >
                         Abrir calendario
                     </button>
                     <AnimateHeight duration={600} height={active === 0 ? 'auto' : 0}>
-                        <div className="bg-white my-8 container !h-[1850px]">
+                        <div className="container my-8 !h-[1850px] bg-white">
                             <div className="googleCalendar !h-[1850px]">
                                 <iframe
                                     title="Google Calendar"
@@ -98,14 +102,14 @@ const Appointment = () => {
                 
             </section> */}
 
-            <section className="pt-10 lg:pt-24 bg-[#efefef] dark:bg-gray-dark">
+            <section className="bg-[#efefef] pt-10 dark:bg-gray-dark lg:pt-24">
                 <div className="container">
                     <div className="heading text-center">
-                        <h5 className="!text-primary text-lg">Flexibilidad</h5>
-                        <h4 className='font-playfair text-3xl'>Valoramos tu tiempo</h4>
+                        <h5 className="text-lg !text-primary">Flexibilidad</h5>
+                        <h4 className="font-playfair text-3xl">Valoramos tu tiempo</h4>
                     </div>
                     <div className="flex flex-col items-center sm:text-lg lg:flex-row" data-aos="fade-up" data-aos-duration="1000">
-                        <div className="group w-full rounded-[32px] border-2 border-transparent bg-white py-8 px-6 shadow duration-200 hover:bg-secondary/20 dark:bg-gray-black md:px-11">
+                        <div className="group w-full rounded-[32px] border-2 border-transparent bg-white px-6 py-8 shadow duration-200 hover:bg-secondary/20 dark:bg-gray-black md:px-11">
                             <p className="text-center text-base font-black text-secondary">Horarios de atención</p>
                             <div className="mt-8 flex justify-between gap-2 font-bold">
                                 <span className="flex-shrink-0 text-black dark:text-white">Lunes - Viernes</span>
@@ -122,7 +126,7 @@ const Appointment = () => {
                 </div>
             </section>
 
-            <section className="py-12 bg-[#efefef] dark:bg-gray-dark">
+            <section className="bg-[#efefef] py-12 dark:bg-gray-dark">
                 <div className="container">
                     <div className="mb-10 grid gap-[30px] md:grid-cols-2">
                         <WidgetContact props={sections.contact.phone} />
