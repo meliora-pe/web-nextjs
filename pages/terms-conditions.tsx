@@ -3,6 +3,7 @@ import { IRootState } from '../store';
 import TitlePage from '../components/TitlePage';
 import WidgetTopBackground from '../components/WidgetTopBackground';
 import { termsConditions } from '../data/content';
+import Head from 'next/head';
 
 const { title, sections } = termsConditions;
 
@@ -18,8 +19,10 @@ const Termsandcondition = () => {
 
     return (
         <div>
-            <TitlePage title={title} />
-
+            <Head>
+                <title>{title}</title>
+                <meta name="robots" content="noindex,follow" />
+            </Head>
             <WidgetTopBackground props={sections.topArea} />
 
             <div className="py-14 dark:bg-gray-dark md:py-[100px]">

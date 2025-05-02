@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import TitlePage from '../components/TitlePage';
 import WidgetTopBackground from '../components/WidgetTopBackground';
 import { cookies } from '../data/content';
@@ -14,7 +15,10 @@ export const metadata = {
 const Cookies = () => {
     return (
         <div>
-            <TitlePage title={title} />
+            <Head>
+                <title>{title}</title>
+                <meta name="robots" content="noindex,follow" />
+            </Head>
 
             <WidgetTopBackground props={sections.topArea} />
 
