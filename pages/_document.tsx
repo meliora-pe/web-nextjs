@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import FacebookPixelEvents from '../components/pixel-events';
+// import FacebookPixelEvents from '../components/pixel-events';
 
 export default function Document() {
     return (

@@ -55,27 +55,27 @@ const ClientSlider = ({
     ],
 }) => {
     return (
-        <Swiper
-            loop={true}
-            slidesPerView="auto"
-            spaceBetween={30}
-            speed={2200}
-            autoplay={{
-                delay: 6000,
-                disableOnInteraction: false,
-            }}
-            navigation={{
-                prevEl: '.feedback-slider-button-prev',
-                nextEl: '.feedback-slider-button-next',
-            }}
-            modules={[Navigation, Autoplay]}
-            dir={'ltr'}
-            key={'false'}
-        >
-            {feedbacks.map((feedback: any) => {
-                return (
-                    <SwiperSlide key={feedback.id}>
-                        <div className="relative mx-auto w-full max-w-[555px] rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none">
+        <div className="relative mx-auto w-full max-w-[555px] rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none">
+            <Swiper
+                loop={true}
+                slidesPerView="auto"
+                spaceBetween={30}
+                speed={2200}
+                autoplay={{
+                    delay: 6000,
+                    disableOnInteraction: false,
+                }}
+                navigation={{
+                    prevEl: '.feedback-slider-button-prev',
+                    nextEl: '.feedback-slider-button-next',
+                }}
+                modules={[Navigation, Autoplay]}
+                dir={'ltr'}
+                key={'false'}
+            >
+                {feedbacks.map((feedback: any) => {
+                    return (
+                        <SwiperSlide key={feedback.id}>
                             <div className="flex justify-between gap-7 p-7">
                                 <div className="flex items-center gap-2.5">
                                     <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
@@ -96,11 +96,11 @@ const ClientSlider = ({
                                     <img src={feedback.place} className="inline-flex h-8 w-auto pt-2" alt="google maps logo" />
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                );
-            })}
-        </Swiper>
+                        </SwiperSlide>
+                    );
+                })}
+            </Swiper>
+        </div>
     );
 };
 

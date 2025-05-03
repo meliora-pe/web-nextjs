@@ -46,25 +46,24 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                         <link href="/assets/images/favicon.png" rel="icon" media="(prefers-color-scheme: light)" />
                         <link href="/assets/images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
                         <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
-                        <script>
-                            {/* (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        <FacebookPixelEvents />
+                    </Head>
+                    <Script id="google-tag-manager">
+                        {` (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                        })(window,document,'script','dataLayer','GTM-N64NKH46'); */}
-                        </script>
-                        <FacebookPixelEvents />
-                    </Head>
+                        })(window,document,'script','dataLayer','GTM-N64NKH46'); `}
+                    </Script>
                     <GoogleAnalytics GA_MEASUREMENT_ID="G-NW244HB3C2" />
-                    {/* eslint-disable-next-line @next/next/inline-script-id */}
-                    <Script>
+                    <Script id="google-tag-manager">
                         {`
                         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                         })(window,document,'script','dataLayer','GTM-TX97M7VJ');
-                    `}
+                        `}
                     </Script>
                     {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW244HB3C2"></script> */}
                     <>
@@ -108,18 +107,18 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                     <link href="/assets/images/favicon.png" rel="icon" media="(prefers-color-scheme: light)" />
                     <link href="/assets/images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
                     <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
-                    <script>
-                        {/* (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    {/* <FacebookPixelEvents /> */}
+                </Head>
+                <Script id="google-tag-manager">
+                    {/* (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                         })(window,document,'script','dataLayer','GTM-N64NKH46'); */}
-                    </script>
-                    {/* <FacebookPixelEvents /> */}
-                </Head>
+                </Script>
                 <GoogleAnalytics GA_MEASUREMENT_ID="G-NW244HB3C2" />
                 {/* eslint-disable-next-line @next/next/inline-script-id */}
-                <Script>
+                <Script id="google-tag-manager">
                     {`
                         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -128,7 +127,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                         })(window,document,'script','dataLayer','GTM-TX97M7VJ');
                     `}
                 </Script>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW244HB3C2"></script>
+                <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NW244HB3C2"></Script>
                 <DefaultLayout>
                     <noscript>
                         <iframe
