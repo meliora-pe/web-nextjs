@@ -113,9 +113,9 @@ const Footer = () => {
                                     <Image
                                         src="/assets/images/complaints.png"
                                         alt="libro de reclamaciones"
-                                        width={100}
-                                        height={40}
-                                        className="mt-2 inline-block"
+                                        width={56}
+                                        height={22}
+                                        className="mt-3 inline-block"
                                     />
                                 </Link>
                             </li>
