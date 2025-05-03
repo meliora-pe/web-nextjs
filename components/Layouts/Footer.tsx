@@ -5,14 +5,10 @@ const Footer = () => {
     return (
         <footer className="mt-auto bg-black text-center sm:text-left">
             <div className="container">
-                <div className="grid gap-y-10 gap-x-4 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px]">
+                <div className="grid gap-x-4 gap-y-10 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px]">
                     <div className="relative">
-                        <img
-                            src="/assets/images/Isotipo.png"
-                            alt="logo-full-dark"
-                            className="h-14 -mt-3 mb-12 w-auto mx-auto sm:mx-0"
-                        />
-                        <ul className="flex gap-8 justify-center mt-6 sm:justify-start">
+                        <img src="/assets/images/Isotipo.png" alt="logo-full-dark" className="mx-auto -mt-3 mb-12 h-14 w-auto sm:mx-0" />
+                        <ul className="mt-6 flex justify-center gap-8 sm:justify-start">
                             <li>
                                 <a href="https://www.facebook.com/profile.php?id=61560595868897" target="_blank" rel="noreferrer">
                                     <svg
@@ -31,7 +27,12 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/meliora.pe/" target="_blank" rel="noreferrer" className="transition hover:scale-110 hover:text-secondary">
+                                <a
+                                    href="https://www.instagram.com/meliora.pe/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="transition hover:scale-110 hover:text-secondary"
+                                >
                                     <svg
                                         width="23"
                                         height="22"
@@ -95,12 +96,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className="flex flex-col gap-3 font-bold">
-                            <li className="mb-3 text-lg font-bold text-white">Términos</li>
-                            {/* <li> */}
-                            {/* <Link href="/complaints" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                        Libro de Reclamaciones
-                                    </Link> */}
-                            {/* </li> */}
+                            <li className="mb-3 text-lg font-bold text-white">Legales</li>
                             <li>
                                 <Link href="/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Política de privacidad
@@ -109,6 +105,18 @@ const Footer = () => {
                             <li>
                                 <Link href="/terms-conditions" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Términos y condiciones
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/complaints" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    Libro de Reclamaciones
+                                    <Image
+                                        src="/assets/images/complaints.png"
+                                        alt="libro de reclamaciones"
+                                        width={100}
+                                        height={40}
+                                        className="mt-2 inline-block"
+                                    />
                                 </Link>
                             </li>
                         </ul>
@@ -122,7 +130,12 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <a href="https://maps.google.com/maps/dir//Meliora+Studio+Dental+R2X6%2B73G+Lima+15054/@-12.1519314,-76.9897075,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105b90829b6e561:0xd2160ffba0651ce0" className="inline-block transition hover:scale-110 hover:text-secondary" target="_blank" rel="noreferrer">
+                                <a
+                                    href="https://maps.google.com/maps/dir//Meliora+Studio+Dental+R2X6%2B73G+Lima+15054/@-12.1519314,-76.9897075,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105b90829b6e561:0xd2160ffba0651ce0"
+                                    className="inline-block transition hover:scale-110 hover:text-secondary"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     Cómo llegar
                                 </a>
                             </li>
@@ -140,25 +153,22 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-white dark:bg-gray-dark py-5 dark:border-t-2 dark:border-white/5 dark:bg-none">
+            <div className="bg-white py-5 dark:border-t-2 dark:border-white/5 dark:bg-gray-dark dark:bg-none">
                 <div className="container">
                     <div className="items-center justify-between text-center font-bold dark:text-white md:flex">
                         <div>
                             Copyright© {new Date().getFullYear() + ' '}
-                            <span className="text-secondary transition">
-                                Meliora Studio Dental
-                            </span>
+                            <span className="text-secondary transition">Meliora Studio Dental</span>
                         </div>
                         <div>
                             ¿Tienes dudas?{' '}
-                            <Link href="/contact-us" className="text-secondary/50 transition hover:text-secondary">
+                            <Link href="/contact-us" className="text-secondary transition hover:text-black">
                                 Contáctanos
                             </Link>
                         </div>
-                        <div hidden={true}>
-                            💡 Made by{" "}
-                            <Link href="https://clarity.pe">Clarity Creative Studio</Link>
-                        </div>
+                        {/* <div hidden={true}>
+                            💡 Made by <Link href="https://clarity.pe">Clarity Creative Studio</Link>
+                        </div> */}
                     </div>
                 </div>
             </div>

@@ -5,6 +5,8 @@ import App from '../../App';
 import Footer from './Footer';
 import Header from './Header';
 import CookieBanner from '../../components/CookieBanner';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const DefaultLayout = ({ children }: PropsWithChildren) => {
     const [showLoader, setShowLoader] = useState(true);
@@ -132,6 +134,19 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                         </div>
                     </button>
                 )}
+                <button type="button" className="fixed bottom-5 left-5 z-10">
+                    <div className="bottom-5 z-10 mb-2 block bg-white p-1">
+                        <span className="text-xs">
+                            ¿Tienes dudas?
+                            <br /> <strong>¡Escríbenos!</strong>
+                        </span>
+                    </div>
+                    <Link href="https://api.whatsapp.com/send?phone=51969174019&text=Hola%2C%20quisiera%20mas%20informacion%20%F0%9F%98%8A" target="_blank">
+                        <div className="duration-50 group flex h-14 w-14 items-center  justify-center transition">
+                            <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={60} height={60} />
+                        </div>
+                    </Link>
+                </button>
             </div>
         </App>
     );
