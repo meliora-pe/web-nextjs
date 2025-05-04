@@ -14,35 +14,35 @@ import Faq from '../components/Faq';
 const { title, sections } = services;
 
 const Services = () => {
-
     return (
         <div>
             <TitlePage title={title} />
 
             <WidgetTopBackground props={sections.topArea} />
 
-            <section className="bg-white dark:bg-gray-dark py-12 lg:py-24">
+            <section className="bg-white py-12 dark:bg-gray-dark lg:py-24">
                 <div className="container relative">
                     <div className="flex flex-col items-center md:flex-row md:gap-8">
-                        <div className="mx-auto w-full max-w-[732px]" data-aos='fade-right' data-aos-duration="1500">
+                        <div className="mx-auto w-full max-w-[732px]" data-aos="fade-right" data-aos-duration="1500">
                             <img src="/assets/images/mujer-sonriente.webp" className="rtl:rotate-y-180" alt="ilustracion de fondo" title="woman-in-dentist-1" />
                         </div>
-                        <div className="ltr:text-left rtl:text-right mt-5 md:mt-0"  data-aos='fade-left' data-aos-duration="1500">
-                            <div className="heading mb-0 text-center rtl:text-right ltr:sm:text-left">
-                                <h5 className="!text-secondary text-lg">Tratamientos personalizados, enfoque conservador</h5>
-                                <h4 className='text-3xl font-playfair'>Cuidamos tu sonrisa, preservamos lo mejor de ti</h4>
+                        <div className="mt-5 md:mt-0 ltr:text-left rtl:text-right" data-aos="fade-left" data-aos-duration="1500">
+                            <div className="heading mb-0 text-center ltr:sm:text-left rtl:text-right">
+                                <h5 className="text-lg !text-secondary">Tratamientos personalizados, enfoque conservador</h5>
+                                <h4 className="font-playfair text-3xl">Cuidamos tu sonrisa, preservamos lo mejor de ti</h4>
                             </div>
                             <p className="mt-5 text-lg font-semibold">
-                                En Meliora Studio Dental, creemos que lo más importante es conservar la salud y la estructura natural de tus dientes. Con técnicas modernas y menos invasivas, priorizamos tratamientos que te brindan comodidad, seguridad y resultados que transforman tu sonrisa sin comprometer lo que la hace única.
+                                En Meliora Studio Dental, creemos que lo más importante es conservar la salud y la estructura natural de tus dientes. Con
+                                técnicas modernas y menos invasivas, priorizamos tratamientos que te brindan comodidad, seguridad y resultados que transforman
+                                tu sonrisa sin comprometer lo que la hace única.
                             </p>
                             <p className="mt-5 text-lg font-semibold">
-                                Nuestra trayectoria de más de una década nos ha consolidado como referentes en odontología integral y estética. Con un equipo multidisciplinario y un trato cálido, te ofrecemos soluciones efectivas que cuidan cada detalle de tu salud bucal.
+                                Nuestra trayectoria de más de una década nos ha consolidado como referentes en odontología integral y estética. Con un equipo
+                                multidisciplinario y un trato cálido, te ofrecemos soluciones efectivas que cuidan cada detalle de tu salud bucal.
                             </p>
                             <div className="flex justify-center sm:flex-none md:justify-start">
-                                <button type="button" className="btn mt-10 py-5 px-9 text-black mx-auto sm:mx-0 font-medium font-raleway">
-                                    <Link href="/appointment">
-                                        Agenda tu cita
-                                    </Link>
+                                <button id="btn-reserve" type="button" className="btn mx-auto mt-10 px-9 py-5 font-raleway font-medium text-black sm:mx-0">
+                                    <Link href="/appointment">Agenda tu cita</Link>
                                 </button>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ const Services = () => {
 
             <WidgetListServices props={sections.services} />
 
-            <section className="py-12 lg:py-[80px] bg-meliora-2 dark:bg-none">
+            <section className="bg-meliora-2 py-12 dark:bg-none lg:py-[80px]">
                 <div className="container">
                     <div className="mb-12 flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
                         <div className="flex-none md:w-2/3">
@@ -63,12 +63,15 @@ const Services = () => {
                                 Con más de 10 años de experiencia, numerosos testimonios de pacientes felices y más de 5000 sonrisas deslumbrantes.
                             </p>
                         </div>
-                        <Link
-                            href="/appointment"
-                            className="mx-auto inline-flex font-raleway font-semibold shrink whitespace-nowrap rounded-lg bg-primary px-8 py-5 text-sm uppercase text-black hover:bg-secondary hover:text-white sm:mx-0"
+                        <button
+                            id="btn-reserve"
+                            type="button"
+                            className="mx-auto inline-flex shrink whitespace-nowrap rounded-lg bg-primary px-8 py-5 font-raleway text-sm font-semibold uppercase text-black hover:bg-secondary hover:text-white sm:mx-0"
                         >
-                            Reserva una cita
-                        </Link>
+                            <Link href="/appointment" className="">
+                                Reserva una cita
+                            </Link>
+                        </button>
                     </div>
                     <BeforeAfterPic props={sections.beforeAfter} />
                 </div>
@@ -106,7 +109,7 @@ const Services = () => {
                             }}
                             modules={[Autoplay]}
                             dir={'ltr'}
-                        // key={true}
+                            // key={true}
                         >
                             <SwiperSlide>
                                 <div>
@@ -151,7 +154,6 @@ const Services = () => {
             <Faq showTitle={true} />
 
             <WidgetCtaBanner title={sections.ctaBanner.title} cta={sections.ctaBanner.cta} />
-
         </div>
     );
 };

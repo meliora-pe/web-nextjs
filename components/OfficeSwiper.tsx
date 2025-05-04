@@ -11,15 +11,15 @@ const OfficeSwiper = () => {
     const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
 
     return (
-        <section className="bg-meliora-2 dark:bg-none py-12">
+        <section className="bg-meliora-2 py-12 dark:bg-none">
             <div className="container">
                 <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between">
-                    <div className="heading text-center w-full">
-                        <h6 className='font-montserrat text-lg'>Estamos aquí para ti</h6>
-                        <h4 className='font-playfair text-3xl font-bold'>Visítanos en Surco</h4>
+                    <div className="heading w-full text-center">
+                        <h6 className="font-montserrat text-lg">Estamos aquí para ti</h6>
+                        <h4 className="font-playfair text-3xl font-bold">Visítanos en Surco</h4>
                     </div>
                 </div>
-                <div className="swiper ofc-slider rounded-[32px] drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] dark:drop-shadow-none !z-0">
+                <div className="swiper ofc-slider !z-0 rounded-[32px] drop-shadow-[5px_10px_80px_rgba(119,128,161,0.15)] dark:drop-shadow-none">
                     <div className="swiper-wrapper">
                         <Swiper
                             modules={[Navigation, Autoplay]}
@@ -39,10 +39,9 @@ const OfficeSwiper = () => {
                                     <img
                                         src="/assets/images/consultorio.webp"
                                         alt="consultorio"
-                                        className="h-full w-full rounded-r-[32px] rounded-l-[32px] object-cover md:rounded-r-none"
+                                        className="h-full w-full rounded-l-[32px] rounded-r-[32px] object-cover md:rounded-r-none"
                                     />
-                                    <div className="py-10 px-5 sm:px-8">
-
+                                    <div className="px-5 py-10 sm:px-8">
                                         <ul className="space-y-8 pt-10">
                                             <li className="flex gap-3">
                                                 <div className="pt-1">
@@ -55,7 +54,9 @@ const OfficeSwiper = () => {
                                                         />
                                                     </svg>
                                                 </div>
-                                                <div className="text-sm font-bold sm:text-lg">Av. Los Próceres Mz. B Lt. 16 - Urb. Sánchez Cerro - Surco - Lima</div>
+                                                <div className="text-sm font-bold sm:text-lg">
+                                                    Av. Los Próceres Mz. B Lt. 16 - Urb. Sánchez Cerro - Surco - Lima
+                                                </div>
                                             </li>
                                             <li className="flex items-center gap-3">
                                                 <div>
@@ -87,8 +88,10 @@ const OfficeSwiper = () => {
                                             </li>
                                         </ul>
                                         <div className="flex justify-center gap-2 font-bold">
-                                            <button type="button" className="btn mt-10 py-5 px-9 text-white sm:mx-auto">
-                                                <Link href="/appointment" className="font-raleway font-semibold">Reserva Una Cita</Link>
+                                            <button id="btn-reserve" type="button" className="btn mt-10 px-9 py-5 text-white sm:mx-auto">
+                                                <Link href="/appointment" className="font-raleway font-semibold">
+                                                    Reserva Una Cita
+                                                </Link>
                                             </button>
                                         </div>
                                     </div>

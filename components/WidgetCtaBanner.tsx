@@ -10,14 +10,14 @@ const WidgetCtaBanner = ({ title, cta }: { title: string; cta: CtaTag }) => {
                     <p className="flex-1 text-2xl font-bold text-white md:text-3xl" data-aos="fade-right" data-aos-duration="1000">
                         {title}
                     </p>
-                    <Link
-                        href={cta.href}
+                    <button
+                        id="btn-reserve"
                         className="inline-flex shrink whitespace-nowrap rounded-lg bg-secondary px-8 py-5 font-raleway text-sm font-semibold uppercase text-white hover:bg-secondary/90 hover:text-white"
                         data-aos="fade-left"
                         data-aos-duration="1000"
                     >
-                        {cta.text}
-                    </Link>
+                        <Link href={cta.href}>{cta.text}</Link>
+                    </button>
                 </div>
             </div>
         </section>

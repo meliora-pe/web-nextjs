@@ -72,6 +72,7 @@ const Appointment = () => {
                 </div>
                 <div className="container my-4 text-center">
                     <button
+                        id="btn-calendar"
                         type="button"
                         className="btn relative bg-secondary font-raleway font-semibold  text-white hover:bg-primary sm:px-14 sm:py-5"
                         onClick={() => {

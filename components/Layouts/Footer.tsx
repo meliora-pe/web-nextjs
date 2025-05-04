@@ -115,7 +115,7 @@ const Footer = () => {
                                         alt="libro de reclamaciones"
                                         width={56}
                                         height={22}
-                                        className="mt-3 inline-block"
+                                        className="ml-1 inline-block md:mt-3"
                                     />
                                 </Link>
                             </li>

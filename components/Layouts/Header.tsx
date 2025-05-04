@@ -64,6 +64,7 @@ const Header = (props: any) => {
                                 </li>
                                 <li>
                                     <Link
+                                        id="btn-reserve"
                                         href="/appointment"
                                         className={router.pathname === '/appointment' || router.pathname === '/appointment' ? 'active' : ''}
                                     >
@@ -96,6 +97,7 @@ const Header = (props: any) => {
                                 >
                                     <form action="" className="relative">
                                         <input
+                                            id="search"
                                             type="text"
                                             placeholder="Buscar..."
                                             className="w-full border-b border-white bg-transparent py-1 outline-none ltr:pl-2 ltr:pr-8 rtl:pl-8 rtl:pr-2"
