@@ -81,7 +81,7 @@ const Appointment = () => {
                             //trackGAEvent("key-event", "click", "open-calendar")
                         }}
                     >
-                        Abrir calendario
+                        {active === 0 ? 'Cerrar calendario' : 'Abrir calendario'}
                     </button>
                     <AnimateHeight duration={600} height={active === 0 ? 'auto' : 0}>
                         <div className="container my-8 !h-[1850px] bg-white">

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FoldSectionProps } from '../AboveTheFold';
 
 const Heading = ({ props }: { props: FoldSectionProps }) => {

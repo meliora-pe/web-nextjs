@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -107,7 +106,7 @@ const Footer = () => {
                                     Términos y condiciones
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link href="/complaints" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Libro de Reclamaciones
                                     <Image
@@ -118,7 +117,7 @@ const Footer = () => {
                                         className="ml-1 inline-block md:mt-3"
                                     />
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div>
@@ -162,7 +161,7 @@ const Footer = () => {
                         </div>
                         <div>
                             ¿Tienes dudas?{' '}
-                            <Link href="/contact-us" className="text-secondary transition hover:text-black">
+                            <Link href="/contact-us" className="text-secondary transition hover:text-black dark:hover:text-primary">
                                 Contáctanos
                             </Link>
                         </div>
