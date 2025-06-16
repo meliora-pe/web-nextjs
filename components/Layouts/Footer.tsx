@@ -71,11 +71,11 @@ const Footer = () => {
                                     Servicios
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link href="/appointment#horarios" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Horarios
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link href="/contact-us" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Contacto

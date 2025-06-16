@@ -59,7 +59,7 @@ const ClientSlider = ({
             time: `Hace ${new Date().getMonth() - 2} meses`,
             place: '/assets/images/google-maps.png',
             thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjWeaqoh5Dhgngk9zR5gSW3oYNUtnErYOGgJmSn68eHyxRlm26U=w72-h72-p-rp-mo-br100',
-            message: `"Desde mi primera visita a Meliora Studio Dental, he recibido una atención de primera calidad. Cuenta con un equipo de profesionales especializados en distintas áreas de la odontología, lo que garantiza un servicio completo y de alta calidad. En especial, quiero destacar a la doctora Yessica, una profesional excepcional, con trato amable y paciencia para explicar cada procedimiento. Su precisión y dedicación en cada tratamiento demuestran su compromiso con la salud y bienestar de sus pacientes. Definitivamente, recomiendo Meliora Studio Dental a quienes buscan atención odontológica de calidad, con un ambiente cálido y profesional. ¡Una excelente experiencia!"`,
+            message: `"Desde mi primera visita, he recibido una atención de primera calidad. Cuenta con un equipo de profesionales especializados en distintas áreas de la odontología, lo que garantiza un servicio de alta calidad. En especial, la doctora Yessica, una profesional excepcional, con trato amable y paciencia para explicar cada procedimiento. Definitivamente, recomiendo Meliora Studio Dental ¡Una excelente experiencia!"`,
         },
     ],
 }) => {
@@ -86,13 +86,13 @@ const ClientSlider = ({
                     return (
                         <SwiperSlide key={feedback.id}>
                             <div className="rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none">
-                                <div className="flex justify-between gap-7 p-7">
-                                    <div className="flex items-center gap-2.5">
+                                <div className="flex justify-between p-4">
+                                    <div className="flex items-center gap-1.5">
                                         <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
-                                            <img src={feedback.thumbnail} alt="client's picture thumbnail" className="h-full w-full object-cover" />
+                                            <img src={feedback.thumbnail} alt="client's picture thumbnail" className="h-14 w-14 rounded-full object-cover" />
                                         </div>
                                         <div>
-                                            <h5 className="mb-2 text-lg font-bold text-black dark:text-white">{feedback.name}</h5>
+                                            <h5 className="mb-2 text-base font-bold text-black dark:text-white md:text-lg">{feedback.name}</h5>
                                             <Stars points={5} />
                                         </div>
                                     </div>

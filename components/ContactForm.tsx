@@ -1,15 +1,13 @@
 'use client';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { contactSchema } from "../lib/zodSchema/contact";
-import { useEffect, useState } from "react";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
+import { contactSchema } from '../lib/zodSchema/contact';
+import { useEffect, useState } from 'react';
 
 type ContactForm = z.infer<typeof contactSchema>;
 
-
 const ContactForm = () => {
-
     const [success, setSuccess] = useState<boolean>(false);
 
     const {
@@ -24,28 +22,27 @@ const ContactForm = () => {
 
     useEffect(() => {
         setError('name', {
-            type: 'required', message: 'Nombre es requerido'
-        }
-        )
-    }, [setError])
-
+            type: 'required',
+            message: 'Nombre es requerido',
+        });
+    }, [setError]);
 
     async function handleSubmit(event: any) {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "8415e6e4-f41c-4323-8540-c63625e83d76");
+        formData.append('access_key', process.env.NEXT_PUBLIC_ACCESS_KEY_W3FORMS || '');
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
             },
-            body: json
+            body: json,
         });
         const result = await response.json();
         if (result.success) {
@@ -58,7 +55,7 @@ const ContactForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="rounded-3xl bg-[#fff] px-4 py-12 dark:bg-gray-black/60 lg:px-8 lg:w-full">
+        <form onSubmit={handleSubmit} className="rounded-3xl bg-[#fff] px-4 py-12 shadow-xl dark:bg-gray-black/60 lg:w-full lg:px-8">
             <div className="grid gap-10 sm:grid-cols-2">
                 <div className="relative">
                     <input
@@ -68,10 +65,7 @@ const ContactForm = () => {
                         id="name"
                         autoComplete="off"
                     />
-                    <label
-                        htmlFor=""
-                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white"
-                    >
+                    <label htmlFor="" className="absolute -top-3 bg-white px-2 font-bold dark:bg-gray-dark dark:text-white ltr:left-6 rtl:right-6">
                         Nombre completo
                     </label>
                     <svg
@@ -80,7 +74,7 @@ const ContactForm = () => {
                         viewBox="0 0 20 22"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                        className="absolute top-1/2 -translate-y-1/2 dark:text-white ltr:right-4 rtl:left-4"
                     >
                         <path
                             d="M5.42855 5.57875C5.42855 8.10348 7.47525 10.1502 9.99998 10.1502C12.5247 10.1502 14.5714 8.10348 14.5714 5.57875C14.5714 3.05402 12.5247 1.00732 9.99998 1.00732"
@@ -94,11 +88,7 @@ const ContactForm = () => {
                             strokeWidth="1.8"
                         />
                     </svg>
-                    {errors.name && errors.name.type === 'required' && (
-                        <span className="text-red text-sm pl-4">
-                            {/* {errors?.name?.message} */}
-                        </span>
-                    )}
+                    {errors.name && errors.name.type === 'required' && <span className="pl-4 text-sm text-red">{/* {errors?.name?.message} */}</span>}
                 </div>
                 {/* {errors?.name?.message} */}
                 <div className="relative">
@@ -110,15 +100,8 @@ const ContactForm = () => {
                         id="email"
                         autoComplete="off"
                     />
-                    {errors?.email && (
-                        <p className="text-red-600 text-sm">
-                            {/* {errors?.email?.message} */}
-                        </p>
-                    )}
-                    <label
-                        htmlFor=""
-                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white"
-                    >
+                    {errors?.email && <p className="text-red-600 text-sm">{/* {errors?.email?.message} */}</p>}
+                    <label htmlFor="" className="absolute -top-3 bg-white px-2 font-bold dark:bg-gray-dark dark:text-white ltr:left-6 rtl:right-6">
                         Correo electrónico
                     </label>
                     <svg
@@ -127,7 +110,7 @@ const ContactForm = () => {
                         viewBox="0 0 22 21"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                        className="absolute top-1/2 -translate-y-1/2 dark:text-white ltr:right-4 rtl:left-4"
                     >
                         <path
                             d="M1 8.00732V7.00732C1 4.2459 3.23858 2.00732 6 2.00732H16C18.7614 2.00732 21 4.2459 21 7.00732V13.0073C21 15.7687 18.7614 18.0073 16 18.0073H6C3.23858 18.0073 1 15.7687 1 13.0073V12.0073"
@@ -153,15 +136,8 @@ const ContactForm = () => {
                         id="cellphone"
                         autoComplete="off"
                     />
-                    {errors?.cellphone && (
-                        <p className="text-red-600 text-sm">
-                            {errors?.cellphone?.message}
-                        </p>
-                    )}
-                    <label
-                        htmlFor=""
-                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white"
-                    >
+                    {errors?.cellphone && <p className="text-red-600 text-sm">{errors?.cellphone?.message}</p>}
+                    <label htmlFor="" className="absolute -top-3 bg-white px-2 font-bold dark:bg-gray-dark dark:text-white ltr:left-6 rtl:right-6">
                         Teléfono celular
                     </label>
                     <svg
@@ -170,7 +146,7 @@ const ContactForm = () => {
                         viewBox="0 0 22 22"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                        className="absolute top-1/2 -translate-y-1/2 dark:text-white ltr:right-4 rtl:left-4"
                     >
                         <path
                             d="M6.45241 1.40806C5.45292 0.783702 4.14202 0.887138 3.2983 1.73086L1.86856 3.1606C-0.302899 5.33207 1.73747 10.8931 6.42586 15.5815C11.1142 20.2699 16.6753 22.3102 18.8467 20.1388L20.2765 18.709C21.2635 17.722 21.2374 16.0956 20.2182 15.0764L18.0036 12.8619C16.9844 11.8426 15.358 11.8165 14.371 12.8036L14.0639 13.1107C13.531 13.6436 12.6713 13.6957 12.0713 13.2005C11.4925 12.7229 10.9159 12.208 10.3576 11.6497C9.79933 11.0914 9.28441 10.5149 8.80678 9.93607C8.31161 9.33601 8.36374 8.47631 8.89666 7.9434L9.20375 7.63631C9.98187 6.85819 10.1303 5.68271 9.65898 4.72062"
@@ -189,15 +165,8 @@ const ContactForm = () => {
                         id="district"
                         autoComplete="off"
                     />
-                    {errors?.district && (
-                        <p className="text-red-600 text-sm">
-                            {errors?.district?.message}
-                        </p>
-                    )}
-                    <label
-                        htmlFor=""
-                        className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white"
-                    >
+                    {errors?.district && <p className="text-red-600 text-sm">{errors?.district?.message}</p>}
+                    <label htmlFor="" className="absolute -top-3 bg-white px-2 font-bold dark:bg-gray-dark dark:text-white ltr:left-6 rtl:right-6">
                         Distrito
                     </label>
                     <svg
@@ -206,7 +175,7 @@ const ContactForm = () => {
                         viewBox="0 0 20 22"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                        className="absolute top-1/2 -translate-y-1/2 dark:text-white ltr:right-4 rtl:left-4"
                     >
                         <path
                             d="M5.89416 2.31259C7.20149 1.48625 8.75475 1.00732 10.4211 1.00732C15.0719 1.00732 18.8421 4.73828 18.8421 9.34066C18.8421 15.0541 12.1053 21.0073 10.4211 21.0073C8.73684 21.0073 2 15.0541 2 9.34066C2 7.87581 2.38193 6.49924 3.05263 5.30315"
@@ -232,12 +201,8 @@ const ContactForm = () => {
                     id="message"
                     autoComplete="off"
                 />
-                {errors?.message && (
-                    <p className="text-red-600 text-sm">
-                        {errors?.message?.message}
-                    </p>
-                )}
-                <label htmlFor="" className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-gray-dark dark:text-white">
+                {errors?.message && <p className="text-red-600 text-sm">{errors?.message?.message}</p>}
+                <label htmlFor="" className="absolute -top-3 bg-white px-2 font-bold dark:bg-gray-dark dark:text-white ltr:left-6 rtl:right-6">
                     Mensaje
                 </label>
                 <svg
@@ -246,7 +211,7 @@ const ContactForm = () => {
                     viewBox="0 0 22 22"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white"
+                    className="absolute top-1/2 -translate-y-1/2 dark:text-white ltr:right-4 rtl:left-4"
                 >
                     <path
                         d="M1 11.467V18.9267C1 19.7652 1.96993 20.2314 2.6247 19.7076L5.45217 17.4456C5.8068 17.1619 6.24742 17.0073 6.70156 17.0073H16C18.7614 17.0073 21 14.7687 21 12.0073V6.00732C21 3.2459 18.7614 1.00732 16 1.00732H6C3.23858 1.00732 1 3.2459 1 6.00732V7.62225"
@@ -259,14 +224,13 @@ const ContactForm = () => {
                     <circle cx="16.05" cy="9.05713" r="1.25" fill="currentColor" />
                 </svg>
             </div>
-            {success && (
-                <span className="ml-4 mt-6 text-md">Mensaje enviado con éxito.</span>
-            )}
+            {success && <span className="text-md ml-4 mt-6">Mensaje enviado con éxito.</span>}
             <div className="mt-10 text-center ltr:lg:text-right rtl:lg:text-left">
                 <button
                     type="submit"
                     disabled={!isDirty || !isValid || isSubmitting}
-                    className="btn bg-primary px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary disabled:bg-gray disabled:hover:none">
+                    className="btn disabled:hover:none bg-primary px-12 capitalize text-white disabled:bg-gray dark:bg-white dark:text-black dark:hover:bg-secondary"
+                >
                     Enviar
                 </button>
             </div>
