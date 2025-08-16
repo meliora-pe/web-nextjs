@@ -1,18 +1,21 @@
 import '../styles/tailwind.css';
-import type { AppProps } from 'next/app';
-import { Suspense, useEffect } from 'react';
+
+import Head from 'next/head';
 import { Router } from 'next/router';
+import Script from 'next/script';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
-import DefaultLayout from '../components/Layouts/DefaultLayout';
-
+import { Suspense, useEffect } from 'react';
 import { Provider } from 'react-redux';
-import store from '../store/index';
-import Head from 'next/head';
-import GoogleAnalytics from '../components/GoogleAnalytics';
-import Script from 'next/script';
-import FacebookPixelEvents from '../components/pixel-events';
 
+import { GoogleTagManager } from '@next/third-parties/google';
+
+import GoogleAnalytics from '../components/GoogleAnalytics';
+import DefaultLayout from '../components/Layouts/DefaultLayout';
+import FacebookPixelEvents from '../components/pixel-events';
+import store from '../store/index';
+
+import type { AppProps } from 'next/app';
 export default function App({ Component, pageProps, ...appProps }: AppProps) {
     useEffect(() => {
         posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || '', {
@@ -69,26 +72,9 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                             <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
                             <FacebookPixelEvents />
                         </Head>
-                        <Script id="google-tag-manager">
-                            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                            })(window,document,'script','dataLayer','GTM-N64NKH46');`}
-                        </Script>
-                        <GoogleAnalytics GA_MEASUREMENT_ID="G-NW244HB3C2" />
-                        <Script id="google-tag-manager">
-                            {`
-                            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                            })(window,document,'script','dataLayer','GTM-TX97M7VJ');
-                            `}
-                        </Script>
-                        <>
-                            <Component {...pageProps} />
-                        </>
+                        <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+                        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
+                        <Component {...pageProps} />
                     </Suspense>
                 </Provider>
             </PostHogProvider>
@@ -129,34 +115,9 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                         <link href="/assets/images/favicon.png" rel="icon" media="(prefers-color-scheme: light)" />
                         <link href="/assets/images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
                         <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
-                        {/* <FacebookPixelEvents /> */}
                     </Head>
-                    <Script id="google-tag-manager">
-                        {/* (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                        })(window,document,'script','dataLayer','GTM-N64NKH46'); */}
-                    </Script>
-                    <GoogleAnalytics GA_MEASUREMENT_ID="G-NW244HB3C2" />
-                    {/* eslint-disable-next-line @next/next/inline-script-id */}
-                    <Script id="google-tag-manager">
-                        {`
-                            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                            })(window,document,'script','dataLayer','GTM-TX97M7VJ');
-                        `}
-                    </Script>
-                    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NW244HB3C2"></Script>
-                    <Script>
-                        {`!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-                            posthog.init('phc_heMtkxEWSNlKiUTC90MetsnmSCqhjFakUN2VZJxdt1P', {
-                            api_host: 'https://us.i.posthog.com',
-                            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-                        })`}
-                    </Script>
+                    <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+                    <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                     <DefaultLayout>
                         <noscript>
                             <iframe
