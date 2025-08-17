@@ -1,5 +1,5 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import { ImageTag } from './AboveTheFold';
 
 export const PhotoSlider = ({ before, after }: { before: ImageTag; after: ImageTag }) => {
