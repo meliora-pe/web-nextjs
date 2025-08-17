@@ -1,9 +1,11 @@
 'use client';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+
 import { contactSchema } from '../lib/zodSchema/contact';
-import { useEffect, useState } from 'react';
 
 type ContactForm = z.infer<typeof contactSchema>;
 
@@ -36,7 +38,7 @@ const ContactForm = () => {
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
 
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const response = await fetch(process.env.NEXT_PUBLIC_W3FORMS_URL || '', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

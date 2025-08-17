@@ -257,7 +257,7 @@ header .menus.open-menus {
 }
 
 iframe {
-  @apply aspect-16/11 md:aspect-16/5
+  @apply aspect-1/1 md:aspect-16/5
 }
 
 .video-container {
