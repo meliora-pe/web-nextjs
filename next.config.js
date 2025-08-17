@@ -27,8 +27,32 @@ const nextConfig = {
             },
         ];
     },
-    // This is required to support PostHog trailing slash API requests
-    // skipTrailingSlashRedirect: true,
+    async headers() {
+        return [
+            {
+                source: '/(.*)', // Apply to all routes
+                headers: [
+                    {
+                        key: 'Content-Security-Policy',
+                        value: `
+              default-src 'self' https://www.google.com/ https://api.hubapi.com/;
+              connect-src 'self' https://www.google-analytics.com/ https://api.hubapi.com/ https://forms.hscollectedforms.net/;
+              img-src 'self' data: https://google.com https://track.hubspot.com/ https://lh3.googleusercontent.com/ https://forms.hsforms.com/ https://www.facebook.com https://fonts.gstatic.com/;
+              script-src 'self' 'unsafe-eval' 'unsafe-inline' https://js.hs-scripts.com/ https://js.hsadspixel.net/ https://js.hs-analytics.net/ https://js.hs-banner.com/ https://js.hs-scripts.com/ https://js.hs-scripts.com/ https://js.hsadspixel.net/ https://js.hscollectedforms.net/ https://www.googletagmanager.com/ https://connect.facebook.net/;
+              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://www.googletagmanager.com/;
+              font-src 'self' data: https://fonts.gstatic.com/;
+              object-src 'none';
+              base-uri 'self';
+              form-action 'self';
+              frame-src https://www.google.com/;
+              frame-ancestors 'none';
+              upgrade-insecure-requests;
+            `.replace(/\n/g, ''), // Remove newlines for a single-line header
+                    },
+                ],
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;

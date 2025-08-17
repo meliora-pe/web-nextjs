@@ -1,11 +1,11 @@
 import '../styles/tailwind.css';
 
 import Head from 'next/head';
-import { Router } from 'next/router';
-import Script from 'next/script';
+// import { Router } from 'next/router';
+// import Script from 'next/script';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 import { Provider } from 'react-redux';
 
 import { GoogleTagManager } from '@next/third-parties/google';
@@ -17,22 +17,22 @@ import store from '../store/index';
 
 import type { AppProps } from 'next/app';
 export default function App({ Component, pageProps, ...appProps }: AppProps) {
-    useEffect(() => {
-        posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || '', {
-            api_host: '/ingest',
-            ui_host: 'https://us.posthog.com',
-            loaded: (ph) => {
-                if (process.env.NODE_ENV === 'development') ph.debug();
-            },
-            debug: process.env.NODE_ENV === 'development',
-        });
+    // useEffect(() => {
+    //     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || '', {
+    //         api_host: '/ingest',
+    //         ui_host: 'https://us.posthog.com',
+    //         loaded: (ph) => {
+    //             if (process.env.NODE_ENV === 'development') ph.debug();
+    //         },
+    //         debug: process.env.NODE_ENV === 'development',
+    //     });
 
-        const handleRouteChange = () => posthog.capture('$pageview');
-        Router.events.on('routeChangeComplete', handleRouteChange);
-        return () => {
-            Router.events.off('routeChangeComplete', handleRouteChange);
-        };
-    }, []);
+    //     const handleRouteChange = () => posthog.capture('$pageview');
+    //     Router.events.on('routeChangeComplete', handleRouteChange);
+    //     return () => {
+    //         Router.events.off('routeChangeComplete', handleRouteChange);
+    //     };
+    // }, []);
 
     if ([`/landings/ad`].includes(appProps.router.pathname))
         return (
