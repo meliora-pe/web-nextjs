@@ -250,7 +250,7 @@ header .menus.open-menus {
 }
 
 iframe {
-  @apply aspect-1/1 md:aspect-16/5
+  @apply aspect-5/7 md:aspect-16/5
 }
 
 .video-container {

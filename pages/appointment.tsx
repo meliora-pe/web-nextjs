@@ -1,13 +1,14 @@
+import confetti from 'canvas-confetti';
+import { useState } from 'react';
+import AnimateHeight from 'react-animate-height';
+
+import GoogleAnalytics from '../components/GoogleAnalyticsFile';
 import TitlePage from '../components/TitlePage';
-import WidgetTopBackground from '../components/WidgetTopBackground';
 import WidgetContact from '../components/WidgetContact';
 import WidgetCtaBanner from '../components/WidgetCtaBanner';
-import { appointment } from '../data/content';
-import AnimateHeight from 'react-animate-height';
-import { useState } from 'react';
+import WidgetTopBackground from '../components/WidgetTopBackground';
 import WidgetTwoParagraphsButton from '../components/WidgetTwoParagraphsButton';
-import confetti from 'canvas-confetti';
-import GoogleAnalytics from '../components/GoogleAnalyticsFile';
+import { appointment } from '../data/content';
 import { trackGAEvent } from '../lib/google-analytics';
 
 const { title, sections } = appointment;
@@ -84,7 +85,7 @@ const Appointment = () => {
                         {active === 0 ? 'Cerrar calendario' : 'Abrir calendario'}
                     </button>
                     <AnimateHeight duration={600} height={active === 0 ? 'auto' : 0}>
-                        <div className="container my-8 !h-[1850px] bg-white">
+                        <div className="my-6 !h-[1850px] bg-white">
                             <div className="googleCalendar !h-[1850px]">
                                 <iframe
                                     title="Google Calendar"
@@ -98,10 +99,6 @@ const Appointment = () => {
                     </AnimateHeight>
                 </div>
             </section>
-
-            {/* <section className="bg-white dark:bg-gray-dark pb-4">
-                
-            </section> */}
 
             <section className="bg-[#efefef] pt-10 dark:bg-gray-dark lg:pt-24">
                 <div className="container">

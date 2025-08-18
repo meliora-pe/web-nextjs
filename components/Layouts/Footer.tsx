@@ -4,10 +4,10 @@ const Footer = () => {
     return (
         <footer className="mt-auto bg-black text-center sm:text-left">
             <div className="container">
-                <div className="grid gap-x-4 gap-y-10 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px]">
+                <div className="grid gap-x-4 gap-y-7 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px]">
                     <div className="relative">
                         <img src="/assets/images/Isotipo.png" alt="logo-full-dark" className="mx-auto -mt-3 mb-12 h-14 w-auto sm:mx-0" />
-                        <ul className="mt-6 flex justify-center gap-8 sm:justify-start">
+                        <ul className="mt-5 flex justify-center gap-12 sm:justify-start">
                             <li>
                                 <a href="https://www.facebook.com/profile.php?id=61560595868897" target="_blank" rel="noreferrer">
                                     <svg
@@ -59,8 +59,8 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <ul className="flex flex-col gap-3 font-bold">
-                            <li className="mb-3 text-lg font-bold text-white">Enlaces</li>
+                        <ul className="flex flex-col gap-1 font-bold lg:gap-3">
+                            <li className="mb-1 mt-5 text-lg font-bold text-white sm:mt-0 lg:mb-3">Enlaces</li>
                             <li>
                                 <Link href="/about-us" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Quiénes somos
@@ -84,8 +84,8 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <ul className="flex flex-col gap-3 font-bold">
-                            <li className="mb-3 text-lg font-bold text-white">Citas</li>
+                        <ul className="flex flex-col gap-1 font-bold lg:gap-3">
+                            <li className="mb-1 text-lg font-bold text-white lg:mb-3">Citas</li>
                             <li>
                                 <Link href="/appointment" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Calendario de citas
@@ -94,8 +94,8 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <ul className="flex flex-col gap-3 font-bold">
-                            <li className="mb-3 text-lg font-bold text-white">Legales</li>
+                        <ul className="flex flex-col gap-1 font-bold lg:gap-3">
+                            <li className="mb-1 text-lg font-bold text-white lg:mb-3">Legales</li>
                             <li>
                                 <Link href="/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Política de privacidad
@@ -121,8 +121,8 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <ul className="flex flex-col gap-3 font-bold">
-                            <li className="mb-3 text-lg font-bold text-white">Contacto</li>
+                        <ul className="flex flex-col gap-1 font-bold lg:gap-3">
+                            <li className="mb-1 text-lg font-bold text-white lg:mb-3">Contacto</li>
                             <li>
                                 <Link href="/contact-us#formulario" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Formulario de contacto

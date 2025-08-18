@@ -52,7 +52,7 @@ module.exports = {
             },
             aspectRatio: {
                 '16/5': '16 / 5',
-                '1/1': '1 / 1',
+                '5/7': '5 / 7',
             },
             typography: ({ theme }) => ({
                 DEFAULT: {
