@@ -58,16 +58,16 @@ const Appointment = () => {
 
             <section className="lg:py-22 bg-white py-14 dark:bg-gray-dark sm:px-5">
                 <div className="container px-8">
-                    <div className="flex flex-col items-center gap-16 lg:flex-row">
-                        <div className="mt-6 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div className="flex flex-col items-center gap-4 lg:flex-row">
+                        <div className="flex-1 text-center ltr:md:text-left rtl:md:text-right" data-aos="fade-left" data-aos-duration="1000">
+                            <WidgetTwoParagraphsButton props={sections.reserveNow} />
+                        </div>
+                        <div className="flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade-right" data-aos-duration="1000">
                             <img
                                 src={`/assets/images/${sections.reserveNow.image.src}`}
                                 alt={sections.reserveNow.image.alt}
                                 title={sections.reserveNow.image.title}
                             />
-                        </div>
-                        <div className="flex-1 text-center ltr:md:text-left rtl:md:text-right" data-aos="fade-left" data-aos-duration="1000">
-                            <WidgetTwoParagraphsButton props={sections.reserveNow} />
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const Appointment = () => {
                     <button
                         id="btn-calendar"
                         type="button"
-                        className="btn relative bg-secondary font-raleway font-semibold  text-white hover:bg-primary sm:px-14 sm:py-5"
+                        className="btn relative mt-4 bg-secondary font-raleway font-semibold  text-white hover:bg-primary sm:px-14 sm:py-5"
                         onClick={() => {
                             setActive(active === 0 ? null : 0);
                             if (active === null) handleConfetti();

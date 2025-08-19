@@ -1,3 +1,4 @@
+// import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -60,7 +61,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className="flex flex-col gap-1 font-bold lg:gap-3">
-                            <li className="mb-1 mt-5 text-lg font-bold text-white sm:mt-0 lg:mb-3">Enlaces</li>
+                            <li className="mb-1 mt-5 text-lg font-bold text-white sm:mt-0 lg:mb-3">Acerca De</li>
                             <li>
                                 <Link href="/about-us" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Quiénes somos
@@ -73,19 +74,19 @@ const Footer = () => {
                             </li>
                             {/* <li>
                                 <Link href="/appointment#horarios" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Horarios
-                                </Link>
-                            </li> */}
-                            <li>
-                                <Link href="/contact-us" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Contacto
+                                    Ubicación y horarios de atención
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/appointment#horarios" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    Trabaja con nosotros
+                                </Link>
+                            </li> */}
                         </ul>
                     </div>
                     <div>
                         <ul className="flex flex-col gap-1 font-bold lg:gap-3">
-                            <li className="mb-1 text-lg font-bold text-white lg:mb-3">Citas</li>
+                            <li className="mb-1 text-lg font-bold text-white lg:mb-3">Agenda</li>
                             <li>
                                 <Link href="/appointment" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Calendario de citas
@@ -112,8 +113,8 @@ const Footer = () => {
                                     <Image
                                         src="/assets/images/complaints.png"
                                         alt="libro de reclamaciones"
-                                        width={56}
-                                        height={22}
+                                        width={48}
+                                        height={18}
                                         className="ml-1 inline-block md:mt-3"
                                     />
                                 </Link>
@@ -165,8 +166,11 @@ const Footer = () => {
                                 Contáctanos
                             </Link>
                         </div>
-                        {/* <div hidden={true}>
-                            💡 Made by <Link href="https://clarity.pe">Clarity Creative Studio</Link>
+                        {/* <div className="mt-3 text-xs">
+                            Made with 💡 and by{' '}
+                            <Link href="https://lumbre.pe" className="text-secondary transition hover:text-black dark:hover:text-primary">
+                                lumbre.pe
+                            </Link>
                         </div> */}
                     </div>
                 </div>

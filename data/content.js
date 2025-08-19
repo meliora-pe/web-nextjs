@@ -21,11 +21,13 @@ const home = {
             definition: {
                 title: 'Preservamos tu salud con atención a los detalles y trato amable',
                 subtitle: '¡Bienvenido! Somos Meliora Studio Dental',
-                paragraph1: 'Somos un equipo de profesionales especializados en odontología conservadora, comprometidos en brindarte una atención personalizada y de calidad para que recuperes tu salud bucal.',
-                paragraph2: 'Nuestro enfoque es preservar la estructura natural de tus dientes con técnicas menos invasivas, priorizando la prevención, restauración y resultados duraderos.',
+                paragraph1:
+                    'Somos un equipo de profesionales especializados en odontología conservadora, comprometidos en brindarte una atención personalizada y de calidad para que recuperes tu salud bucal.',
+                paragraph2:
+                    'Nuestro enfoque es preservar la estructura natural de tus dientes con técnicas menos invasivas, priorizando la prevención, restauración y resultados duraderos.',
                 button: {
                     href: '/about-us',
-                    text: 'Leer más'
+                    text: 'Leer más',
                 },
             },
             images: {
@@ -38,28 +40,20 @@ const home = {
                     src: 'mujer-sonriente.webp',
                     alt: 'mujer-sonriente',
                     title: 'mujer-sonriente',
-                }
-            }
+                },
+            },
         },
         whyUs: {
             title: '¿Por qué nos eligen?',
             subtitle: 'Cada detalle cuenta',
             paragraph1: 'Entendemos que tu sonrisa es clave para tu confianza. Por eso, ofrecemos un servicio integral y multidisciplinario.',
             paragraph2: 'Nuestro compromiso es brindarte una atención personalizada para hacerte sentir cómodo desde tu primera visita, donde encontrarás:',
-            bullets: [
-                'Confianza',
-                'Honestidad',
-                'Compromiso',
-                'Profesionalismo',
-                'Experiencia',
-                'Amabilidad',
-                'Empatía',
-            ],
+            bullets: ['Confianza', 'Honestidad', 'Compromiso', 'Profesionalismo', 'Experiencia', 'Amabilidad', 'Empatía'],
             image: {
                 src: 'porque-nos-eligen.webp',
                 alt: 'porque-nos-eligen',
-                title: 'porque-nos-eligen'
-            }
+                title: 'porque-nos-eligen',
+            },
         },
         testimonials: {
             title: [
@@ -119,7 +113,6 @@ const home = {
             title: 'Eficacia y calidad',
             subtitle: 'Resultados reales',
             case: {
-
                 title: 'Blanqueamiento dental',
                 text: 'Realzamos el color de tus dientes con técnicas seguras y personalizadas. Recupera la confianza en tu sonrisa con un tratamiento efectivo, mínimamente invasivo y diseñado para resaltar tu belleza natural.',
                 before: {
@@ -133,7 +126,7 @@ const home = {
                     title: 'after',
                 },
                 cta: { text: 'VER MÁS', href: '/services' },
-            }
+            },
         },
         contact: {
             title: 'Contáctanos',
@@ -186,24 +179,20 @@ const aboutUs = {
                 src: 'paciente-mujer-sonrie-dentista-1.webp',
                 alt: 'paciente-mujer-sonrie-dentista-1',
                 title: 'paciente-mujer-sonrie-dentista-1',
-            }
+            },
         },
         howWeWork: {
             title: 'Odontología conservadora',
             subtitle: 'Cómo trabajamos',
-            paragraph1: 'Se busca preservar la estructura natural de tus dientes con técnicas menos invasivas, priorizando la prevención, restauración y resultados duraderos.',
+            paragraph1:
+                'Se busca preservar la estructura natural de tus dientes con técnicas menos invasivas, priorizando la prevención, restauración y resultados duraderos.',
             paragraph2: 'Nuestro equipo multidisciplinario está comprometido en proteger tu sonrisa con soluciones personalizadas y eficaces, garantizando:',
-            bullets: [
-                'Preservación',
-                'Estética',
-                'Durabilidad',
-                'Naturalidad'
-            ],
+            bullets: ['Preservación', 'Estética', 'Durabilidad', 'Naturalidad'],
             image: {
                 src: 'odontologia-conservadora.webp',
                 alt: 'odontologia-conservadora',
                 title: 'odontologia-conservadora',
-            }
+            },
         },
         payments: {
             title: 'ACEPTAMOS',
@@ -322,12 +311,14 @@ const appointment = {
             image: {
                 src: 'pareja-sonriente.webp',
                 alt: 'pareja-sonriente',
-                title: 'pareja-sonriente'
+                title: 'pareja-sonriente',
             },
             title: 'Transforma tu sonrisa, comienza hoy',
             subtitle: 'Da el primer paso, recupera tu salud y confianza',
-            paragraph1: 'En Meliora, cada tratamiento es una experiencia única diseñada para cuidar tu salud bucal y realzar tu sonrisa. Nuestro enfoque integral y conservador garantiza comodidad y resultados duraderos.',
-            paragraph2: 'No dejes para mañana el cambio que puedes comenzar hoy. Nuestro equipo multidisciplinario está listo para brindarte un trato cálido y profesional en cada paso del camino.'
+            paragraph1:
+                'En Meliora, cada tratamiento es una experiencia única diseñada para cuidar tu salud bucal y realzar tu sonrisa. Nuestro enfoque integral y conservador garantiza comodidad y resultados duraderos.',
+            paragraph2:
+                'No dejes para mañana el cambio que puedes comenzar hoy. Nuestro equipo multidisciplinario está listo para brindarte un trato cálido y profesional en cada paso del camino.',
         },
         contact: {
             phone: {
@@ -347,7 +338,7 @@ const appointment = {
                 targetRel: true,
                 svg: locationSvg,
                 color: 'text-secondary',
-                title: 'Ubícanos',
+                title: 'Ubicación',
                 subtitle: 'Av. Los Próceres Mz. B Lt. 16 - Urb. Sánchez Cerro - Surco',
             },
         },
@@ -394,7 +385,7 @@ const contactUs = {
                 targetRel: true,
                 svg: locationSvg,
                 color: 'text-secondary',
-                title: 'Ubícanos',
+                title: 'Ubicación',
                 data: 'Av. Los Próceres Mz. B Lt. 16 - Urb. Sánchez Cerro - Surco',
             },
         },

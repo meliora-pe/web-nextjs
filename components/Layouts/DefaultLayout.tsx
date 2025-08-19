@@ -1,12 +1,14 @@
-import { PropsWithChildren, useEffect, useState } from 'react';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
-import App from '../../App';
-import Footer from './Footer';
-import Header from './Header';
-import CookieBanner from '../../components/CookieBanner';
+
+import AOS from 'aos';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PropsWithChildren, useEffect, useState } from 'react';
+
+import App from '../../App';
+import CookieBanner from '../../components/CookieBanner';
+import Footer from './Footer';
+import Header from './Header';
 
 const DefaultLayout = ({ children }: PropsWithChildren) => {
     const [showLoader, setShowLoader] = useState(true);
@@ -119,7 +121,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                 </div>
 
                 {showTopButton && (
-                    <button type="button" className="fixed bottom-5 z-10 animate-bounce ltr:right-5 rtl:left-5" onClick={goToTop}>
+                    <button type="button" className="fixed bottom-5 z-10 ltr:right-5 rtl:left-5" onClick={goToTop}>
                         <div className="group flex h-14 w-14 items-center justify-center rounded-full border border-primary bg-primary text-white transition duration-500 hover:bg-secondary dark:hover:bg-secondary">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
