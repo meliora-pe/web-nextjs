@@ -1,15 +1,17 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
+
 import Link from 'next/link';
-import TitlePage from '../components/TitlePage';
-import WidgetTopBackground from '../components/WidgetTopBackground';
-import WidgetListServices from '../components/WidgetListServices';
-import BeforeAfterPic from '../components/BeforeAfterPic';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
-import WidgetCtaBanner from '../components/WidgetCtaBanner';
-import { services } from '../data/content';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import BeforeAfterPic from '../components/BeforeAfterPic';
 import Faq from '../components/Faq';
+import TitlePage from '../components/TitlePage';
+import WidgetCtaBanner from '../components/WidgetCtaBanner';
+import WidgetListServices from '../components/WidgetListServices';
+import WidgetTopBackground from '../components/WidgetTopBackground';
+import { services } from '../data/content';
 
 const { title, sections } = services;
 
@@ -24,7 +26,12 @@ const Services = () => {
                 <div className="container relative">
                     <div className="flex flex-col items-center md:flex-row md:gap-8">
                         <div className="mx-auto w-full max-w-[732px]" data-aos="fade-right" data-aos-duration="1500">
-                            <img src="/assets/images/mujer-sonriente.webp" className="rtl:rotate-y-180" alt="ilustracion de fondo" title="woman-in-dentist-1" />
+                            <img
+                                src="/assets/images/mujer-sonriente.webp"
+                                className="rounded-[25px] rtl:rotate-y-180"
+                                alt="ilustracion de fondo"
+                                title="woman-in-dentist-1"
+                            />
                         </div>
                         <div className="mt-5 md:mt-0 ltr:text-left rtl:text-right" data-aos="fade-left" data-aos-duration="1500">
                             <div className="heading mb-0 text-center ltr:sm:text-left rtl:text-right">

@@ -13,9 +13,13 @@ const Header = (props: any) => {
     const dispatch = useDispatch();
 
     const [showMenu, setShowMenu] = useState(false);
+    const [href, setHref] = useState('');
 
-    const toggleMenu = () => {
+    const toggleMenu = (e: any) => {
         setShowMenu(!showMenu);
+        setHref(e.target.getAttribute('href'));
+        // console.log();
+        // console.log(`${router.pathname}/`);
         // if (window.innerWidth < 1024) {
         // } else {
         //     setShowMenu(false);
@@ -35,8 +39,10 @@ const Header = (props: any) => {
                         <img src="/assets/images/logo.png" alt="meliora studio dental" className="h-11 w-auto md:h-14 lg:my-3" />
                     </Link>
                     <div className="flex items-center">
-                        <div onClick={toggleMenu} className={`overlay fixed inset-0 z-50 bg-black/60 ${showMenu ? '' : 'hidden'}`}></div>
-                        <div className={`menus ${showMenu ? 'overflow-y-auto ltr:!right-0 rtl:!left-0' : 'hidden'}`}>
+                        {showMenu && `${router.pathname}/` !== href && (
+                            <div onClick={toggleMenu} className={`overlay fixed inset-0 z-50 bg-black/60 ${showMenu ? '' : 'hidden'}`}></div>
+                        )}
+                        <div className={`menus ${showMenu ? 'overflow-y-auto ltr:!right-0 rtl:!left-0' : 'hidden lg:block'}`}>
                             <div className="border-b border-gray/10 lg:hidden ltr:text-right rtl:text-left">
                                 <button onClick={toggleMenu} type="button" className="p-4">
                                     <svg

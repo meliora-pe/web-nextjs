@@ -43,7 +43,7 @@ const nextConfig = {
                             object-src 'none';
                             base-uri 'self';
                             form-action 'self';
-                            frame-src https://www.google.com/;
+                            frame-src https://www.google.com/ https://calendar.google.com/;
                             frame-ancestors 'none';
                             upgrade-insecure-requests;
                         `.replace(/\n/g, ''),

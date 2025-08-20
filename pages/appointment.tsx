@@ -98,6 +98,7 @@ const Appointment = () => {
                         </div>
                     </AnimateHeight>
                 </div>
+                <div id="horarios"></div>
             </section>
 
             <section className="bg-[#efefef] pt-10 dark:bg-gray-dark lg:pt-24">

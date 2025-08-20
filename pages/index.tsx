@@ -3,11 +3,11 @@ import BeforeAfterPic from '../components/BeforeAfterPic';
 import ClientSlider from '../components/ClientSlider';
 import Services from '../components/Services';
 import TitlePage from '../components/TitlePage';
+import WidgetContact from '../components/WidgetContact';
 import WidgetCtaBanner from '../components/WidgetCtaBanner';
 import WidgetMap from '../components/WidgetMap';
-import WidgetContact from '../components/WidgetContact';
-import WgtTwoParagraphsBullets from '../components/WidgetTwoParagraphsBullets';
 import WidgetTwoImages from '../components/WidgetTwoImages';
+import WgtTwoParagraphsBullets from '../components/WidgetTwoParagraphsBullets';
 import WidgetTwoParagraphsButton from '../components/WidgetTwoParagraphsButton';
 import { home } from '../data/content';
 
@@ -36,11 +36,11 @@ const Index = () => {
                 <section className="bg-black py-14 dark:bg-gray-black sm:px-5 lg:py-20">
                     <div className="container px-8">
                         <div className="flex flex-col items-center gap-16 lg:flex-row">
-                            <div className="mt-6 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade-right" data-aos-duration="1000">
-                                <img src={`/assets/images/${sections.whyUs.image.src}`} alt={sections.whyUs.image.alt} title={sections.whyUs.image.title} />
-                            </div>
                             <div className="flex-1 text-center ltr:md:text-left rtl:md:text-right" data-aos="fade-left" data-aos-duration="1000">
                                 <WgtTwoParagraphsBullets props={sections.whyUs} />
+                            </div>
+                            <div className="mt-6 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade-right" data-aos-duration="1000">
+                                <img src={`/assets/images/${sections.whyUs.image.src}`} alt={sections.whyUs.image.alt} title={sections.whyUs.image.title} />
                             </div>
                         </div>
                     </div>
