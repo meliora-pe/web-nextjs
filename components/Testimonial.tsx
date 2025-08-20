@@ -1,8 +1,10 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper';
+
 import { useSelector } from 'react-redux';
+import { Autoplay, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { IRootState } from '../store';
 import { Stars } from './Stars';
 
@@ -16,7 +18,7 @@ const Testimonial = ({
             time: '2',
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/patient-1.webp',
-            message: `“Excelente atención! Me retiraron la muela del juicio inferior y el procedimiento fue correcto. Hicieron todo para que me sienta cómoda, tranquila y sin dolor. La primera noche de la operación no sentí dolor alguno. Recomendado 100%”`,
+            message: `“Excelente atención! Me retiraron la muela del juicio y el procedimiento fue correcto. Hicieron todo para que me sienta cómoda, tranquila y sin dolor. Recomendado 100%”`,
         },
         {
             id: 2,
@@ -25,7 +27,7 @@ const Testimonial = ({
             time: '2',
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/patient-2.webp',
-            message: `"Desde la primera vez que llegué a su consultorio tuve una experiencia satisfactoria, si no mal recuerdo desde 2014. Gracias Dra. Yessica por su paciencia al explicarme, animarme a cuidar mis dientes y por su buen trabajo que se ve reflejado por muchos años. También por recordarme el tiempo debido para el control."`,
+            message: `"Desde la primera vez que llegué a su consultorio tuve una experiencia satisfactoria. Gracias Dra. Yessica por su paciencia al explicarme, animarme a cuidar mis dientes y por su buen trabajo."`,
         },
         {
             id: 3,
@@ -34,7 +36,7 @@ const Testimonial = ({
             time: '3',
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/patient-3.webp',
-            message: `“Excelente atención profesional! He tenido buena experiencia con los tratamientos y procedimientos que me realizaron, así como con la explicación que es completa y ayuda al paciente a poder comprender en qué estado se encuentra su salud dental. Lo recomiendo.”`,
+            message: `“Excelente atención profesional! Buena experiencia con los tratamientos y la explicación. Lo recomiendo.”`,
         },
         {
             id: 4,
@@ -43,7 +45,7 @@ const Testimonial = ({
             time: '2',
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/patient-4.webp',
-            message: `“Realmente 10/10. Me explicó todo con detalle, me mostró fotos de mis dientes y siempre se tomó el tiempo de responder mis dudas. La comunicación fue excelente y me hizo sentir muy cómoda durante todo el proceso. Se nota que realmente le importa su trabajo y sus pacientes. Estoy muy agradecida con la Dra. Yessica y la recomiendo totalmente.”`,
+            message: `“Realmente 10/10. Me explicó todo con detalle, me mostró fotos de mis dientes y siempre se tomó el tiempo de responder mis dudas. La comunicación fue excelente y me hizo sentir muy cómoda durante todo el proceso. Estoy muy agradecida y lo recomiendo totalmente.”`,
         },
         {
             id: 5,
@@ -52,7 +54,7 @@ const Testimonial = ({
             time: '7',
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/patient-5.webp',
-            message: `"Ella es una persona muy profesional y hace un trabajo impecable y altamente recomendable."`,
+            message: `"Muy profesional, un trabajo impecable y altamente recomendable."`,
         },
     ],
     className = '',

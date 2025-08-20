@@ -1,6 +1,7 @@
-import React from 'react';
-import { ImageTag } from './AboveTheFold';
 import Link from 'next/link';
+import React from 'react';
+
+import { ImageTag } from './AboveTheFold';
 
 export interface ServiceItem {
     title: string;
@@ -20,14 +21,14 @@ const Services = ({ props }: { props: ServicesProps }) => {
         <section className="bg-white pt-14 dark:bg-gray-black lg:pt-20">
             <div className="container">
                 <div className="heading text-center">
-                    <h4 className="!text-secondary font-playfair">{props.title}</h4>
-                    <h6 className="mt-2 font-raleway !font-medium mx-auto max-w-[707px] !text-gray dark:!text-white">{props.subtitle}</h6>
+                    <h4 className="font-playfair !text-secondary">{props.title}</h4>
+                    <h6 className="mx-auto mt-2 max-w-[707px] font-raleway !font-medium !text-gray dark:!text-white">{props.subtitle}</h6>
                 </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
-                {props.list.map((item) => {
+                {props.list.map((item, index) => {
                     return (
-                        <div className="group" key={item.image.src} data-aos='fade-up' data-aos-duration="1000">
+                        <div className="group" key={item.image.src} data-aos="fade-up" data-aos-duration="1600" data-aos-delay={300 * index}>
                             <div className="relative overflow-hidden">
                                 <Link href={item.href ? item.href : '/'}>
                                     <img
@@ -38,10 +39,10 @@ const Services = ({ props }: { props: ServicesProps }) => {
                                     />
                                 </Link>
                             </div>
-                            <div className="space-y-2.5 p-3 text-center lg:text-left sm:p-5 ltr:sm:text-left rtl:sm:text-right">
+                            <div className="space-y-2.5 p-3 text-center sm:p-5 lg:text-left ltr:sm:text-left rtl:sm:text-right">
                                 <Link
                                     href={item.href ? item.href : '/'}
-                                    className="font-raleway text-lg font-bold text-center md:text-left text-black duration-200 group-hover:text-secondary dark:text-white dark:group-hover:text-secondary md:text-2xl"
+                                    className="text-center font-raleway text-lg font-bold text-black duration-200 group-hover:text-secondary dark:text-white dark:group-hover:text-secondary md:text-left md:text-2xl"
                                 >
                                     {item.title}
                                 </Link>

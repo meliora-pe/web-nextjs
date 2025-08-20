@@ -1,7 +1,9 @@
-import { Autoplay, Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+
+import { Autoplay, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { Stars } from './Stars';
 
 const ClientSlider = ({
@@ -14,7 +16,7 @@ const ClientSlider = ({
             time: 'Hace 10 meses',
             place: '/assets/images/google-maps.png',
             thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjUjnAt-MeCEXxuGpuxIbXRkR8-m3deb-_WkS1oZ-WgGkt6Hi7so=w72-h72-p-rp-mo-ba2-br100',
-            message: `“Excelente atención! Me retiraron la muela del juicio inferior y el procedimiento fue correcto. Hicieron todo para que me sienta cómoda, tranquila y sin dolor. La primera noche de la operación no sentí dolor alguno. Recomendado 100%”`,
+            message: `“Excelente atención! Me retiraron la muela del juicio. Hicieron de todo para que me sienta cómoda, tranquila y sin dolor. Recomendado 100%”`,
         },
         {
             id: 2,
@@ -23,7 +25,7 @@ const ClientSlider = ({
             time: 'Hace 6 meses',
             place: '/assets/images/google-maps.png',
             thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjWqASMvguBRmPCcpAIjGtDlbTbYzfPITkECFPlyqGBtYOjYdJn4=w72-h72-p-rp-mo-br100',
-            message: `"Desde la primera vez que llegué a su consultorio tuve una experiencia satisfactoria, si no mal recuerdo desde 2014. Gracias Dra. Yessica por su paciencia al explicarme, animarme a cuidar mis dientes y por su buen trabajo que se ve reflejado por muchos años. También por recordarme el tiempo debido para el control."`,
+            message: `"Desde la primera vez que llegué a su consultorio tuve una experiencia satisfactoria, desde 2014. Gracias por su paciencia al explicarme, animarme a cuidar mis dientes, también por recordarme el tiempo debido para el control."`,
         },
         {
             id: 3,
@@ -32,7 +34,7 @@ const ClientSlider = ({
             time: 'Hace un año',
             place: '/assets/images/google-maps.png',
             thumbnail: 'https://lh3.googleusercontent.com/a/ACg8ocLICV-uZhERLhvrUeOigQqZFIkCcc5SnMt86ULZevJuwO100w=w72-h72-p-rp-mo-br100',
-            message: `“Excelente atención profesional! He tenido buena experiencia con los tratamientos y procedimientos que me realizaron, así como con la explicación que es completa y ayuda al paciente a poder comprender en qué estado se encuentra su salud dental. Lo recomiendo.”`,
+            message: `“Excelente atención profesional! He tenido buena experiencia con los tratamientos y procedimientos, así como con la explicación. Lo recomiendo.”`,
         },
         {
             id: 4,
@@ -41,7 +43,7 @@ const ClientSlider = ({
             time: 'Hace 1 año',
             place: '/assets/images/google-maps.png',
             thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjVNFW1UGm2EEQVQmAIJ6uk_JEKc1wI3Kx-7W8O3USK3sRBXgAnE=w72-h72-p-rp-mo-br100',
-            message: `“Una consulta agradable, una increíble atención al cliente y rápida solución a mi problema, recomendadísimo."`,
+            message: `“Una consulta agradable, una increíble atención y rápida solución a mi problema, recomendadísimo."`,
         },
         {
             id: 5,
@@ -50,7 +52,7 @@ const ClientSlider = ({
             time: `Hace ${new Date().getMonth() - 3} meses`,
             place: '/assets/images/google-maps.png',
             thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjVykvO6mlMsidUTvEaI4jrsFUfFwg6ead_k4o-vFK9DYh7O_OlK=w72-h72-p-rp-mo-br100',
-            message: `"Realmente 10/10. Me explicó todo con detalle, me mostró fotos de mis dientes y siempre se tomó el tiempo de responder mis dudas. La comunicación fue excelente y me hizo sentir muy cómoda durante todo el proceso. Se nota que realmente le importa su trabajo y sus pacientes. Estoy muy agradecida con la Dra. Yessica y la recomiendo totalmente🫶🏻"`,
+            message: `"Realmente 10/10. Me explicó todo con detalle, me mostró fotos de mis dientes y siempre se tomó el tiempo de responder mis dudas. La comunicación excelente y me hizo sentir muy cómoda en todo el proceso. Se nota que realmente le importa sus pacientes. Estoy muy agradecida y lo recomiendo totalmente🫶🏻"`,
         },
         {
             id: 6,
@@ -59,7 +61,7 @@ const ClientSlider = ({
             time: `Hace ${new Date().getMonth() - 2} meses`,
             place: '/assets/images/google-maps.png',
             thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjWeaqoh5Dhgngk9zR5gSW3oYNUtnErYOGgJmSn68eHyxRlm26U=w72-h72-p-rp-mo-br100',
-            message: `"Desde mi primera visita, he recibido una atención de primera calidad. Cuenta con un equipo de profesionales especializados en distintas áreas de la odontología, lo que garantiza un servicio de alta calidad. En especial, la doctora Yessica, una profesional excepcional, con trato amable y paciencia para explicar cada procedimiento. Definitivamente, recomiendo Meliora Studio Dental ¡Una excelente experiencia!"`,
+            message: `"Desde mi primera visita, he recibido una atención de primera calidad, profesionales especializados en distintas áreas y un servicio de alta calidad. En especial el trato amable y paciencia para explicar cada procedimiento. Definitivamente, lo recomiendo ¡Una excelente experiencia!"`,
         },
     ],
 }) => {
@@ -89,7 +91,7 @@ const ClientSlider = ({
                                 <div className="flex justify-between p-4">
                                     <div className="flex items-center gap-1.5">
                                         <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
-                                            <img src={feedback.thumbnail} alt="client's picture thumbnail" className="h-14 w-14 rounded-full object-cover" />
+                                            <img src={feedback.thumbnail} alt="client's picture thumbnail" className="h-14 w-14 rounded-full" />
                                         </div>
                                         <div>
                                             <h5 className="mb-2 text-base font-bold text-black dark:text-white md:text-lg">{feedback.name}</h5>

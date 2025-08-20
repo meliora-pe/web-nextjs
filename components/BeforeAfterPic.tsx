@@ -1,6 +1,7 @@
-import React from 'react';
-import { CtaTag, ImageTag } from './AboveTheFold';
 import Link from 'next/link';
+import React from 'react';
+
+import { CtaTag, ImageTag } from './AboveTheFold';
 import { PhotoSlider } from './PhotoSlider';
 
 interface BeforeAfterProps {
@@ -13,7 +14,11 @@ interface BeforeAfterProps {
 
 const BeforeAfterPic = ({ props }: { props: BeforeAfterProps }) => {
     return (
-        <div className="relative flex flex-col items-center justify-between gap-[43px] overflow-hidden rounded-2xl bg-black bg-[url(/assets/images/app-bg.png)] bg-cover bg-no-repeat py-10 px-4 text-center dark:bg-white/5 md:p-16 md:ltr:text-left md:rtl:text-right lg:flex-row" data-aos="zoom-in" data-aos-duration="1000">
+        <div
+            className="relative flex flex-col items-center justify-between gap-[43px] overflow-hidden rounded-2xl bg-black bg-[url(/assets/images/app-bg.png)] bg-cover bg-no-repeat px-4 py-10 text-center dark:bg-white/5 md:p-16 lg:flex-row md:ltr:text-left md:rtl:text-right"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+        >
             <div className="heading z-1 relative mb-0 flex-1 px-7">
                 <p className="mb-3 text-2xl !text-white">{props.title}</p>
                 <p className="text-left">{props.text}</p>
@@ -23,7 +28,7 @@ const BeforeAfterPic = ({ props }: { props: BeforeAfterProps }) => {
                     </Link>
                 )}
             </div>
-            <div className="flex-1 pt-4 pb-2">
+            <div className="flex-1 pb-2 pt-4">
                 <PhotoSlider before={props.before} after={props.after} />
             </div>
         </div>

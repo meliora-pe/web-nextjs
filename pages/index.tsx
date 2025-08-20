@@ -35,11 +35,16 @@ const Index = () => {
 
                 <section className="bg-black py-14 dark:bg-gray-black sm:px-5 lg:py-20">
                     <div className="container px-8">
-                        <div className="flex flex-col items-center gap-16 lg:flex-row">
-                            <div className="flex-1 text-center ltr:md:text-left rtl:md:text-right" data-aos="fade-left" data-aos-duration="1000">
+                        <div className="flex flex-col items-center gap-10 lg:flex-row">
+                            <div className="flex-1 text-center ltr:md:text-left rtl:md:text-right" data-aos="fade-up" data-aos-duration="1600">
                                 <WgtTwoParagraphsBullets props={sections.whyUs} />
                             </div>
-                            <div className="mt-6 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade-right" data-aos-duration="1000">
+                            <div
+                                className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0"
+                                data-aos="fade-up"
+                                data-aos-duration="1600"
+                                data-aos-delay="500"
+                            >
                                 <img src={`/assets/images/${sections.whyUs.image.src}`} alt={sections.whyUs.image.alt} title={sections.whyUs.image.title} />
                             </div>
                         </div>
@@ -50,7 +55,7 @@ const Index = () => {
                     <div className="container">
                         <div className="py-14 lg:py-20">
                             <div className="flex flex-col items-center justify-between gap-[63px] lg:flex-row">
-                                <div data-aos="fade-right" data-aos-duration="1000">
+                                <div data-aos="fade-up" data-aos-duration="1600">
                                     <h4 className="text-center font-playfair text-3xl font-black text-black dark:text-white md:text-[40px] md:leading-[50px] ltr:lg:text-left rtl:text-right">
                                         {sections.testimonials.title[0]}&nbsp;
                                         <span className="font-montserrat font-semibold !text-secondary">{sections.testimonials.title[1]}&nbsp;</span>
