@@ -136,7 +136,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                         </div>
                     </button>
                 )}
-                <button type="button" className="fixed bottom-5 left-5 z-10">
+                <div className="fixed bottom-5 left-5 z-10 cursor-pointer">
                     <div className="bottom-5 z-10 mb-2 block bg-white p-1">
                         <span className="text-xs leading-4">
                             <p>¿Tienes dudas?</p>
@@ -154,7 +154,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={60} height={60} />
                         </div>
                     </Link>
-                </button>
+                </div>
             </div>
         </App>
     );
