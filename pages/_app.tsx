@@ -119,14 +119,6 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                     <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
                     <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                     <DefaultLayout>
-                        <noscript>
-                            <iframe
-                                src="https://www.googletagmanager.com/ns.html?id=GTM-N64NKH46"
-                                height="0"
-                                width="0"
-                                style={{ display: 'none', visibility: 'hidden' }}
-                            ></iframe>
-                        </noscript>
                         <Component {...pageProps} />
                     </DefaultLayout>
                 </Suspense>
