@@ -2,7 +2,7 @@ import confetti from 'canvas-confetti';
 import { useState } from 'react';
 import AnimateHeight from 'react-animate-height';
 
-import GoogleAnalytics from '../components/GoogleAnalyticsFile';
+// import GoogleAnalytics from '../components/GoogleAnalyticsFile';
 import TitlePage from '../components/TitlePage';
 import WidgetContact from '../components/WidgetContact';
 import WidgetCtaBanner from '../components/WidgetCtaBanner';
