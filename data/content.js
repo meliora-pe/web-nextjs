@@ -15,6 +15,7 @@ const home = {
             cta: {
                 text: 'RESERVA UNA CITA',
                 href: '/appointment',
+                tagCode: 'cta-appointment',
             },
         },
         meliora: {

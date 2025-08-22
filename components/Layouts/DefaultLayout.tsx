@@ -145,7 +145,11 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                             </p>
                         </span>
                     </div>
-                    <Link href="https://api.whatsapp.com/send?phone=51969174019&text=Hola%2C%20quisiera%20mas%20informacion%20%F0%9F%98%8A" target="_blank">
+                    <Link
+                        href="https://api.whatsapp.com/send?phone=51969174019&text=Hola%2C%20quisiera%20mas%20informacion%20%F0%9F%98%8A"
+                        target="_blank"
+                        id="message-whatsapp"
+                    >
                         <div className="duration-50 group flex h-14 w-14 items-center  justify-center transition">
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={60} height={60} />
                         </div>
