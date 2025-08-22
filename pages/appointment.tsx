@@ -9,7 +9,6 @@ import WidgetCtaBanner from '../components/WidgetCtaBanner';
 import WidgetTopBackground from '../components/WidgetTopBackground';
 import WidgetTwoParagraphsButton from '../components/WidgetTwoParagraphsButton';
 import { appointment } from '../data/content';
-import { trackGAEvent } from '../lib/google-analytics';
 
 const { title, sections } = appointment;
 
@@ -51,7 +50,7 @@ const Appointment = () => {
 
     return (
         <div>
-            <GoogleAnalytics />
+            {/* <GoogleAnalytics /> */}
             <TitlePage title={title} />
 
             <WidgetTopBackground props={sections.topArea} />

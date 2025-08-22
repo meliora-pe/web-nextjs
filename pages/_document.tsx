@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from 'next/document';
+import { Head, Html } from 'next/document';
 
 // import FacebookPixelEvents from '../components/pixel-events';
 
@@ -36,8 +36,8 @@ export default function Document() {
                         style={{ display: 'none', visibility: 'hidden' }}
                     ></iframe>
                 </noscript>
-                <Main />
-                <NextScript />
+                {/* <Main />
+                <NextScript /> */}
                 {/* <Script id="hubspot">
                     {`
                     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48411767.js">
