@@ -136,7 +136,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                         </div>
                     </button>
                 )}
-                <button className="fixed bottom-5 left-5 z-10 cursor-pointer" id="message-whatsapp">
+                <div className="fixed bottom-5 left-5 z-10">
                     <div className="bottom-5 z-10 mb-2 block bg-white p-1">
                         <span className="text-xs leading-4">
                             <p>¿Tienes dudas?</p>
@@ -145,12 +145,16 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                             </p>
                         </span>
                     </div>
-                    <Link href="https://api.whatsapp.com/send?phone=51969174019&text=Hola%2C%20quisiera%20mas%20informacion%20%F0%9F%98%8A" target="_blank">
-                        <div className="duration-50 group flex h-14 w-14 items-center  justify-center transition">
+                    <Link
+                        href="https://api.whatsapp.com/send?phone=51969174019&text=Hola%2C%20quisiera%20mas%20informacion%20%F0%9F%98%8A"
+                        target="_blank"
+                        id="message-whatsapp"
+                    >
+                        <div className="duration-50 group flex h-14 w-14 items-center justify-center transition">
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={60} height={60} />
                         </div>
                     </Link>
-                </button>
+                </div>
             </>
         </App>
     );

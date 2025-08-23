@@ -50,11 +50,11 @@ const AboveTheFold = ({ props }: { props: FoldSectionProps }) => {
                         </h1>
                         <h2 className="font-playfair text-4xl font-semibold text-primary sm:text-5xl md:text-[70px] md:leading-[72px]">{props.title}</h2>
                         <p className="mt-8 font-montserrat text-lg">{props.subtitle}</p>
-                        <button type="button" className="btn mt-10 bg-white px-8 py-[19px] text-black hover:bg-black hover:text-white" id={props.cta.tagCode}>
-                            <Link href={props.cta.href} className="font-raleway font-semibold">
+                        <Link href={props.cta.href} className="font-raleway font-semibold" id={props.cta.tagCode}>
+                            <button type="button" className="btn mt-10 bg-white px-8 py-[19px] text-black hover:bg-black hover:text-white">
                                 {props.cta.text}
-                            </Link>
-                        </button>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
