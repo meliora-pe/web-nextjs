@@ -1,28 +1,31 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { Autoplay, Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Aos from 'aos';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import WidgetContact from '../../components/WidgetContact';
-import WidgetMap from '../../components/WidgetMap';
+
+import Aos from 'aos';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { Autoplay, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { PhotoSlider } from '../../components/PhotoSlider';
 import { Stars } from '../../components/Stars';
+import WidgetContact from '../../components/WidgetContact';
+import WidgetMap from '../../components/WidgetMap';
 import { emailSvg, locationSvg, phoneSvg } from '../../data/svg';
 
 const foldProp = {
-    header: 'Este San Valentín, regálate una sonrisa que enamore',
+    header: 'Resultados visibles desde la primera sesión',
     title: 'Blanqueamiento dental personalizado',
-    subtitle: 'Descuento exclusivo de 20% y consulta gratis al iniciar cualquier tratamiento. ¡Reserva tu cita ahora y aprovecha el descuento!',
+    subtitle: 'Descuento exclusivo de 10% y consulta gratis si inicias tu tratamiento. ¡Reserva tu cita ahora y aprovecha el descuento!',
     image: {
-        src: '/landings/blanqueamiento-dental.jpg',
+        src: 'landings/blanqueamiento-dental.jpg',
         alt: 'blanqueamiento-dental',
         title: 'blanqueamiento-dental',
     },
     cta: {
-        text: 'Reservar cita',
-        href: 'https://meliora.pe/appointment/',
+        text: 'Agenda tu evaluación',
+        href: 'https://wa.link/f7jrvw',
     },
 };
 
@@ -188,16 +191,17 @@ const Ad = () => {
 
     useEffect(() => {
         const body = document.getElementsByTagName('body')[0];
-        console.log(body);
+        // console.log(body);
         if (!body) return;
         else {
             body.classList.toggle('overflow-hidden');
-            console.log('si');
+            // console.log('si');
         }
     }, [openModal]);
 
     return (
         <>
+            {/* logotipo Meliora */}
             <Link href="/">
                 <img src="/assets/images/logo.png" alt="meliora studio dental" className="absolute z-30 m-4 h-11 w-auto md:h-14" />
             </Link>
@@ -216,22 +220,23 @@ const Ad = () => {
                     className="z-1 absolute inset-0 opacity-50"
                     style={{ background: 'linear-gradient(90deg, rgba(8, 17, 31, 0.95) 57.29%, rgba(8, 17, 31, 0.4) 100%)' }}
                 ></div>
-                <div className="z-1 absolute inset-x-0 top-[19%] text-white md:top-1/3">
+                <div className="z-1 md:top-1/5 absolute inset-x-0 top-[19%] text-white lg:top-1/4">
                     <div className="container flex flex-col items-center gap-x-32 lg:flex-row lg:items-start">
                         <div className="max-w-[624px] text-center lg:text-left">
-                            <h1 className="mb-3 font-playfair text-xl font-semibold text-[#eb8dc2] md:text-2xl">{foldProp.header}</h1>
+                            <h1 className="mb-4 font-playfair text-xl font-semibold  md:text-2xl">{foldProp.header}</h1>
                             <h2 className="font-playfair text-4xl font-semibold text-primary md:text-5xl xl:text-[60px] xl:leading-[72px]">{foldProp.title}</h2>
-                            <p className="mt-8 hidden font-montserrat text-lg lg:flex">{foldProp.subtitle}</p>
-                            <button type="button" className="btn mt-10 bg-white px-8 py-[19px] text-black hover:bg-secondary hover:text-white">
-                                <button onClick={handleModal} className="font-raleway font-semibold uppercase">
+                            <p className="mt-8 hidden font-montserrat text-lg text-[#eb8dc2] lg:flex">{foldProp.subtitle}</p>
+                            <Link href="https://wa.link/f7jrvw" className="font-raleway font-semibold">
+                                <button type="button" className="btn mt-10 flex bg-white px-8 py-[19px] text-black hover:bg-black hover:text-white">
+                                    <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={30} height={30} className="pr-2" />
                                     {foldProp.cta.text}
                                 </button>
-                            </button>
+                            </Link>
                         </div>
                         <div className="text-right">
                             <div className="h-auto w-full">
                                 <img
-                                    src="/assets/images/20-blanqueamiento-dental.png"
+                                    src="/assets/images/landings/10 blanqueamiento dental.png"
                                     alt=""
                                     className="m-6 h-48 w-48 lg:m-0 lg:h-80 lg:w-80 lg:object-contain"
                                 />
@@ -322,11 +327,11 @@ const Ad = () => {
                         </div>
                     </div>
                 </div>
-                <img
+                {/* <img
                     src="/assets/images/vector-line.svg"
                     alt="vector-line"
                     className="absolute inset-x-0 -top-9 block h-9 w-full object-cover object-top dark:hidden"
-                />
+                /> */}
             </section>
 
             {/* parte lógica */}
