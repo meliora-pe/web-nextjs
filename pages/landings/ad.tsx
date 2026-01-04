@@ -8,174 +8,14 @@ import { useEffect, useState } from 'react';
 import { Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import ClientSlider from '../../components/ClientSlider';
 import { PhotoSlider } from '../../components/PhotoSlider';
 import { Stars } from '../../components/Stars';
 import WidgetContact from '../../components/WidgetContact';
 import WidgetMap from '../../components/WidgetMap';
-import { emailSvg, locationSvg, phoneSvg } from '../../data/svg';
+import adContent from '../../data/landings/ad';
 
-const foldProp = {
-    header: 'Resultados visibles desde la primera sesión',
-    title: 'Blanqueamiento dental personalizado',
-    subtitle: 'Descuento exclusivo de 10% y consulta gratis si inicias tu tratamiento. ¡Reserva tu cita ahora y aprovecha el descuento!',
-    image: {
-        src: 'landings/blanqueamiento-dental.jpg',
-        alt: 'blanqueamiento-dental',
-        title: 'blanqueamiento-dental',
-    },
-    cta: {
-        text: 'Agenda tu evaluación',
-        href: 'https://wa.link/f7jrvw',
-    },
-};
-
-const benefits = {
-    title: '¿Por qué elegir nuestro tratamiento?',
-    subtitle: 'Beneficios clave',
-    paragraph1: 'Descubre los beneficios de un tratamiento que no solo mejora tu estética, sino también tu confianza y autoestima.',
-    bullets: [
-        'Resultados visibles desde la primera sesión',
-        'Procedimientos adaptados a tu estilo de vida: en consultorio o en casa',
-        'Métodos seguros no invasivos y cómodos',
-    ],
-    image: {
-        src: 'porque-nos-eligen.webp',
-        alt: 'porque-nos-eligen',
-        title: 'porque-nos-eligen',
-    },
-};
-
-const beforeAfter = {
-    title: 'Blanqueamiento dental',
-    text: 'Realzamos el color de tus dientes con técnicas seguras y personalizadas. Recupera la confianza en tu sonrisa con un tratamiento efectivo, mínimamente invasivo y diseñado para resaltar tu belleza natural.',
-    before: {
-        src: '/assets/images/before.webp',
-        alt: 'before',
-        title: 'before',
-    },
-    after: {
-        src: '/assets/images/after.webp',
-        alt: 'after',
-        title: 'after',
-    },
-    cta: { text: 'VER MÁS', href: '/services' },
-};
-
-const meliora = {
-    title: 'Un proceso simple y efectivo en 3 pasos',
-    subtitle: '¿Cómo funciona?',
-    paragraph1: 'Evaluamos tu caso y definimos el mejor tipo de blanqueamiento para ti.',
-    paragraph2: 'Elige entre blanqueamiento en consultorio para resultados inmediatos o en casa para mayor comodidad.',
-    paragraph3: 'Logra una sonrisa más blanca y radiante que transformará tu confianza.',
-    definition: {
-        button: {
-            href: '/about-us',
-            text: 'Reserva tu consulta gratis',
-        },
-    },
-    images: {
-        image1: {
-            src: 'radiografia.webp',
-            alt: 'radiografia',
-            title: 'radiografia',
-        },
-        image2: {
-            src: 'mujer-sonriente.webp',
-            alt: 'mujer-sonriente',
-            title: 'mujer-sonriente',
-        },
-    },
-};
-
-const testimonials = {
-    title: ['Testimonios y opiniones', 'reales'],
-    subtitle: 'Ellos ya transformaron sus sonrisas, ¡tú también puedes hacerlo!',
-};
-
-const feedbacks = [
-    {
-        id: 1,
-        name: 'Gabriela Llaja',
-        role: '',
-        time: 'Hace 4 meses',
-        place: '/assets/images/google-maps.png',
-        thumbnail: '/assets/images/patient-1.webp',
-        message: `“Excelente atención! Me retiraron la muela del juicio inferior y el procedimiento fue correcto. Hicieron todo para que me sienta cómoda, tranquila y sin dolor. La primera noche de la operación no sentí dolor alguno. Recomendado 100%”`,
-    },
-    {
-        id: 2,
-        name: 'Yuri Villaruel',
-        role: '',
-        time: 'Hace 1 mes',
-        place: '/assets/images/google-maps.png',
-        thumbnail: '/assets/images/patient-2.webp',
-        message: `"Desde la primera vez que llegué a su consultorio tuve una experiencia satisfactoria, si no mal recuerdo desde 2014. Gracias Dra. Yessica por su paciencia al explicarme, animarme a cuidar mis dientes y por su buen trabajo que se ve reflejado por muchos años. También por recordarme el tiempo debido para el control."`,
-    },
-    {
-        id: 3,
-        name: 'Alberto Cosme',
-        role: '',
-        time: 'Hace 1 año',
-        place: '/assets/images/google-maps.png',
-        thumbnail: '/assets/images/patient-3.webp',
-        message: `“Excelente atención profesional! He tenido buena experiencia con los tratamientos y procedimientos que me realizaron, así como con la explicación que es completa y ayuda al paciente a poder comprender en qué estado se encuentra su salud dental. Lo recomiendo.”`,
-    },
-    {
-        id: 4,
-        name: 'Adriana Arias',
-        role: '',
-        time: 'Hace 8 meses',
-        place: '/assets/images/google-maps.png',
-        thumbnail: '/assets/images/patient-4.webp',
-        message: `“Excelente atención y servicio profesional. Superaron mis expectativas.”`,
-    },
-    {
-        id: 5,
-        name: 'Yuvis Alvarado',
-        role: '',
-        time: 'Hace 1 año',
-        place: '/assets/images/google-maps.png',
-        thumbnail: '/assets/images/patient-5.webp',
-        message: `"Ella es una persona muy profesional y hace un trabajo impecable y altamente recomendable."`,
-    },
-];
-
-const sections = {
-    topArea: {
-        bgImage: 'url(/assets/images/fondo.png)',
-        title: 'Contacto',
-        subtitle: '¿Tienes preguntas? Te ayudamos',
-        illustration: {
-            src: '/assets/images/somebody.svg',
-            alt: 'somebody',
-            title: 'somebody',
-        },
-    },
-    contact: {
-        phone: {
-            href: 'tel:+51969174019',
-            svg: phoneSvg,
-            color: 'text-secondary',
-            title: 'Llámanos',
-            subtitle: '969 174 019',
-        },
-        email: {
-            href: 'mailto:hola@meliora.pe',
-            svg: emailSvg,
-            color: 'text-primary',
-            title: 'Envía un correo',
-            subtitle: 'hola@meliora.pe',
-        },
-        location: {
-            href: 'https://maps.google.com/maps/dir//Meliora+Studio+Dental+R2X6%2B73G+Lima+15054/@-12.1519314,-76.9897075,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105b90829b6e561:0xd2160ffba0651ce0',
-            targetRel: true,
-            svg: locationSvg,
-            color: 'text-secondary',
-            title: 'Dirección',
-            subtitle: 'Av. Los Próceres Mz. B Lt. 16 - Urb. Sánchez Cerro - Surco',
-        },
-    },
-};
+const { AboveTheFold, benefits, beforeAfter, meliora, testimonials, feedbacks, sections } = adContent;
 
 const Ad = () => {
     useEffect(() => {
@@ -189,16 +29,6 @@ const Ad = () => {
         setModal(!openModal);
     };
 
-    useEffect(() => {
-        const body = document.getElementsByTagName('body')[0];
-        // console.log(body);
-        if (!body) return;
-        else {
-            body.classList.toggle('overflow-hidden');
-            // console.log('si');
-        }
-    }, [openModal]);
-
     return (
         <>
             {/* logotipo Meliora */}
@@ -210,10 +40,10 @@ const Ad = () => {
             <section className="relative">
                 <div className="-top-11 h-[700px] lg:h-[840px]">
                     <img
-                        src={`/assets/images/${foldProp.image.src}`}
+                        src={`/assets/images/${AboveTheFold.image.src}`}
                         className="flex h-full w-full object-cover"
-                        alt={foldProp.image.alt}
-                        title={foldProp.image.title}
+                        alt={AboveTheFold.image.alt}
+                        title={AboveTheFold.image.title}
                     />
                 </div>
                 <div
@@ -223,13 +53,15 @@ const Ad = () => {
                 <div className="z-1 md:top-1/5 absolute inset-x-0 top-[19%] text-white lg:top-1/4">
                     <div className="container flex flex-col items-center gap-x-32 lg:flex-row lg:items-start">
                         <div className="max-w-[624px] text-center lg:text-left">
-                            <h1 className="mb-4 font-playfair text-xl font-semibold  md:text-2xl">{foldProp.header}</h1>
-                            <h2 className="font-playfair text-4xl font-semibold text-primary md:text-5xl xl:text-[60px] xl:leading-[72px]">{foldProp.title}</h2>
-                            <p className="mt-8 hidden font-montserrat text-lg text-[#eb8dc2] lg:flex">{foldProp.subtitle}</p>
+                            <h1 className="mb-4 font-playfair text-xl font-semibold  md:text-2xl">{AboveTheFold.header}</h1>
+                            <h2 className="font-playfair text-4xl font-semibold text-primary md:text-5xl xl:text-[60px] xl:leading-[72px]">
+                                {AboveTheFold.title}
+                            </h2>
+                            <p className="mt-8 hidden font-montserrat text-lg text-[#eb8dc2] lg:flex">{AboveTheFold.subtitle}</p>
                             <Link href="https://wa.link/f7jrvw" className="font-raleway font-semibold">
                                 <button type="button" className="btn mt-10 flex bg-white px-8 py-[19px] text-black hover:bg-black hover:text-white">
                                     <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={30} height={30} className="pr-2" />
-                                    {foldProp.cta.text}
+                                    {AboveTheFold.cta.text}
                                 </button>
                             </Link>
                         </div>
@@ -246,39 +78,179 @@ const Ad = () => {
                 </div>
             </section>
 
-            {/* modal */}
-            {openModal && (
-                <div
-                    onClick={() => setModal(false)}
-                    className={`fixed inset-0 flex items-center justify-center transition-colors ${openModal ? 'visible bg-black/20' : 'invisible'} z-999`}
-                >
-                    {/* modal */}
+            {/* dolor y solucion */}
+            <section className="relative overflow-hidden bg-white">
+                {/* fondo suave */}
+                {/* <div className="pointer-events-none absolute inset-0">
+                    <div className="bg-zinc-100 absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl" />
+                    <div className="bg-zinc-100 absolute -bottom-24 -left-24 h-72 w-72 rounded-full blur-3xl" />
+                </div> */}
 
-                    <div
-                        onClick={(e) => e.stopPropagation()}
-                        className={`rounded-xl bg-white p-6 shadow transition-all ${openModal ? 'scale-100 opacity-100' : 'scale-125 opacity-0'}`}
-                    >
-                        <button
-                            onClick={() => setModal(false)}
-                            className="text-gray-400 hover:bg-gray-50 hover:text-gray-600 absolute right-2 top-2 rounded-lg bg-white p-1"
-                        >
-                            X
-                        </button>
+                <div className="relative mx-auto max-w-6xl px-4 py-14 sm:py-16">
+                    <div className="grid items-center gap-10 lg:grid-cols-2">
+                        {/* LEFT: photo stack */}
+                        <div className="order-1 lg:order-none">
+                            <div className="relative mx-auto h-[360px] w-full max-w-[520px] sm:h-[420px]">
+                                {/* card 1 */}
+                                <div className="absolute top-9 w-[56%] rotate-[-3deg]">
+                                    <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
+                                        <Image
+                                            src="/assets/images/landings/ad/blanqueamiento-0.png"
+                                            alt="Inseguridad al sonreír"
+                                            width={900}
+                                            height={700}
+                                            className="h-auto w-full object-cover"
+                                            priority
+                                        />
+                                    </div>
+                                </div>
 
-                        <div className="!h-[80vh] w-[80vw] bg-white">
-                            <div className="z-999 h-full w-full ">
-                                <iframe
-                                    title="Google Calendar"
-                                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1-3btr7vk7iGNeSVq4CcD4EcFRz5aBGdSGkWDulPy0fPf2SZPjwFkBHkHTvVWmHHd2dshnKGaD?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23ffffff&amp;color=%23FFF&amp;ctz=America%2FLima"
-                                    style={{ borderWidth: 0 }}
-                                    width="100%"
-                                    height="100%"
-                                ></iframe>
+                                {/* card 2 */}
+                                <div className="absolute right-0 top-16 w-[62%] rotate-[2deg]">
+                                    <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
+                                        <Image
+                                            src="/assets/images/landings/ad/blanqueamiento-4.jpg"
+                                            alt="Taparse la sonrisa por manchas"
+                                            width={900}
+                                            height={700}
+                                            className="h-auto w-full object-cover"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* card 3 */}
+                                <div className="absolute bottom-3 left-12 w-[40%] rotate-[-2deg]">
+                                    <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray">
+                                        <Image
+                                            src="/assets/images/landings/ad/blanqueamiento-5.png"
+                                            alt="Sonrisa más blanca y natural"
+                                            width={1000}
+                                            height={800}
+                                            className="h-auto w-full object-cover"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* mini culprit */}
+                                <div className="absolute bottom-5 right-12 hidden w-[42%] rotate-[4deg] sm:block">
+                                    <div className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-gray">
+                                        <Image
+                                            src="/assets/images/landings/ad/blanqueamiento-3.png"
+                                            alt="Manchas por café o té"
+                                            width={700}
+                                            height={500}
+                                            className="h-auto w-full object-cover"
+                                        />
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+
+                        {/* RIGHT: copy */}
+                        <div className="order-2 lg:order-none">
+                            <div className="heading mb-0 text-center lg:text-left">
+                                <h2 className="pb-3 font-montserrat text-[18px] font-bold !text-secondary">
+                                    <span aria-hidden>✨</span>
+                                    Promo por tiempo limitado • Surco
+                                </h2>
+                                <h4 className="mb-3 font-montserrat !text-primary">
+                                    ¿Te da vergüenza sonreír en fotos?
+                                    {/* {meliora.title} */}
+                                </h4>
+                            </div>
+
+                            <h6 className="mt-[18px] text-left font-raleway !font-semibold !text-gray">
+                                Manchas por <span className="font-semibold">café, té, vino o tabaco</span> no se van con “cepillado fuerte”. Si tu sonrisa se ve
+                                apagada, esto te interesa:
+                                {/* {benefits.paragraph1} */}
+                                <br />
+                            </h6>
                         </div>
                     </div>
                 </div>
-            )}
+            </section>
+
+            <section className="bg-meliora-1 relative sm:px-5 lg:py-12">
+                <div className="container px-8">
+                    <div className="relative mt-6 overflow-hidden rounded-xl bg-black bg-[url(/assets/images/app-bg.png)] bg-cover bg-no-repeat px-4 py-6 dark:bg-white/5">
+                        {/* <img
+                                                src="assets/images/restaurent/food-1.png"
+                                                alt=""
+                                                className="absolute bottom-0 w-48 opacity-30 md:opacity-100 lg:w-[420px] ltr:right-0 rtl:left-0 rtl:rotate-y-180"
+                                            /> */}
+                        <div className="heading z-1 relative mb-0 lg:w-1/2">
+                            <h6>subtitulo</h6>
+                            <h4 className="mb-3 text-2xl !text-white">Texto &amp; título</h4>
+                            <a href="javascript:" className="btn mt-6 rounded-md bg-secondary text-white hover:bg-primary">
+                                cta botón
+                            </a>
+                        </div>
+
+                        <img
+                            src="/assets/images/landings/ad/blanqueamiento-2.jpg"
+                            alt=""
+                            className="absolute bottom-0 right-4 w-48 opacity-30 md:opacity-100 lg:w-[420px]"
+                        />
+
+                        <div className="heading relative mb-0">
+                            <p className="text-sm font-semibold">✅ Solución: Blanqueamiento dental personalizado</p>
+                            <p className="mt-2 text-sm">
+                                Evaluamos tu tono, cuidamos la sensibilidad y buscamos un resultado <span className="font-semibold">blanco natural</span>, sin
+                                efecto artificial.
+                            </p>
+
+                            <ul className="text-zinc-700 mt-4 space-y-2 text-sm">
+                                <li className="flex gap-2">
+                                    <span aria-hidden>•</span>
+                                    <span>Resultados visibles desde la primera sesión (según caso)</span>
+                                </li>
+                                <li className="flex gap-2">
+                                    <span aria-hidden>•</span>
+                                    <span>Sesión rápida + indicaciones claras para que dure más</span>
+                                </li>
+                                <li className="flex gap-2">
+                                    <span aria-hidden>•</span>
+                                    <span>Ideal si tienes evento, entrevista o sesión de fotos</span>
+                                </li>
+                            </ul>
+
+                            {/* <PromoBadges /> */}
+
+                            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                                <Link
+                                    href={'https://wa.link/f7jrvw'}
+                                    className="bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500 inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
+                                >
+                                    Agendar por WhatsApp
+                                </Link>
+
+                                <Link
+                                    href="#precios"
+                                    className="border-zinc-300 text-zinc-900 hover:bg-zinc-50 focus:ring-zinc-400 inline-flex items-center justify-center rounded-xl border bg-white px-5 py-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2"
+                                >
+                                    Ver precio y requisitos
+                                </Link>
+                            </div>
+
+                            {/* microcopy WhatsApp */}
+                            <p className="text-zinc-600 mt-3 text-xs">
+                                📲 Te respondemos rápido por WhatsApp. Mensaje sugerido:{' '}
+                                <span className="text-zinc-900 font-medium">
+                                    “Hola, quiero la promo de blanqueamiento (-10% + consulta gratis). ¿Hay cupos esta semana?”
+                                </span>
+                            </p>
+
+                            {/* <TrustRow /> */}
+
+                            <h6>Hello Melur!</h6>
+                            <h4 className="text-white!">Melur's First &amp; Best Food Delivery App is here</h4>
+                            <a href="javascript:" className="btn mt-6 rounded-md bg-secondary text-white hover:bg-primary">
+                                get started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Beneficios */}
             <section className="bg-meliora-1 relative sm:px-5 lg:py-20">
@@ -286,18 +258,12 @@ const Ad = () => {
                     <div className="flex flex-col items-center gap-16 lg:flex-row">
                         <div className="mt-6" data-aos="fade-right" data-aos-duration="1000">
                             <PhotoSlider before={beforeAfter.before} after={beforeAfter.after} />
-                            <p className="mt-2 text-xs text-gray">Caso real, paciente eligió blanqueamiento en consultorio</p>
+                            <p className="mt-2 text-xs text-gray">* Caso real, paciente eligió blanqueamiento en consultorio</p>
                             <div className="flex flex-col items-center">
-                                <h6 className="mt-5 text-left font-raleway !font-semibold !text-gray">
+                                {/* <h6 className="mt-5 text-left font-raleway !font-semibold !text-gray">
                                     ¡Agenda hoy! no te pierdas esta promoción
                                     <br />
-                                </h6>
-                                <button
-                                    className="btn mt-6 rounded-md bg-secondary font-raleway font-semibold text-white hover:bg-primary"
-                                    onClick={handleModal}
-                                >
-                                    Reservar cita
-                                </button>
+                                </h6> */}
                             </div>
                         </div>
 
@@ -324,6 +290,9 @@ const Ad = () => {
                                     ))}
                                 </ul>
                             </div>
+                            <button className="btn mt-6 rounded-md bg-secondary font-raleway font-semibold text-white hover:bg-primary" onClick={handleModal}>
+                                Reservar cita
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -334,17 +303,17 @@ const Ad = () => {
                 /> */}
             </section>
 
-            {/* parte lógica */}
+            {/* proceso */}
             <section className="relative bg-black py-14 lg:py-20">
                 <div className="container">
-                    <div className="grid-cols-3 lg:grid">
+                    <div className="grid-cols-4 lg:grid">
                         <div className="col-span-2 flex flex-col justify-center lg:pr-16" data-aos="fade-right" data-aos-duration="1000">
                             <div className="heading mb-0 text-center lg:text-left">
                                 <h2 className="pb-3 font-montserrat text-[18px] font-bold !text-secondary">{meliora.subtitle}</h2>
                                 <h4 className="mb-3 font-playfair !text-primary">{meliora.title}</h4>
                             </div>
                             <div className="my-8 text-left font-raleway text-lg font-semibold text-gray sm:grid-cols-2 md:my-6">
-                                <ol className="space-y-3">
+                                <ol className="space-y-6">
                                     <li>
                                         <p className="text-xl font-extrabold">1. Diagnóstico personalizado </p>
                                         {meliora.paragraph1}
@@ -369,14 +338,57 @@ const Ad = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="relative mb-8 mt-8 flex justify-center gap-5 lg:mb-0 lg:mt-0 lg:block" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="/assets/images/blanqueamiento-3-pasos.png" alt="" className="mt-24 hidden h-auto w-full lg:flex" />
-                            <div className="flex flex-col gap-4 md:flex-row lg:hidden">
-                                <img className="h-60 w-auto" src={`/assets/images/blanqueamiento-paso-1.png`} alt="" title="" />
-                                <img className="h-60 w-auto" src={`/assets/images/blanqueamiento-paso-2.png`} alt="" title="" />
-                                <img className="h-60 w-auto" src={`/assets/images/blanqueamiento-paso-3.png`} alt="" title="" />
+                        {/* pasos tratamiento */}
+                        <div
+                            className="relative col-span-2 mx-auto flex min-h-full w-full justify-center
+                gap-5 overflow-x-auto
+                lg:block lg:h-[420px]"
+                        >
+                            {/* FOTO 1 */}
+                            <div
+                                className="relative h-[280px] 
+               w-[220px] flex-shrink-0
+               lg:absolute lg:right-0 lg:top-0
+               lg:rotate-[5deg]"
+                            >
+                                <div className="h-full w-full overflow-hidden rounded-2xl shadow-xl">
+                                    <img src="/assets/images/landings/ad/blanqueamiento-paso-1.png" alt="" className="h-full w-full object-cover" />
+                                </div>
+                            </div>
+
+                            {/* FOTO 2 */}
+                            <div
+                                className="relative h-[280px] 
+               w-[220px] flex-shrink-0
+               lg:absolute lg:left-1/2 lg:top-32 lg:-translate-x-1/2
+               lg:rotate-[-3deg]"
+                            >
+                                <div className="h-full w-full overflow-hidden rounded-2xl shadow-xl">
+                                    <img src="/assets/images/landings/ad/blanqueamiento-paso-2.png" alt="" className="h-full w-full object-cover" />
+                                </div>
+                            </div>
+
+                            {/* FOTO 3 */}
+                            <div
+                                className="relative h-[280px] 
+               w-[220px] flex-shrink-0
+               lg:absolute lg:bottom-0 lg:left-0
+               lg:rotate-[4deg]"
+                            >
+                                <div className="h-full w-full overflow-hidden rounded-2xl shadow-xl">
+                                    <img src="/assets/images/landings/ad/blanqueamiento-paso-3.png" alt="" className="h-full w-full object-cover" />
+                                </div>
                             </div>
                         </div>
+
+                        {/* <div className="relative mb-8 mt-8 flex justify-center gap-5 lg:mb-0 lg:mt-0 lg:block" data-aos="fade-left" data-aos-duration="1000">
+                            <img src="/assets/images/landings/ad/blanqueamiento-3-pasos.png" alt="" className="mt-24 hidden h-auto w-full lg:flex" />
+                            <div className="flex flex-col gap-4 md:flex-row lg:hidden">
+                                <img className="h-60 w-auto" src={`/assets/images/landings/ad/blanqueamiento-paso-1.png`} alt="" title="" />
+                                <img className="h-60 w-auto" src={`/assets/images/landings/ad/blanqueamiento-paso-2.png`} alt="" title="" />
+                                <img className="h-60 w-auto" src={`/assets/images/landings/ad/blanqueamiento-paso-3.png`} alt="" title="" />
+                            </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -395,61 +407,7 @@ const Ad = () => {
                                 <h5 className="mt-2.5 text-center font-raleway text-lg font-medium lg:text-left">{testimonials.subtitle}</h5>
                             </div>
 
-                            {/* CLIENT SLIDER */}
-                            <div
-                                className="relative mx-auto w-full max-w-[555px] rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                            >
-                                <Swiper
-                                    loop={true}
-                                    slidesPerView="auto"
-                                    spaceBetween={30}
-                                    speed={2200}
-                                    autoplay={{
-                                        delay: 6000,
-                                        disableOnInteraction: false,
-                                    }}
-                                    navigation={{
-                                        prevEl: '.feedback-slider-button-prev',
-                                        nextEl: '.feedback-slider-button-next',
-                                    }}
-                                    modules={[Navigation, Autoplay]}
-                                    dir={'ltr'}
-                                    key={'false'}
-                                >
-                                    {feedbacks.map((feedback: any) => {
-                                        return (
-                                            <SwiperSlide key={feedback.id}>
-                                                <div className="flex justify-between gap-7 p-7">
-                                                    <div className="flex items-center gap-2.5">
-                                                        <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
-                                                            <img
-                                                                src={feedback.thumbnail}
-                                                                alt="client's picture thumbnail"
-                                                                className="h-full w-full object-cover"
-                                                            />
-                                                        </div>
-                                                        <div>
-                                                            <h5 className="mb-2 text-lg font-bold text-black dark:text-white">{feedback.name}</h5>
-                                                            <Stars points={5} />
-                                                        </div>
-                                                    </div>
-                                                    <div className="pt-5 text-right">
-                                                        <p className="text-xs text-gray">Meliora Studio Dental</p>
-                                                        <img src={feedback.place} className="inline-flex h-5 w-auto" alt="google maps logo" />
-                                                    </div>
-                                                </div>
-                                                <div className="border border-black/10 dark:border-white/10"></div>
-                                                <div className="p-7">
-                                                    <h3 className="text-lg font-bold italic text-black dark:text-white">{feedback.time}</h3>
-                                                    <p className="mt-4 font-medium leading-7 text-[#797979]">{feedback.message}</p>
-                                                </div>
-                                            </SwiperSlide>
-                                        );
-                                    })}
-                                </Swiper>
-                            </div>
+                            <ClientSlider />
                         </div>
                     </div>
                 </div>

@@ -90,9 +90,11 @@ const ClientSlider = ({
                             <div className="rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none">
                                 <div className="flex justify-between p-4">
                                     <div className="flex items-center gap-1.5">
-                                        <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]">
+                                        {/* <div className="flex h-14 w-14 items-end justify-center overflow-hidden rounded-full border border-[rgba(125,132,150,0.2)] bg-gradient-to-t from-[rgba(125,132,150,0.1)] to-[125,132,150]"> */}
+                                        <div>
                                             <img src={feedback.thumbnail} alt="client's picture thumbnail" className="h-14 w-14 rounded-full" />
                                         </div>
+                                        {/* </div> */}
                                         <div>
                                             <h5 className="mb-2 text-base font-bold text-black dark:text-white md:text-lg">{feedback.name}</h5>
                                             <Stars points={5} />
