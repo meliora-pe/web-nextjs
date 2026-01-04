@@ -4,19 +4,16 @@ import 'swiper/css/navigation';
 import Aos from 'aos';
 import Image from 'next/image';
 import Link from 'next/link';
-import { off } from 'process';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import ClientSlider from '../../components/ClientSlider';
+import ClientSlider from '../../components/ClientSlider2';
 import { PhotoSlider } from '../../components/PhotoSlider';
 import { Stars } from '../../components/Stars';
-import WidgetContact from '../../components/WidgetContact';
-import WidgetMap from '../../components/WidgetMap';
 import adContent from '../../data/landings/ad';
 
-const { AboveTheFold, dolorYSolucion, benefits, beforeAfter, meliora, testimonials, offer, ctaFinal } = adContent;
+const { AboveTheFold, dolorYSolucion, benefits, beforeAfter, meliora, testimonials, offer, ctaFinal, terms } = adContent;
 
 const Ad = () => {
     useEffect(() => {
@@ -24,11 +21,6 @@ const Ad = () => {
             once: true,
         });
     }, []);
-
-    const [openModal, setModal] = useState(false);
-    const handleModal = () => {
-        setModal(!openModal);
-    };
 
     return (
         <>
@@ -54,15 +46,15 @@ const Ad = () => {
                 <div className="z-1 absolute inset-x-0 top-[30%] text-white md:top-1/2 lg:top-1/4">
                     <div className="container flex flex-col-reverse items-center gap-x-32 lg:flex-row lg:items-start">
                         <div className="max-w-[624px] text-center lg:text-left">
-                            <h1 className="mb-4 font-montserrat text-xl font-semibold  md:text-2xl">{AboveTheFold.header}</h1>
-                            <h2 className="font-playfair text-4xl font-semibold md:text-5xl xl:text-[60px] xl:leading-[72px]">{AboveTheFold.title}</h2>
+                            <h2 className="mb-4 font-montserrat text-xl font-semibold  md:text-2xl">{AboveTheFold.header}</h2>
+                            <h1 className="font-playfair text-4xl font-semibold md:text-5xl xl:text-[60px] xl:leading-[72px]">{AboveTheFold.title}</h1>
                             <p className="mt-8 hidden font-montserrat text-lg lg:flex">{AboveTheFold.subtitle}</p>
                             <Link
                                 href="https://wa.link/f7jrvw"
-                                className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-black hover:text-white"
+                                className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
-                                <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>
+                                <p className="pl-2 font-raleway font-semibold">{AboveTheFold.cta.text}</p>
                             </Link>
                         </div>
                         <div className="text-right">
@@ -81,7 +73,7 @@ const Ad = () => {
             {/* dolor y solucion */}
             <section className="bg-meliora-2 relative overflow-hidden pb-8">
                 <div className="relative mx-auto max-w-6xl px-4 py-8 sm:py-12">
-                    <div className="grid items-center gap-10 lg:grid-cols-2">
+                    <div className="grid items-center gap-5 lg:grid-cols-2">
                         {/* LEFT: photo stack */}
                         <div className="order-1 lg:order-none">
                             <div className="relative mx-auto h-[320px] w-full max-w-[520px] sm:h-[420px]">
@@ -111,7 +103,7 @@ const Ad = () => {
                                     </div>
                                 </div>
                                 {/* card 3 */}
-                                <div className="absolute bottom-4 left-9 w-[40%] rotate-[-2deg]">
+                                <div className="absolute bottom-4 left-9 w-[42%] rotate-[-2deg]">
                                     <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray">
                                         <Image
                                             src="/assets/images/landings/ad/blanqueamiento-5.png"
@@ -139,14 +131,15 @@ const Ad = () => {
 
                         {/* RIGHT: copy */}
                         <div className="order-2 lg:order-none">
-                            <div className="heading mb-0 text-center lg:text-left">
-                                <h2 className="pb-3 font-montserrat text-[18px] font-bold !text-secondary">{dolorYSolucion.subtitle}</h2>
-                                <h4 className="mb-3 font-montserrat !text-primary">{dolorYSolucion.title}</h4>
+                            <div className="heading mb-0">
+                                <h3 className="pb-3 text-center font-montserrat text-[18px] font-bold !text-secondary lg:text-left">
+                                    {dolorYSolucion.subtitle}
+                                </h3>
+                                <h4 className="mb-3 text-center font-montserrat !text-primary lg:text-left">{dolorYSolucion.title}</h4>
                             </div>
 
                             <h6 className="mt-[18px] text-left font-raleway !font-semibold !text-gray">
                                 {dolorYSolucion.paragraph}
-                                {/* {benefits.paragraph1} */}
                                 <br />
                             </h6>
                         </div>
@@ -154,19 +147,19 @@ const Ad = () => {
                 </div>
 
                 <div className="container">
-                    <div className="relative mt-6 flex flex-col items-center gap-10 overflow-hidden rounded-xl bg-black bg-[url(/assets/images/app-bg.png)] bg-cover bg-no-repeat px-4 py-6 dark:bg-white/5 lg:flex-row lg:p-12">
+                    <div className="relative mt-6 flex flex-col items-center gap-10 overflow-hidden rounded-xl bg-black bg-[url(/assets/images/app-bg.png)] bg-cover bg-no-repeat p-8 dark:bg-white/5 lg:flex-row lg:p-12">
                         <div className="heading z-1 relative mb-0 lg:w-1/2">
                             <h6>{dolorYSolucion.subtitle2}</h6>
                             <h4 className="mb-3 text-2xl !text-white">{dolorYSolucion.title2}</h4>
 
                             <div className="heading relative mb-0 text-gray">
-                                {/* <p className="text-sm font-semibold">✅ Solución: Blanqueamiento dental personalizado</p> */}
                                 <p className="mt-2 text-base">{dolorYSolucion.paragraph2}</p>
 
                                 <ul className="text-zinc-700 mt-4 space-y-2 text-base">
                                     {dolorYSolucion.bullets.map((bullet, i) => (
-                                        <li key={i} className="flex gap-2">
-                                            <span aria-hidden>•</span> <span>{bullet}</span>
+                                        <li key={i} className="flex items-start gap-2">
+                                            <img src="/assets/images/estrella.png" alt="viñeta" className="h-5 w-auto" />
+                                            <span>{bullet}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -178,15 +171,8 @@ const Ad = () => {
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
                                 <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>
                             </Link>
-                            {/* microcopy WhatsApp */}
-                            {/* <p className="text-zinc-600 mx-10 mt-3 text-xs text-gray">
-                                📲 Te respondemos rápido por WhatsApp. Mensaje sugerido:{' '}
-                                <span className="text-zinc-900 font-medium">
-                                    “Hola, quiero la promo de blanqueamiento (-10% + consulta gratis). ¿Hay cupos esta semana?”
-                                </span>
-                            </p> */}
                         </div>
-                        <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade-up" data-aos-duration="1600" data-aos-delay="500">
+                        <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade" data-aos-duration="1600" data-aos-delay="500">
                             <img src="/assets/images/landings/ad/blanqueamiento-2.jpg" alt="" />
                         </div>
                     </div>
@@ -210,8 +196,8 @@ const Ad = () => {
                                 <ul className="mb-5 space-y-2 sm:mb-0">
                                     {benefits.bullets.map((bullet, i) => (
                                         <li key={i} className="flex items-start gap-2">
-                                            <img src="/assets/images/estrella.png" alt="viñeta" className=" h-6 w-auto" />
-                                            <span className="text-lg font-bold text-gray">{bullet}</span>
+                                            <img src="/assets/images/estrella.png" alt="viñeta" className="mt-1 h-5 w-auto" />
+                                            <span className="text-left text-base font-semibold text-gray">{bullet}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -219,7 +205,7 @@ const Ad = () => {
                         </div>
                         <div className="" data-aos="fade-right" data-aos-duration="1000">
                             <PhotoSlider before={beforeAfter.before} after={beforeAfter.after} />
-                            <p className="mt-2 text-xs text-gray">* Caso real, paciente eligió blanqueamiento en consultorio</p>
+                            <p className="mt-2 text-center text-xs text-gray">* Caso real, paciente eligió blanqueamiento en consultorio</p>
                         </div>
                     </div>
                 </div>
@@ -363,9 +349,9 @@ const Ad = () => {
             <section className="bg-meliora-1 py-14 sm:px-5 lg:py-20">
                 <div className="container flex flex-col gap-10 lg:flex-row">
                     <div className="mx-auto lg:mx-0" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="/assets/images/paciente-mujer-sonrie-dentista-2.webp" alt="" className="h-auto w-[420px] rounded-3xl" />
+                        <img src="/assets/images/paciente-mujer-sonrie-dentista-2.webp" alt="" className="h-auto w-[620px] rounded-3xl" />
                     </div>
-                    <div className="" data-aos="fade-left" data-aos-duration="1000">
+                    <div className="text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
                         <div className="heading mb-8">
                             <h6 className="font-montserrat !font-semibold !text-secondary">{offer.subtitle}</h6>
                             <h4 className="font-playfair !text-primary">{offer.title}</h4>
@@ -375,8 +361,8 @@ const Ad = () => {
                             <ul className="mb-5 space-y-2 sm:mb-0">
                                 {offer.bullets.map((bullet, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        <img src="/assets/images/estrella.png" alt="viñeta" className="h-6 w-auto" />
-                                        <span className="text-lg font-extrabold text-gray">{bullet}</span>
+                                        <img src="/assets/images/estrella.png" alt="viñeta" className="mt-1 h-5 w-auto" />
+                                        <span className="text-left text-base font-semibold text-gray">{bullet}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -432,12 +418,8 @@ const Ad = () => {
                     </div>
                     <div className="flex sm:gap-8 md:gap-12">
                         <ul className="mb-5 space-y-2 sm:mb-0">
-                            {[
-                                'Elegir un blanqueamiento dental es una decisión que debe basarse en resultados comprobados y en la seguridad del procedimiento. En Meliora Studio Dental, ofrecemos dos opciones: blanqueamiento en consultorio, con resultados visibles desde la primera sesión y un proceso de una semana a semana y media; o blanqueamiento en casa, que permite mayor flexibilidad y alcanza su efecto máximo en aproximadamente tres semanas. Ambos métodos están diseñados para lograr un aclaramiento uniforme y duradero.',
-                                'Es común preguntarse si el blanqueamiento puede causar molestias. Algunos pacientes experimentan sensibilidad dental temporal, pero en nuestro protocolo incluimos gel desensibilizante para minimizar cualquier incomodidad. Además, la técnica utilizada protege el esmalte y evita daños en la estructura dental, garantizando un tratamiento seguro y efectivo.',
-                                'Para obtener los mejores resultados, es importante realizar el tratamiento sobre dientes y encías sanos. Por eso, antes de iniciar, realizamos una evaluación para determinar si eres candidato ideal y cuál opción es mejor para ti. Si buscas una forma segura y efectiva de mejorar tu sonrisa, esta es una excelente oportunidad para hacerlo.',
-                            ].map((bullet, i) => (
-                                <li key={i} className="flex items-center gap-2">
+                            {terms.map((bullet, i) => (
+                                <li key={i} className="flex items-start gap-2">
                                     <img src="/assets/images/estrella.png" alt="viñeta" className="h-3 w-auto" />
                                     <span className="text-xs font-bold text-gray">{bullet}</span>
                                 </li>

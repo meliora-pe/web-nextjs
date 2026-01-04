@@ -1,8 +1,8 @@
 const adContent = {
   AboveTheFold: {
     header: 'Resultados visibles desde la primera sesión',
-    title: 'Blanqueamiento dental profesional en Surco',
-    subtitle: 'Recupera el blanco natural de tu sonrisa sin dañar el esmalte.',
+    title: 'Blanqueamiento dental profesional en Surco *',
+    subtitle: 'Recupera el tono natural de tu sonrisa sin dañar el esmalte.',
     image: {
       src: 'landings/blanqueamiento-dental.jpg',
       alt: 'blanqueamiento-dental',
@@ -19,7 +19,7 @@ const adContent = {
     paragraph: 'Manchas por café, té, vino o tabaco, dientes amarillos que no se arreglan con “cepillado fuerte”. Si tu sonrisa se ve apagada, esto te interesa',
     title2: 'Blanqueamiento dental seguro y personalizado',
     subtitle2: 'Tenemos la solucion',
-    paragraph2: 'Analizamos tu caso, protegemos la sensibilidad y buscamos un blanco natural, sin efecto artificial ni desgaste del esmalte.',
+    paragraph2: 'Analizamos tu caso, protegemos la sensibilidad y buscamos un tono natural, sin efecto artificial ni desgaste del esmalte.',
     bullets: [
       'Resultados visibles desde la primera sesión (según evaluación)',
       'Tratamiento en consultorio o en casa, según tu preferencia',
@@ -64,7 +64,7 @@ const adContent = {
     step3: 'Resultados y seguimiento',
     paragraph1: 'Revisamos tono, encías y sensibilidad antes de empezar.',
     paragraph2: 'Elegimos el método ideal según tu objetivo y tiempo',
-    paragraph3: 'Te damos indicaciones para prolongar el blanco por más tiempo',
+    paragraph3: 'Te damos indicaciones para prolongar el resultado por más tiempo',
     cta: '¡Agénda ahora y reserva un turno!',
   },
   testimonials: {
@@ -73,18 +73,23 @@ const adContent = {
   },
   offer: {
     subtitle: 'Una decisión simple que cambiará tu sonrisa',
-    title: 'Tu evaluación es el primer paso a una sonrisa más blanca',
-    paragraph: 'Antes de cualquier tratamiento, evaluamos si el blanqueamiento es adecuado para ti, qué resultados puedes esperar y cuál es la mejor opción según tu caso. Sin compromisos. Sin presión.',
+    title: 'Tu evaluación es el primer paso a una sonrisa radiante',
+    paragraph: 'Antes de cualquier tratamiento, evaluamos si el blanqueamiento es adecuado para ti, qué resultados puedes esperar y cuál es la mejor opción según tu caso. Sin compromisos.',
     bullets: [
       'Evaluación personalizada por un profesional',
       'Te explicamos qué resultado es posible en tu caso',
-      'Acompañamiento y recomendaciones para mantener el blanco',
+      'Acompañamiento y recomendaciones para mantener el resultado',
     ],
   },
   ctaFinal: {
     title: 'Da el primer paso. Mejora tu sonrisa',
     subtitle: 'Escríbenos por WhatsApp y agenda tu evaluación. Te responderemos rápido.',
-  }
+  },
+  terms: [
+    'Elegir un blanqueamiento dental es una decisión que debe basarse en resultados comprobados y en la seguridad del procedimiento. En Meliora Studio Dental, ofrecemos tres opciones: blanqueamiento en consultorio, con resultados visibles desde la primera sesión y un proceso de una semana a semana y media; blanqueamiento en casa, que permite mayor flexibilidad y alcanza su efecto máximo en aproximadamente tres semanas y el mixto. Nuestros métodos están diseñados para lograr un blanqueamiento uniforme y duradero.',
+    'Es común preguntarse si el blanqueamiento puede causar molestias. Algunos pacientes experimentan sensibilidad dental temporal, pero en nuestro protocolo incluimos gel desensibilizante para minimizar cualquier incomodidad. Además, la técnica utilizada protege el esmalte y evita daños en la estructura dental, garantizando un tratamiento seguro y efectivo.',
+    'Para obtener los mejores resultados, es importante realizar el tratamiento sobre dientes y encías sanos. Por eso, antes de iniciar, realizamos una evaluación para determinar si eres candidato ideal y cuál opción es mejor para ti. Si buscas una forma segura y efectiva de mejorar tu sonrisa, esta es una excelente oportunidad para hacerlo.',
+  ]
 }
 
 export default adContent;
