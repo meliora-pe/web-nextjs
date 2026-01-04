@@ -96,17 +96,22 @@ const ClientSlider = ({
                                         </div>
                                         {/* </div> */}
                                         <div>
-                                            <h5 className="mb-2 text-base font-bold text-black dark:text-white md:text-lg">{feedback.name}</h5>
+                                            <h5 className="mb-2 text-base font-bold text-black dark:text-white md:text-xl">{feedback.name}</h5>
                                             <Stars points={5} />
                                         </div>
                                     </div>
-                                    <img src="/assets/images/swipe-icon.svg" alt="swipe-icon" title="swipe-icon" className="h-12 w-12 animate-ping" />
-                                    <img src={feedback.place} className="inline-flex h-10 w-auto pt-3" alt="google maps logo" />
+                                    <img src={feedback.place} className="inline-flex h-8 w-auto pt-3" alt="google maps logo" />
                                 </div>
                                 <div className="border border-black/10 dark:border-white/10"></div>
-                                <div className="p-7">
+                                <div className="relative p-7">
                                     <h3 className="text-lg font-bold italic text-black dark:text-white">{feedback.time}</h3>
                                     <p className="mt-4 font-medium leading-7 text-[#797979]">{feedback.message}</p>
+                                    <img
+                                        src="/assets/images/swipe-icon.svg"
+                                        alt="swipe-icon"
+                                        title="swipe-icon"
+                                        className="absolute bottom-0 right-0 h-12 w-12 animate-ping"
+                                    />
                                 </div>
                             </div>
                         </SwiperSlide>
