@@ -1,10 +1,8 @@
-import { emailSvg, locationSvg, phoneSvg } from '../../data/svg';
-
 const adContent = {
   AboveTheFold: {
     header: 'Resultados visibles desde la primera sesión',
-    title: 'Blanqueamiento dental personalizado',
-    subtitle: 'Descuento exclusivo de 10% y consulta gratis si inicias tu tratamiento. ¡Reserva tu cita ahora y aprovecha el descuento!',
+    title: 'Blanqueamiento dental profesional en Surco',
+    subtitle: 'Recupera el blanco natural de tu sonrisa sin dañar el esmalte.',
     image: {
       src: 'landings/blanqueamiento-dental.jpg',
       alt: 'blanqueamiento-dental',
@@ -15,14 +13,28 @@ const adContent = {
       href: 'https://wa.link/f7jrvw',
     }
   },
+  dolorYSolucion: {
+    title: '¿Dientes amarillos u opacos?',
+    subtitle: 'Un problema muy común',
+    paragraph: 'Manchas por café, té, vino o tabaco, dientes amarillos que no se arreglan con “cepillado fuerte”. Si tu sonrisa se ve apagada, esto te interesa',
+    title2: 'Blanqueamiento dental seguro y personalizado',
+    subtitle2: 'Tenemos la solucion',
+    paragraph2: 'Analizamos tu caso, protegemos la sensibilidad y buscamos un blanco natural, sin efecto artificial ni desgaste del esmalte.',
+    bullets: [
+      'Resultados visibles desde la primera sesión (según evaluación)',
+      'Tratamiento en consultorio o en casa, según tu preferencia',
+      'Ideal si tienes un evento, entrevista o sesión de fotos cerca',
+    ]
+
+  },
   benefits: {
-    title: '¿Por qué elegir nuestro tratamiento?',
-    subtitle: 'Beneficios clave',
+    title: '¿Por qué elegir nuestro blanqueamiento dental?',
+    subtitle: 'Somos especialistas',
     paragraph1: 'Descubre los beneficios de un tratamiento que no solo mejora tu estética, sino también tu confianza y autoestima.',
     bullets: [
-      'Resultados visibles desde la primera sesión',
-      'Procedimientos adaptados a tu estilo de vida: en consultorio o en casa',
-      'Métodos seguros no invasivos y cómodos',
+      'Protocolos profesionales que no dañan el esmalte',
+      'Control de sensibilidad incluído en el tratamiento',
+      'Resultados naturales, sin efecto "blanco artificial"',
     ],
     image: {
       src: 'porque-nos-eligen.webp',
@@ -43,119 +55,35 @@ const adContent = {
       alt: 'after',
       title: 'after',
     },
-    cta: { text: 'VER MÁS', href: '/services' },
   },
   meliora: {
     title: 'Un proceso simple y efectivo en 3 pasos',
     subtitle: '¿Cómo funciona?',
-    paragraph1: 'Evaluamos tu caso y definimos el mejor tipo de blanqueamiento para ti.',
-    paragraph2: 'Elige entre blanqueamiento en consultorio para resultados inmediatos o en casa para mayor comodidad.',
-    paragraph3: 'Logra una sonrisa más blanca y radiante que transformará tu confianza.',
-    definition: {
-      button: {
-        href: '/about-us',
-        text: 'Reserva tu consulta gratis',
-      },
-    },
-    images: {
-      image1: {
-        src: 'radiografia.webp',
-        alt: 'radiografia',
-        title: 'radiografia',
-      },
-      image2: {
-        src: 'mujer-sonriente.webp',
-        alt: 'mujer-sonriente',
-        title: 'mujer-sonriente',
-      },
-    },
+    step1: 'Evaluación dental personalizada',
+    step2: 'Blanqueamiento en consultorio o en casa',
+    step3: 'Resultados y seguimiento',
+    paragraph1: 'Revisamos tono, encías y sensibilidad antes de empezar.',
+    paragraph2: 'Elegimos el método ideal según tu objetivo y tiempo',
+    paragraph3: 'Te damos indicaciones para prolongar el blanco por más tiempo',
+    cta: '¡Agénda ahora y reserva un turno!',
   },
   testimonials: {
-    title: ['Testimonios y opiniones', 'reales'],
+    title: ['Testimonios de pacientes', 'felices con su nueva sonrisa'],
     subtitle: 'Ellos ya transformaron sus sonrisas, ¡tú también puedes hacerlo!',
   },
-  feedbacks: [
-    {
-      id: 1,
-      name: 'Gabriela Llaja',
-      role: '',
-      time: 'Hace 4 meses',
-      place: '/assets/images/google-maps.png',
-      thumbnail: '/assets/images/patient-1.webp',
-      message: `“Excelente atención! Me retiraron la muela del juicio inferior y el procedimiento fue correcto. Hicieron todo para que me sienta cómoda, tranquila y sin dolor. La primera noche de la operación no sentí dolor alguno. Recomendado 100%”`,
-    },
-    {
-      id: 2,
-      name: 'Yuri Villaruel',
-      role: '',
-      time: 'Hace 1 mes',
-      place: '/assets/images/google-maps.png',
-      thumbnail: '/assets/images/patient-2.webp',
-      message: `"Desde la primera vez que llegué a su consultorio tuve una experiencia satisfactoria, si no mal recuerdo desde 2014. Gracias Dra. Yessica por su paciencia al explicarme, animarme a cuidar mis dientes y por su buen trabajo que se ve reflejado por muchos años. También por recordarme el tiempo debido para el control."`,
-    },
-    {
-      id: 3,
-      name: 'Alberto Cosme',
-      role: '',
-      time: 'Hace 1 año',
-      place: '/assets/images/google-maps.png',
-      thumbnail: '/assets/images/patient-3.webp',
-      message: `“Excelente atención profesional! He tenido buena experiencia con los tratamientos y procedimientos que me realizaron, así como con la explicación que es completa y ayuda al paciente a poder comprender en qué estado se encuentra su salud dental. Lo recomiendo.”`,
-    },
-    {
-      id: 4,
-      name: 'Adriana Arias',
-      role: '',
-      time: 'Hace 8 meses',
-      place: '/assets/images/google-maps.png',
-      thumbnail: '/assets/images/patient-4.webp',
-      message: `“Excelente atención y servicio profesional. Superaron mis expectativas.”`,
-    },
-    {
-      id: 5,
-      name: 'Yuvis Alvarado',
-      role: '',
-      time: 'Hace 1 año',
-      place: '/assets/images/google-maps.png',
-      thumbnail: '/assets/images/patient-5.webp',
-      message: `"Ella es una persona muy profesional y hace un trabajo impecable y altamente recomendable."`,
-    },
-  ],
-  sections: {
-    topArea: {
-      bgImage: 'url(/assets/images/fondo.png)',
-      title: 'Contacto',
-      subtitle: '¿Tienes preguntas? Te ayudamos',
-      illustration: {
-        src: '/assets/images/somebody.svg',
-        alt: 'somebody',
-        title: 'somebody',
-      },
-    },
-    contact: {
-      phone: {
-        href: 'tel:+51969174019',
-        svg: phoneSvg,
-        color: 'text-secondary',
-        title: 'Llámanos',
-        subtitle: '969 174 019',
-      },
-      email: {
-        href: 'mailto:hola@meliora.pe',
-        svg: emailSvg,
-        color: 'text-primary',
-        title: 'Envía un correo',
-        subtitle: 'hola@meliora.pe',
-      },
-      location: {
-        href: 'https://maps.google.com/maps/dir//Meliora+Studio+Dental+R2X6%2B73G+Lima+15054/@-12.1519314,-76.9897075,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105b90829b6e561:0xd2160ffba0651ce0',
-        targetRel: true,
-        svg: locationSvg,
-        color: 'text-secondary',
-        title: 'Dirección',
-        subtitle: 'Av. Los Próceres Mz. B Lt. 16 - Urb. Sánchez Cerro - Surco',
-      },
-    }
+  offer: {
+    subtitle: 'Una decisión simple que cambiará tu sonrisa',
+    title: 'Tu evaluación es el primer paso a una sonrisa más blanca',
+    paragraph: 'Antes de cualquier tratamiento, evaluamos si el blanqueamiento es adecuado para ti, qué resultados puedes esperar y cuál es la mejor opción según tu caso. Sin compromisos. Sin presión.',
+    bullets: [
+      'Evaluación personalizada por un profesional',
+      'Te explicamos qué resultado es posible en tu caso',
+      'Acompañamiento y recomendaciones para mantener el blanco',
+    ],
+  },
+  ctaFinal: {
+    title: 'Da el primer paso. Mejora tu sonrisa',
+    subtitle: 'Escríbenos por WhatsApp y agenda tu evaluación. Te responderemos rápido.',
   }
 }
 
