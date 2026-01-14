@@ -172,7 +172,7 @@ const Ad = () => {
                                 <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>
                             </Link>
                         </div>
-                        <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade" data-aos-duration="1600" data-aos-delay="500">
+                        <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade" data-aos-duration="500" data-aos-delay="100">
                             <img src="/assets/images/landings/ad/blanqueamiento-2.jpg" alt="" />
                         </div>
                     </div>
@@ -203,7 +203,7 @@ const Ad = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="" data-aos="fade-right" data-aos-duration="1000">
+                        <div className="" data-aos="fade" data-aos-duration="1000">
                             <PhotoSlider before={beforeAfter.before} after={beforeAfter.after} />
                             <p className="mt-2 text-center text-xs text-gray">* Caso real, paciente eligió blanqueamiento en consultorio</p>
                         </div>
@@ -221,7 +221,7 @@ const Ad = () => {
                                 <h4 className="mb-3 font-playfair !text-primary">{meliora.title}</h4>
                             </div>
                             <div className="my-4 text-left font-raleway text-lg font-semibold text-gray sm:grid-cols-2 md:my-6">
-                                <ol className="space-y-6">
+                                <ol className="space-y-6" data-aos="fade-left" data-aos-duration="1000">
                                     <li className="flex flex-row">
                                         <Image
                                             src="/assets/images/landings/ad/1.png"
@@ -301,7 +301,11 @@ const Ad = () => {
                             </Link>
                         </div>
                         {/* pasos tratamiento */}
-                        <div className="relative col-span-2 mx-auto hidden min-h-full w-full justify-center gap-5 overflow-x-auto lg:block lg:flex lg:h-[420px]">
+                        <div
+                            className="relative col-span-2 mx-auto hidden min-h-full w-full justify-center gap-5 overflow-x-auto lg:block lg:flex lg:h-[420px]"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
                             {/* FOTO 1 */}
                             <div className="relative h-[280px] w-[220px] flex-shrink-0 lg:absolute lg:right-3 lg:top-2 lg:rotate-[5deg]">
                                 <div className="h-full w-full overflow-hidden rounded-2xl shadow-xl">
