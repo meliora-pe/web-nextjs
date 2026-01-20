@@ -79,12 +79,7 @@ const Ad = () => {
                             <div className="relative mx-auto h-[320px] w-full max-w-[520px] sm:h-[420px]">
                                 {/* card 1 */}
                                 <div className="absolute top-9 w-[56%] rotate-[-3deg]">
-                                    <div
-                                        className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray"
-                                        data-aos="fade-right"
-                                        data-aos-duration="600"
-                                        data-aos-delay="100"
-                                    >
+                                    <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
                                         <Image
                                             src="/assets/images/landings/ad/blanqueamiento-0.png"
                                             alt="Inseguridad al sonreír"
@@ -97,12 +92,7 @@ const Ad = () => {
                                 </div>
                                 {/* card 2 */}
                                 <div className="absolute right-0 top-16 w-[62%] rotate-[2deg]">
-                                    <div
-                                        className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray"
-                                        data-aos="fade-down"
-                                        data-aos-duration="600"
-                                        data-aos-delay="400"
-                                    >
+                                    <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
                                         <Image
                                             src="/assets/images/landings/ad/blanqueamiento-4.jpg"
                                             alt="Taparse la sonrisa por manchas"
@@ -114,12 +104,7 @@ const Ad = () => {
                                 </div>
                                 {/* card 3 */}
                                 <div className="absolute bottom-4 left-9 w-[42%] rotate-[-2deg]">
-                                    <div
-                                        className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray"
-                                        data-aos="fade-up"
-                                        data-aos-duration="600"
-                                        data-aos-delay="700"
-                                    >
+                                    <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray">
                                         <Image
                                             src="/assets/images/landings/ad/blanqueamiento-5.png"
                                             alt="Sonrisa más blanca y natural"
@@ -131,12 +116,7 @@ const Ad = () => {
                                 </div>
                                 {/* card 4 */}
                                 <div className="absolute bottom-5 right-10 w-[44%] rotate-[4deg]">
-                                    <div
-                                        className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-gray"
-                                        data-aos="fade-left"
-                                        data-aos-duration="600"
-                                        data-aos-delay="1000"
-                                    >
+                                    <div className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-gray">
                                         <Image
                                             src="/assets/images/landings/ad/blanqueamiento-3.png"
                                             alt="Manchas por café o té"
