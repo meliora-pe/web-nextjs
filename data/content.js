@@ -47,7 +47,8 @@ const home = {
         whyUs: {
             title: '¿Por qué nos eligen?',
             subtitle: 'Cada detalle cuenta',
-            paragraph1: 'Entendemos que tu sonrisa es clave para tu confianza. Por eso, ofrecemos un servicio integral y multidisciplinario.',
+            paragraph1:
+                'Entendemos que tu sonrisa es clave para tu confianza. Por eso, ofrecemos un servicio integral y multidisciplinario, donde encontrarás:',
             paragraph2: '',
             bullets: ['Confianza', 'Honestidad', 'Compromiso', 'Profesionalismo', 'Experiencia', 'Amabilidad', 'Empatía'],
             image: {
