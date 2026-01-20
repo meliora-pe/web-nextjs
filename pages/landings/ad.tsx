@@ -397,7 +397,13 @@ const Ad = () => {
             <section className="bg-meliora py-14 sm:px-5 lg:py-20">
                 <div className="container">
                     <div className="heading mb-2 text-center" data-aos="fade-right" data-aos-duration="1000">
-                        <h6 className="font-montserrat !font-semibold !text-black">{ctaFinal.title}</h6>
+                        <h6 className="hidden font-montserrat !font-semibold !text-black lg:block">{ctaFinal.title}</h6>
+                        <h6 className="-mb-3 font-montserrat !font-semibold !text-black lg:mb-0 lg:hidden">
+                            {ctaFinal.title.split('.')[0]}
+                            <br />
+                            {ctaFinal.title.split('.')[1]}
+                        </h6>
+                        {/* <h6 className="font-montserrat !font-semibold !text-black lg:hidden"></h6> */}
                         <h4 className="font-playfair !text-secondary">{ctaFinal.subtitle}</h4>
                     </div>
                     <div className="flex flex-col gap-x-8 md:flex-row">
