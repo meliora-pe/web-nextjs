@@ -5,12 +5,12 @@ import Aos from 'aos';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { Autoplay, Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
+// import { Autoplay, Navigation } from 'swiper';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import ClientSlider from '../../components/ClientSlider2';
 import { PhotoSlider } from '../../components/PhotoSlider';
-import { Stars } from '../../components/Stars';
+// import { Stars } from '../../components/Stars';
 import adContent from '../../data/landings/ad';
 
 const { AboveTheFold, dolorYSolucion, benefits, beforeAfter, meliora, testimonials, offer, ctaFinal, terms } = adContent;
@@ -132,10 +132,8 @@ const Ad = () => {
                         {/* RIGHT: copy */}
                         <div className="order-2 lg:order-none">
                             <div className="heading mb-0">
-                                <h3 className="pb-3 text-center font-montserrat text-[18px] font-bold !text-secondary lg:text-left">
-                                    {dolorYSolucion.subtitle}
-                                </h3>
-                                <h4 className="mb-3 text-center font-montserrat !text-primary lg:text-left">{dolorYSolucion.title}</h4>
+                                <h3 className="pb-3 text-center font-montserrat text-[18px] font-bold !text-black lg:text-left">{dolorYSolucion.subtitle}</h3>
+                                <h4 className="mb-3 text-center font-montserrat !text-secondary lg:text-left">{dolorYSolucion.title}</h4>
                             </div>
 
                             <h6 className="mt-[18px] text-left font-raleway !font-semibold !text-gray">
@@ -148,14 +146,14 @@ const Ad = () => {
 
                 <div className="container">
                     <div className="relative mt-6 flex flex-col items-center gap-10 overflow-hidden rounded-xl bg-black bg-[url(/assets/images/app-bg.png)] bg-cover bg-no-repeat p-8 dark:bg-white/5 lg:flex-row lg:p-12">
-                        <div className="heading z-1 relative mb-0 lg:w-1/2">
+                        <div className="heading z-1 relative mb-0 text-center lg:w-1/2 lg:text-left">
                             <h6>{dolorYSolucion.subtitle2}</h6>
                             <h4 className="mb-3 text-2xl !text-white">{dolorYSolucion.title2}</h4>
 
-                            <div className="heading relative mb-0 text-gray">
+                            <div className="heading relative mb-0 text-left text-gray">
                                 <p className="mt-2 text-base">{dolorYSolucion.paragraph2}</p>
 
-                                <ul className="text-zinc-700 mt-4 space-y-2 text-base">
+                                <ul className="text-zinc-700 mt-4 space-y-2 text-left text-base">
                                     {dolorYSolucion.bullets.map((bullet, i) => (
                                         <li key={i} className="flex items-start gap-2">
                                             <img src="/assets/images/estrella.png" alt="viñeta" className="h-5 w-auto" />
@@ -183,16 +181,16 @@ const Ad = () => {
             <section className="relative bg-white py-10 sm:px-5 lg:py-20">
                 <div className="container px-8">
                     <div className="flex flex-col items-center gap-2 lg:flex-row">
-                        <div className="mb-3 flex-1 text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
-                            <div className="heading mb-8">
-                                <h6 className="font-montserrat !font-semibold !text-secondary">{benefits.subtitle}</h6>
-                                <h4 className="font-playfair !text-primary">{benefits.title}</h4>
+                        <div className="mb-3 flex-1" data-aos="fade-left" data-aos-duration="1000">
+                            <div className="heading mb-8 text-center md:text-left">
+                                <h6 className="font-montserrat !font-semibold !text-black">{benefits.subtitle}</h6>
+                                <h4 className="font-playfair !text-secondary">{benefits.title}</h4>
                                 <h6 className="mt-[18px] text-left font-raleway !font-semibold !text-gray">
                                     {benefits.paragraph1}
                                     <br />
                                 </h6>
                             </div>
-                            <div className="flex sm:gap-8 md:gap-12">
+                            <div className="flex text-left sm:gap-8 md:gap-12">
                                 <ul className="mb-5 space-y-2 sm:mb-0">
                                     {benefits.bullets.map((bullet, i) => (
                                         <li key={i} className="flex items-start gap-2">
@@ -353,16 +351,16 @@ const Ad = () => {
             <section className="bg-meliora-1 py-14 sm:px-5 lg:py-20">
                 <div className="container flex flex-col gap-10 lg:flex-row">
                     <div className="mx-auto lg:mx-0" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="/assets/images/paciente-mujer-sonrie-dentista-2.webp" alt="" className="h-auto w-[620px] rounded-3xl" />
+                        <img src="/assets/images/paciente-mujer-sonrie-dentista-2.webp" alt="" className="h-auto w-[420px] rounded-3xl" />
                     </div>
                     <div className="text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
-                        <div className="heading mb-8">
+                        <div className="heading mb-4">
                             <h6 className="font-montserrat !font-semibold !text-secondary">{offer.subtitle}</h6>
                             <h4 className="font-playfair !text-primary">{offer.title}</h4>
-                            <h6 className="mt-[18px] text-left font-raleway !font-semibold !text-gray">{offer.paragraph}</h6>
+                            <h6 className="mt-[10px] text-left font-raleway !font-semibold !text-gray">{offer.paragraph}</h6>
                         </div>
                         <div className="flex sm:gap-8 md:gap-12">
-                            <ul className="mb-5 space-y-2 sm:mb-0">
+                            <ul className="mb-3 space-y-2 sm:mb-0">
                                 {offer.bullets.map((bullet, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <img src="/assets/images/estrella.png" alt="viñeta" className="mt-1 h-5 w-auto" />

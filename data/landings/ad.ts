@@ -74,7 +74,7 @@ const adContent = {
   offer: {
     subtitle: 'Una decisión simple que cambiará tu sonrisa',
     title: 'Tu evaluación es el primer paso a una sonrisa radiante',
-    paragraph: 'Antes de cualquier tratamiento, evaluamos si el blanqueamiento es adecuado para ti, qué resultados puedes esperar y cuál es la mejor opción según tu caso. Sin compromisos.',
+    paragraph: 'Asesoría profesional para que decidas la mejor opción según tu caso. Sin compromisos.',
     bullets: [
       'Evaluación personalizada por un profesional',
       'Te explicamos qué resultado es posible en tu caso',
