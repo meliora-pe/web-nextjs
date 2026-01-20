@@ -164,7 +164,7 @@ const Ad = () => {
                             </div>
                             <Link
                                 href="https://wa.link/f7jrvw"
-                                className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-black hover:text-white"
+                                className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-secondary hover:text-black"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
                                 <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>
@@ -292,7 +292,7 @@ const Ad = () => {
                             </div>
                             <Link
                                 href="https://wa.link/f7jrvw"
-                                className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-black hover:text-white"
+                                className="btn hover:bgvia-secondary mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
                                 <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>
@@ -397,16 +397,16 @@ const Ad = () => {
             <section className="bg-meliora py-14 sm:px-5 lg:py-20">
                 <div className="container">
                     <div className="heading mb-2 text-center" data-aos="fade-right" data-aos-duration="1000">
-                        <h6 className="font-montserrat !font-semibold !text-secondary">{ctaFinal.title}</h6>
-                        <h4 className="font-playfair !text-primary">{ctaFinal.subtitle}</h4>
+                        <h6 className="font-montserrat !font-semibold !text-black">{ctaFinal.title}</h6>
+                        <h4 className="font-playfair !text-secondary">{ctaFinal.subtitle}</h4>
                     </div>
                     <div className="flex flex-col gap-x-8 md:flex-row">
                         <Link
                             href="https://wa.link/f7jrvw"
-                            className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-black hover:text-white"
+                            className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                         >
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
-                            <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>
+                            <p className="pl-2 font-raleway font-semibold">{AboveTheFold.cta.text}</p>
                         </Link>
                     </div>
                 </div>

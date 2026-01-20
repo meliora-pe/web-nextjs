@@ -89,6 +89,7 @@ const adContent = {
     'Elegir un blanqueamiento dental es una decisión que debe basarse en resultados comprobados y en la seguridad del procedimiento. En Meliora Studio Dental, ofrecemos tres opciones: blanqueamiento en consultorio, con resultados visibles desde la primera sesión y un proceso de una semana a semana y media; blanqueamiento en casa, que permite mayor flexibilidad y alcanza su efecto máximo en aproximadamente tres semanas y el mixto. Nuestros métodos están diseñados para lograr un blanqueamiento uniforme y duradero.',
     'Es común preguntarse si el blanqueamiento puede causar molestias. Algunos pacientes experimentan sensibilidad dental temporal, pero en nuestro protocolo incluimos gel desensibilizante para minimizar cualquier incomodidad. Además, la técnica utilizada protege el esmalte y evita daños en la estructura dental, garantizando un tratamiento seguro y efectivo.',
     'Para obtener los mejores resultados, es importante realizar el tratamiento sobre dientes y encías sanos. Por eso, antes de iniciar, realizamos una evaluación para determinar si eres candidato ideal y cuál opción es mejor para ti. Si buscas una forma segura y efectiva de mejorar tu sonrisa, esta es una excelente oportunidad para hacerlo.',
+    'Promoción válida hasta el 13 de febrero de 2026 o hasta agotar stock de 300 evaluaciones.'
   ]
 }
 
