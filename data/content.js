@@ -48,7 +48,7 @@ const home = {
             title: '¿Por qué nos eligen?',
             subtitle: 'Cada detalle cuenta',
             paragraph1: 'Entendemos que tu sonrisa es clave para tu confianza. Por eso, ofrecemos un servicio integral y multidisciplinario.',
-            paragraph2: 'Nuestro compromiso es brindarte una atención personalizada para hacerte sentir cómodo desde tu primera visita, donde encontrarás:',
+            paragraph2: '',
             bullets: ['Confianza', 'Honestidad', 'Compromiso', 'Profesionalismo', 'Experiencia', 'Amabilidad', 'Empatía'],
             image: {
                 src: 'porque-nos-eligen.webp',
@@ -66,7 +66,7 @@ const home = {
         },
         services: {
             title: 'Nuestros Servicios',
-            subtitle: 'Atención profesional y personalizada, para que recuperes tu salud bucal. Estos son algunos de nuestros servicios',
+            subtitle: 'Estos son algunos de nuestros servicios',
             list: [
                 {
                     title: 'Blanqueamiento dental',

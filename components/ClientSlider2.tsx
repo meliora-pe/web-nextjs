@@ -49,7 +49,7 @@ const ClientSlider = ({
             id: 5,
             name: 'Valentina R.',
             role: '',
-            time: `Hace 2 meses`,
+            time: `Hace 2 días`,
             place: '/assets/images/whatsapp-business.png',
             thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjVykvO6mlMsidUTvEaI4jrsFUfFwg6ead_k4o-vFK9DYh7O_OlK=w72-h72-p-rp-mo-br100',
             message: `“Quedé encantada con su trabajo. Yo tenía bastante miedo de ir al dentista y me lo quitaron por completo, así que siempre los recomiendo con toda confianza 🫶🏻"`,

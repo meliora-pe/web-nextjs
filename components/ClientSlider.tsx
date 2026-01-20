@@ -11,7 +11,7 @@ const ClientSlider = ({
     feedbacks = [
         {
             id: 1,
-            name: 'Gabriela Llaja',
+            name: 'Gabriela Ll.',
             role: '',
             time: 'Hace 10 meses',
             place: '/assets/images/google-maps.png',
@@ -20,7 +20,7 @@ const ClientSlider = ({
         },
         {
             id: 2,
-            name: 'Yuri Villaruel',
+            name: 'Yuri V.',
             role: '',
             time: 'Hace 6 meses',
             place: '/assets/images/google-maps.png',
@@ -29,7 +29,7 @@ const ClientSlider = ({
         },
         {
             id: 3,
-            name: 'Alberto Cosme',
+            name: 'Alberto C.',
             role: '',
             time: 'Hace un año',
             place: '/assets/images/google-maps.png',
@@ -38,7 +38,7 @@ const ClientSlider = ({
         },
         {
             id: 4,
-            name: 'Aaron Acosta',
+            name: 'Aaron A.',
             role: '',
             time: 'Hace 1 año',
             place: '/assets/images/google-maps.png',
@@ -47,7 +47,7 @@ const ClientSlider = ({
         },
         {
             id: 5,
-            name: 'Valentina Román',
+            name: 'Valentina R.',
             role: '',
             time: `Hace 2 meses`,
             place: '/assets/images/google-maps.png',
@@ -56,7 +56,7 @@ const ClientSlider = ({
         },
         {
             id: 6,
-            name: 'Lizeth Rivera',
+            name: 'Lizeth R.',
             role: '',
             time: `Hace 3 meses`,
             place: '/assets/images/google-maps.png',
