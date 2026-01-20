@@ -40,10 +40,10 @@ const Header = (props: any) => {
                     </Link>
                     <div className="flex items-center">
                         {showMenu && `${router.pathname}/` !== href && (
-                            <div onClick={toggleMenu} className={`overlay fixed inset-0 z-50 bg-black/90 ${showMenu ? '' : 'hidden'}`}></div>
+                            <div onClick={toggleMenu} className={`overlay fixed inset-0 z-50 bg-black/60 ${showMenu ? '' : 'hidden'}`}></div>
                         )}
                         <div className={`menus ${showMenu ? 'overflow-y-auto ltr:!right-0 rtl:!left-0' : 'hidden lg:block'}`}>
-                            <div className="border-b border-gray lg:hidden ltr:text-right rtl:text-left">
+                            <div className="border-b border-gray/10 lg:hidden ltr:text-right rtl:text-left">
                                 <button onClick={toggleMenu} type="button" className="p-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const Header = (props: any) => {
                                     </svg>
                                 </button>
                             </div>
-                            <ul onClick={toggleMenu} className="relative min-h-[calc(100dvh-57px)]">
+                            <ul onClick={toggleMenu} className="relative min-h-[calc(100%-57px)]">
                                 <li>
                                     <Link href="/" className={router.pathname === '/' ? 'active' : ''}>
                                         Inicio
@@ -126,7 +126,7 @@ const Header = (props: any) => {
                                         </button>
                                     </form>
                                 </li>
-                                <li className="absolute bottom-0 left-4 min-w-full">
+                                {/* <li className="absolute bottom-0 left-4 min-w-full">
                                     <ul className="flex">
                                         <li>
                                             <a href="https://www.facebook.com/profile.php?id=61560595868897" target="_blank" rel="noreferrer">
@@ -180,7 +180,7 @@ const Header = (props: any) => {
                                             <span className="pl-2 text-black dark:text-white">meliora.pe</span>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <ul className="flex items-center gap-5 ltr:pr-5 ltr:lg:pl-5 ltr:lg:pr-0 rtl:pl-5 rtl:lg:pl-0 rtl:lg:pr-5">
