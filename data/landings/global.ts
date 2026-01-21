@@ -99,12 +99,15 @@ const globalContent = {
     subtitle: 'Agenda tu evaluación estética y cuida tu sonrisa con profesionales.',
   },
 
-  terms: [
-    'La odontología estética debe realizarse bajo una evaluación profesional previa. En Meliora Studio Dental analizamos cada caso para recomendar tratamientos seguros, responsables y adecuados a cada paciente.',
-    'Nuestros procedimientos priorizan la salud bucal, la paciencia en la atención y el trabajo minucioso para lograr resultados naturales y duraderos.',
-    'La evaluación inicial no obliga a iniciar un tratamiento y permite al paciente tomar una decisión informada.',
-    'Promoción válida hasta el 13 de febrero de 2026 o hasta agotar stock de 300 evaluaciones.'
-  ]
+  terms: {
+    title: '(*) Aplican Términos y condiciones',
+    list: [
+      'La odontología estética debe realizarse bajo una evaluación profesional previa. En Meliora Studio Dental analizamos cada caso para recomendar tratamientos seguros, responsables y adecuados a cada paciente.',
+      'Nuestros procedimientos priorizan la salud bucal, la paciencia en la atención y el trabajo minucioso para lograr resultados naturales y duraderos.',
+      'La evaluación inicial no obliga a iniciar un tratamiento y permite al paciente tomar una decisión informada.',
+      'Promoción válida hasta el 13 de febrero de 2026 o hasta agotar stock de 300 evaluaciones.'
+    ]
+  }
 }
 
 export default globalContent;

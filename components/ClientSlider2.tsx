@@ -7,17 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Stars } from './Stars';
 
 const ClientSlider = ({
-    type = 'common',
     feedbacks = [
-        // {
-        //     id: 1,
-        //     name: 'Adriana A.',
-        //     role: '',
-        //     time: 'Hace 1 mes',
-        //     place: '/assets/images/whatsapp-business.png',
-        //     thumbnail: 'https://lh3.googleusercontent.com/a-/ALV-UjUjnAt-MeCEXxuGpuxIbXRkR8-m3deb-_WkS1oZ-WgGkt6Hi7so=w72-h72-p-rp-mo-ba2-br100',
-        //     message: `“Quedé encantada con su trabajo. Yo tenía bastante miedo de ir al dentista y me lo quitaron por completo, así que siempre la recomiendo con toda confianza.”`,
-        // },
         {
             id: 2,
             name: 'Yuri V.',
@@ -102,14 +92,14 @@ const ClientSlider = ({
                                 </div>
                                 <div className="border border-black/10 dark:border-white/10"></div>
                                 <div className="relative p-7">
-                                    <h3 className="text-lg font-bold italic text-black dark:text-white">{feedback.time}</h3>
-                                    <p className="mt-4 font-medium leading-7 text-[#797979]">{feedback.message}</p>
                                     <img
                                         src="/assets/images/swipe-icon.svg"
                                         alt="swipe-icon"
                                         title="swipe-icon"
-                                        className="absolute bottom-0 right-0 h-10 w-10 animate-ping"
+                                        className="absolute right-2 top-2 h-12 w-12 animate-ping"
                                     />
+                                    <h3 className="text-lg font-bold italic text-black dark:text-white">{feedback.time}</h3>
+                                    <p className="mt-4 font-medium leading-7 text-[#797979]">{feedback.message}</p>
                                 </div>
                             </div>
                         </SwiperSlide>
