@@ -45,7 +45,7 @@ const Ad = () => {
                 ></div>
                 <div className="z-1 absolute inset-x-0 top-[30%] text-white md:top-1/2 lg:top-1/4">
                     <div className="container flex flex-col-reverse items-center gap-x-32 lg:flex-row lg:items-start">
-                        <div className="max-w-[624px] text-center lg:text-left">
+                        <div className="max-w-[624px] text-center">
                             <h2 className="mb-4 font-montserrat text-xl font-semibold  md:text-2xl">{AboveTheFold.header}</h2>
                             <h1 className="font-playfair text-4xl font-semibold md:text-5xl xl:text-[60px] xl:leading-[72px]">{AboveTheFold.title}</h1>
                             <p className="mt-8 hidden font-montserrat text-lg lg:flex">{AboveTheFold.subtitle}</p>
@@ -72,78 +72,81 @@ const Ad = () => {
 
             {/* dolor y solucion */}
             <section className="bg-meliora-2 relative overflow-hidden pb-8">
-                <div className="relative mx-auto max-w-6xl px-4 py-8 sm:py-12">
-                    <div className="grid items-center gap-5 lg:grid-cols-2">
-                        {/* LEFT: photo stack */}
-                        <div className="order-1 lg:order-none">
-                            <div className="relative mx-auto h-[320px] w-full max-w-[520px] sm:h-[420px]">
-                                {/* card 1 */}
-                                <div className="absolute top-9 w-[56%] rotate-[-3deg]">
-                                    <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
-                                        <Image
-                                            src="/assets/images/landings/ad/blanqueamiento-0.png"
-                                            alt="Inseguridad al sonreír"
-                                            width={900}
-                                            height={700}
-                                            className="h-auto w-full object-cover"
-                                            priority
-                                        />
+                <div className="container">
+                    <div className="relative mx-auto max-w-6xl px-4 py-8 sm:py-12">
+                        <div className="grid items-center gap-5 lg:grid-cols-2">
+                            {/* LEFT: photo stack */}
+                            <div className="order-1 lg:order-none">
+                                <div className="relative mx-auto h-[320px] w-full max-w-[520px] sm:h-[420px]">
+                                    {/* card 1 */}
+                                    <div className="absolute top-9 w-[56%] rotate-[-3deg]">
+                                        <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
+                                            <Image
+                                                src="/assets/images/landings/ad/blanqueamiento-0.png"
+                                                alt="Inseguridad al sonreír"
+                                                width={900}
+                                                height={700}
+                                                className="h-auto w-full object-cover"
+                                                priority
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                                {/* card 2 */}
-                                <div className="absolute right-0 top-16 w-[62%] rotate-[2deg]">
-                                    <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
-                                        <Image
-                                            src="/assets/images/landings/ad/blanqueamiento-4.jpg"
-                                            alt="Taparse la sonrisa por manchas"
-                                            width={900}
-                                            height={700}
-                                            className="h-auto w-full object-cover"
-                                        />
+                                    {/* card 2 */}
+                                    <div className="absolute right-0 top-16 w-[62%] rotate-[2deg]">
+                                        <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
+                                            <Image
+                                                src="/assets/images/landings/ad/blanqueamiento-4.jpg"
+                                                alt="Taparse la sonrisa por manchas"
+                                                width={900}
+                                                height={700}
+                                                className="h-auto w-full object-cover"
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                                {/* card 3 */}
-                                <div className="absolute bottom-4 left-9 w-[42%] rotate-[-2deg]">
-                                    <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray">
-                                        <Image
-                                            src="/assets/images/landings/ad/blanqueamiento-5.png"
-                                            alt="Sonrisa más blanca y natural"
-                                            width={1000}
-                                            height={800}
-                                            className="h-auto w-full object-cover"
-                                        />
+                                    {/* card 3 */}
+                                    <div className="absolute bottom-4 left-9 w-[42%] rotate-[-2deg]">
+                                        <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray">
+                                            <Image
+                                                src="/assets/images/landings/ad/blanqueamiento-5.png"
+                                                alt="Sonrisa más blanca y natural"
+                                                width={1000}
+                                                height={800}
+                                                className="h-auto w-full object-cover"
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                                {/* card 4 */}
-                                <div className="absolute bottom-5 right-10 w-[44%] rotate-[4deg]">
-                                    <div className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-gray">
-                                        <Image
-                                            src="/assets/images/landings/ad/blanqueamiento-3.png"
-                                            alt="Manchas por café o té"
-                                            width={700}
-                                            height={500}
-                                            className="h-auto w-full object-cover"
-                                        />
+                                    {/* card 4 */}
+                                    <div className="absolute bottom-5 right-10 w-[44%] rotate-[4deg]">
+                                        <div className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-gray">
+                                            <Image
+                                                src="/assets/images/landings/ad/blanqueamiento-3.png"
+                                                alt="Manchas por café o té"
+                                                width={700}
+                                                height={500}
+                                                className="h-auto w-full object-cover"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* RIGHT: copy */}
-                        <div className="order-2 lg:order-none">
-                            <div className="heading mb-0">
-                                <h3 className="pb-3 text-center font-montserrat text-[18px] font-bold !text-black lg:text-left">{dolorYSolucion.subtitle}</h3>
-                                <h4 className="mb-3 text-center font-montserrat !text-secondary lg:text-left">{dolorYSolucion.title}</h4>
+                            {/* RIGHT: copy */}
+                            <div className="order-2 lg:order-none">
+                                <div className="heading mb-0">
+                                    <h3 className="pb-3 text-center font-montserrat text-[18px] font-bold !text-black lg:text-left">
+                                        {dolorYSolucion.subtitle}
+                                    </h3>
+                                    <h4 className="mb-3 text-center font-montserrat !text-secondary lg:text-left">{dolorYSolucion.title}</h4>
+                                </div>
+
+                                <h6 className="mt-[18px] text-left font-raleway !font-semibold !text-gray">
+                                    {dolorYSolucion.paragraph}
+                                    <br />
+                                </h6>
                             </div>
-
-                            <h6 className="mt-[18px] text-left font-raleway !font-semibold !text-gray">
-                                {dolorYSolucion.paragraph}
-                                <br />
-                            </h6>
                         </div>
                     </div>
                 </div>
-
                 <div className="container">
                     <div className="relative mt-6 flex flex-col items-center gap-10 overflow-hidden rounded-xl bg-black bg-[url(/assets/images/app-bg.png)] bg-cover bg-no-repeat p-8 dark:bg-white/5 lg:flex-row lg:p-12">
                         <div className="heading z-1 relative mb-0 text-center lg:w-1/2 lg:text-left">
@@ -288,7 +291,7 @@ const Ad = () => {
                                     </div>
                                 </ol>
                                 <br />
-                                <p className="text-center lg:text-left">{meliora.cta}</p>
+                                <p className="text-center">{meliora.cta}</p>
                             </div>
                             <Link
                                 href="https://wa.link/f7jrvw"
@@ -351,7 +354,7 @@ const Ad = () => {
             <section className="bg-meliora-1 py-14 sm:px-5 lg:py-20">
                 <div className="container flex flex-col gap-10 lg:flex-row">
                     <div className="mx-auto lg:mx-0" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="/assets/images/paciente-mujer-sonrie-dentista-2.webp" alt="" className="h-auto w-[420px] rounded-3xl" />
+                        <img src="/assets/images/paciente-mujer-sonrie-dentista-2.webp" alt="" className="h-auto w-[360px] rounded-3xl" />
                     </div>
                     <div className="text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
                         <div className="heading mb-4">
