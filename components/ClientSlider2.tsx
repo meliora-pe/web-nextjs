@@ -79,13 +79,13 @@ const ClientSlider = ({
                         <SwiperSlide key={feedback.id}>
                             <div className="rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none">
                                 <div className="flex justify-between p-4">
-                                    <div className="flex items-center gap-1.5">
+                                    <div className="flex items-center gap-3">
                                         <div>
                                             <img src={feedback.thumbnail} alt="client's picture thumbnail" className="flex h-14 w-auto rounded-full" />
                                         </div>
                                         <div>
-                                            <h5 className="mb-2 text-base font-bold text-black dark:text-white md:text-xl">{feedback.name}</h5>
-                                            <Stars points={5} />
+                                            <h5 className="mb-1 text-base font-bold text-black dark:text-white md:text-xl">{feedback.name}</h5>
+                                            <h3 className="text-base font-semibold italic text-black dark:text-white">{feedback.time}</h3>
                                         </div>
                                     </div>
                                     <img src={feedback.place} className="inline-flex h-9 w-auto pt-4" alt="google maps logo" />
@@ -98,7 +98,7 @@ const ClientSlider = ({
                                         title="swipe-icon"
                                         className="absolute right-2 top-2 h-12 w-12 animate-ping"
                                     />
-                                    <h3 className="text-lg font-bold italic text-black dark:text-white">{feedback.time}</h3>
+                                    <Stars points={5} />
                                     <p className="mt-4 font-medium leading-7 text-[#797979]">{feedback.message}</p>
                                 </div>
                             </div>
