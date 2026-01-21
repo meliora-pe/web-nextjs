@@ -58,7 +58,7 @@ export const PhotoSlider = ({ before, after, autoPlay = true, speed = 25 }: { be
             <div className="slider-line" aria-hidden="true"></div>
 
             <div className="slider-button" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 256 256">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
                     <line x1="128" y1="40" x2="128" y2="216" stroke="currentColor" strokeWidth="16" />
                     <line x1="96" y1="128" x2="16" y2="128" stroke="currentColor" strokeWidth="16" />
                     <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" strokeWidth="16" />
