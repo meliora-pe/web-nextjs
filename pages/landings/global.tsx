@@ -45,7 +45,7 @@ const Ad = () => {
                     className="z-1 absolute inset-0 opacity-50"
                     style={{ background: 'linear-gradient(90deg, rgba(8, 17, 31, 0.95) 57.29%, rgba(8, 17, 31, 0.4) 100%)' }}
                 ></div>
-                <div className="z-1 absolute inset-x-0 top-[30%] text-white md:top-1/2 lg:top-1/4">
+                <div className="z-1 absolute inset-x-0 top-[30%] text-white md:top-1/4 lg:top-[20%]">
                     <div className="container flex flex-col-reverse items-center gap-x-32 lg:flex-row lg:items-start">
                         <div className="mx-auto max-w-[624px] text-center">
                             <h2 className="mb-4 font-montserrat text-xl font-semibold  md:text-2xl">{AboveTheFold.header}</h2>
@@ -176,7 +176,7 @@ const Ad = () => {
                             </Link>
                         </div>
                         <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade" data-aos-duration="500">
-                            <img src="/assets/images/landings/global/mujer-sonriente-2.jpg" alt="estetica dental" />
+                            <img src="/assets/images/porque-nos-eligen.webp" alt="estetica dental" />
                         </div>
                     </div>
                 </div>
@@ -208,7 +208,7 @@ const Ad = () => {
                         </div>
                         <div className="" data-aos="fade" data-aos-duration="1000">
                             <PhotoSlider before={beforeAfter.before} after={beforeAfter.after} />
-                            <p className="mt-2 text-center text-xs text-gray">* Caso real, paciente eligió blanqueamiento en consultorio</p>
+                            <p className="mt-2 text-center text-xs text-gray">{beneficios.foot}</p>
                         </div>
                     </div>
                 </div>

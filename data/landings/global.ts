@@ -1,7 +1,7 @@
 const globalContent = {
   AboveTheFold: {
-    header: 'Estética dental con criterio profesional',
-    title: 'Una sonrisa que refleja cuidado y confianza',
+    header: 'Estética dental para profesionales',
+    title: 'Sonrisas que reflejan cuidado y confianza',
     subtitle: 'Odontología estética para profesionales que valoran la salud, el detalle y los resultados naturales.',
     image: {
       src: 'landings/blanqueamiento-dental.jpg',
@@ -9,16 +9,16 @@ const globalContent = {
       title: 'atención-paciente-dental',
     },
     cta: {
-      text: 'Enviar mensaje para agendar',
+      text: 'Agendar por WhatsApp',
       href: 'https://wa.link/jmy5oy',
     }
   },
 
   dolorYSolucion: {
     title: '¿Tu sonrisa está a la altura de tu vida profesional?',
-    subtitle: 'Una preocupación frecuente en profesionales',
+    subtitle: 'Una preocupación frecuente',
     paragraph: 'Manchas, desgaste, tono apagado o pequeños detalles pueden influir en cómo te perciben y cómo te sientes al sonreír en tu día a día.',
-    title2: 'Odontología estética honesta y personalizada',
+    title2: 'Odontología estética personalizada',
     subtitle2: 'Trabajo cuidadoso, resultados reales',
     paragraph2: 'Analizamos cada caso con paciencia y criterio clínico para lograr mejoras estéticas que se vean naturales y respeten tu salud bucal.',
     bullets: [
@@ -41,21 +41,20 @@ const globalContent = {
       src: 'porque-nos-eligen.webp',
       alt: 'porque-nos-eligen',
       title: 'porque-nos-eligen',
-    }
+    },
+    foot: '* Caso de blanqueamiento dental'
   },
 
   beforeAfter: {
-    title: 'Estética dental con resultados visibles y naturales',
-    text: 'Mejoramos sonrisas cuidando cada detalle, logrando cambios que se notan sin perder naturalidad ni salud.',
     before: {
       src: '/assets/images/before.webp',
-      alt: 'before',
-      title: 'before',
+      alt: 'antes',
+      title: 'antes',
     },
     after: {
       src: '/assets/images/after.webp',
-      alt: 'after',
-      title: 'after',
+      alt: 'después',
+      title: 'después',
     },
   },
 
