@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 import ClientSlider from '../../components/ClientSlider2';
 import { PhotoSlider } from '../../components/PhotoSlider';
-import WidgetContact from '../../components/WidgetContact';
+// import WidgetContact from '../../components/WidgetContact';
 import WidgetMap from '../../components/WidgetMap';
 // import { Stars } from '../../components/Stars';
 import globalContent from '../../data/landings/global';
@@ -84,7 +84,7 @@ const Ad = () => {
                                     <div className="absolute top-9 w-[56%] rotate-[-3deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/ad/blanqueamiento-0.png"
+                                                src="/assets/images/landings/global/estetica-1.jpg"
                                                 alt="Inseguridad al sonreír"
                                                 width={900}
                                                 height={700}
@@ -97,7 +97,7 @@ const Ad = () => {
                                     <div className="absolute right-0 top-16 w-[62%] rotate-[2deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/ad/blanqueamiento-4.jpg"
+                                                src="/assets/images/landings/global/estetica-2.png"
                                                 alt="Taparse la sonrisa por manchas"
                                                 width={900}
                                                 height={700}
@@ -109,7 +109,7 @@ const Ad = () => {
                                     <div className="absolute bottom-4 left-9 w-[42%] rotate-[-2deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/ad/blanqueamiento-5.png"
+                                                src="/assets/images/landings/global/estetica-3.png"
                                                 alt="Sonrisa más blanca y natural"
                                                 width={1000}
                                                 height={800}
@@ -118,10 +118,10 @@ const Ad = () => {
                                         </div>
                                     </div>
                                     {/* card 4 */}
-                                    <div className="absolute bottom-5 right-10 w-[44%] rotate-[4deg]">
+                                    <div className="absolute bottom-7 right-10 w-[44%] rotate-[4deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/ad/blanqueamiento-3.png"
+                                                src="/assets/images/landings/global/estetica-4.png"
                                                 alt="Manchas por café o té"
                                                 width={700}
                                                 height={500}
@@ -176,7 +176,7 @@ const Ad = () => {
                             </Link>
                         </div>
                         <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade" data-aos-duration="500">
-                            <img src="/assets/images/landings/ad/blanqueamiento-2.jpg" alt="blanqueamiento dental" />
+                            <img src="/assets/images/landings/global/mujer-sonriente-2.jpg" alt="estetica dental" />
                         </div>
                     </div>
                 </div>
