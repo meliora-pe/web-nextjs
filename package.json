@@ -12,6 +12,7 @@
         "@hookform/resolvers": "^3.10.0",
         "@next/third-parties": "^15.4.6",
         "@reduxjs/toolkit": "^1.9.0",
+        "@supabase/ssr": "^0.8.0",
         "@tailwindcss/line-clamp": "^0.4.2",
         "@types/node": "18.11.9",
         "@types/nodemailer": "^6.4.17",

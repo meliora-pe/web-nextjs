@@ -79,7 +79,7 @@ const ClientSlider = ({
                         <SwiperSlide key={feedback.id}>
                             <div className="rounded-[16px] bg-white shadow-xl dark:bg-gray-black dark:shadow-none">
                                 <div className="flex justify-between p-4">
-                                    <div className="flex items-center gap-3">
+                                    <div className="flex items-center gap-2">
                                         <div>
                                             <img src={feedback.thumbnail} alt="client's picture thumbnail" className="flex h-14 w-auto rounded-full" />
                                         </div>

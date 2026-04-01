@@ -35,7 +35,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
     //     };
     // }, []);
 
-    if ([`/landings/ad`].includes(appProps.router.pathname) || ['/landings/global'].includes(appProps.router.pathname))
+    if ([`/landings/ad`].includes(appProps.router.pathname) || ['/landings/google-maps'].includes(appProps.router.pathname))
         return (
             <PostHogProvider client={posthog}>
                 <Provider store={store}>

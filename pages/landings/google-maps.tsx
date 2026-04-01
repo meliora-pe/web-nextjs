@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 import ClientSlider from '../../components/ClientSlider2';
 import { PhotoSlider } from '../../components/PhotoSlider';
+import WidgetContact from '../../components/WidgetContact';
 // import WidgetContact from '../../components/WidgetContact';
 import WidgetMap from '../../components/WidgetMap';
 // import { Stars } from '../../components/Stars';
@@ -33,7 +34,7 @@ const Ad = () => {
 
             {/* Above the fold */}
             <section className="relative">
-                <div className="-top-11 h-[700px] lg:h-[840px]">
+                <div className="-top-11 h-[700px] opacity-40 lg:h-[840px]">
                     <img
                         src={`/assets/images/${AboveTheFold.image.src}`}
                         className="flex h-full w-full object-cover"
@@ -47,12 +48,12 @@ const Ad = () => {
                 ></div>
                 <div className="z-1 absolute inset-x-0 top-[30%] text-white md:top-1/4 lg:top-[20%]">
                     <div className="container flex flex-col-reverse items-center gap-x-32 lg:flex-row lg:items-start">
-                        <div className="mx-auto max-w-[624px] text-center">
+                        <div className="mx-auto max-w-[624px] text-center opacity-50">
                             <h2 className="mb-4 font-montserrat text-xl font-semibold  md:text-2xl">{AboveTheFold.header}</h2>
                             <h1 className="font-playfair text-4xl font-semibold md:text-5xl xl:text-[60px] xl:leading-[72px]">{AboveTheFold.title}</h1>
                             <p className="mt-8 hidden font-montserrat text-lg lg:flex">{AboveTheFold.subtitle}</p>
                             <Link
-                                href="https://wa.link/f7jrvw"
+                                href="https://wa.link/90gr3m"
                                 className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
@@ -75,16 +76,16 @@ const Ad = () => {
             {/* dolor y solucion */}
             <section className="bg-meliora-2 relative overflow-hidden pb-8">
                 <div className="container">
-                    <div className="relative mx-auto max-w-6xl px-4 py-8 sm:py-12">
-                        <div className="grid items-center gap-5 lg:grid-cols-2">
+                    <div className="relative mx-auto max-w-6xl px-2 py-8 sm:py-12">
+                        <div className="grid items-center gap-14 lg:grid-cols-2">
                             {/* LEFT: photo stack */}
                             <div className="order-1 lg:order-none">
                                 <div className="relative mx-auto h-[320px] w-full max-w-[520px] sm:h-[420px]">
                                     {/* card 1 */}
-                                    <div className="absolute top-9 w-[56%] rotate-[-3deg]">
+                                    <div className="absolute left-8 top-3 w-[40%] rotate-[3deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/global/estetica-1.jpg"
+                                                src="/assets/images/landings/global/Copia de google-maps-1.jpg"
                                                 alt="Inseguridad al sonreír"
                                                 width={900}
                                                 height={700}
@@ -94,10 +95,10 @@ const Ad = () => {
                                         </div>
                                     </div>
                                     {/* card 2 */}
-                                    <div className="absolute right-0 top-16 w-[62%] rotate-[2deg]">
+                                    <div className="absolute right-0 top-10 w-[54%] rotate-[2deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/global/estetica-2.png"
+                                                src="/assets/images/landings/global/google-maps-2.jpg"
                                                 alt="Taparse la sonrisa por manchas"
                                                 width={900}
                                                 height={700}
@@ -106,10 +107,10 @@ const Ad = () => {
                                         </div>
                                     </div>
                                     {/* card 3 */}
-                                    <div className="absolute bottom-4 left-9 w-[42%] rotate-[-2deg]">
+                                    <div className="absolute bottom-0 left-12 w-[41%] rotate-[-2deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/global/estetica-3.png"
+                                                src="/assets/images/landings/global/google-maps-3.jpg"
                                                 alt="Sonrisa más blanca y natural"
                                                 width={1000}
                                                 height={800}
@@ -118,10 +119,10 @@ const Ad = () => {
                                         </div>
                                     </div>
                                     {/* card 4 */}
-                                    <div className="absolute bottom-7 right-10 w-[44%] rotate-[4deg]">
+                                    <div className="absolute bottom-0 right-12 w-[40%] rotate-[4deg]">
                                         <div className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-gray">
                                             <Image
-                                                src="/assets/images/landings/global/estetica-4.png"
+                                                src="/assets/images/landings/global/google-maps-4.jpg"
                                                 alt="Manchas por café o té"
                                                 width={700}
                                                 height={500}
@@ -168,7 +169,7 @@ const Ad = () => {
                                 </ul>
                             </div>
                             <Link
-                                href="https://wa.link/f7jrvw"
+                                href="https://wa.link/90gr3m"
                                 className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-secondary hover:text-black"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
@@ -185,7 +186,7 @@ const Ad = () => {
             {/* beneficios */}
             <section className="relative bg-white py-10 sm:px-5 lg:py-20">
                 <div className="container px-8">
-                    <div className="flex flex-col items-center gap-2 lg:flex-row">
+                    <div className="flex flex-col items-center gap-8 lg:flex-row">
                         <div className="mb-3 flex-1" data-aos="fade-left" data-aos-duration="1000">
                             <div className="heading mb-8 text-center md:text-left">
                                 <h6 className="font-montserrat !font-semibold !text-black">{beneficios.subtitle}</h6>
@@ -206,9 +207,9 @@ const Ad = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="" data-aos="fade" data-aos-duration="1000">
+                        <div className="mt-8" data-aos="fade" data-aos-duration="1000">
                             <PhotoSlider before={beforeAfter.before} after={beforeAfter.after} />
-                            <p className="mt-2 text-center text-xs text-gray">{beneficios.foot}</p>
+                            <p className="mt-2 text-center text-sm text-gray">{beneficios.foot}</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +297,7 @@ const Ad = () => {
                                 <p className="text-center">{proceso.cta}</p>
                             </div>
                             <Link
-                                href="https://wa.link/f7jrvw"
+                                href="https://wa.link/90gr3m"
                                 className="btn hover:bgvia-secondary mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
@@ -387,22 +388,22 @@ const Ad = () => {
                     </div>
                     <div className="flex flex-col gap-x-8 md:flex-row">
                         <div className="flex-1 pb-7 sm:gap-8 md:gap-12">
-                            <WidgetMap src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.4179093162934!2d-76.99228778891906!3d-12.151926143818944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b90829b6e561%3A0xd2160ffba0651ce0!2sConsultorio%20odontol%C3%B3gico%20Asiri!5e0!3m2!1ses-419!2spe!4v1731362600461!5m2!1ses-419!2spe" />
+                            <WidgetMap src="https://www.google.com/maps/d/u/0/embed?mid=1eBaotyHlFeLQ7xbbssDa-XYp0_rwQtk&ehbc=2E312F" />
                         </div>
                         <div className="flex-1 pb-7 sm:gap-8 md:gap-12">
-                            {/* <WidgetContact props={contacto.location} /> */}
+                            <WidgetContact props={contacto.location} />
                             <div className="mb-6"></div>
-                            {/* <WidgetContact props={contacto.phone} /> */}
+                            <WidgetContact props={contacto.phone} />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* cta final */}
-            <section className="bg-meliora py-14 sm:px-5 lg:py-20">
+            <section className="bg-black py-14 sm:px-5 lg:py-20">
                 <div className="container">
                     <div className="heading mb-2 text-center" data-aos="fade-right" data-aos-duration="1000">
-                        <h6 className="hidden font-montserrat !font-semibold !text-black lg:block">{ctaFinal.title}</h6>
+                        <h6 className="hidden font-montserrat !font-semibold !text-primary lg:block">{ctaFinal.title}</h6>
                         <h6 className="-mb-3 font-montserrat !font-semibold !text-black lg:mb-0 lg:hidden">
                             {ctaFinal.title.split('.')[0]}
                             <br />
@@ -413,8 +414,8 @@ const Ad = () => {
                     </div>
                     <div className="flex flex-col gap-x-8 md:flex-row">
                         <Link
-                            href="https://wa.link/f7jrvw"
-                            className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
+                            href="https://wa.link/90gr3m"
+                            className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-secondary hover:text-white"
                         >
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
                             <p className="pl-2 font-raleway font-semibold">{AboveTheFold.cta.text}</p>
