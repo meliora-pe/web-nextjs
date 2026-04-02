@@ -72,14 +72,14 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                             <link href="/assets/images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
                             <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
                             <FacebookPixelEvents />
-                            <Script id="google-ads-cta-appointment-click" strategy="afterInteractive">
-                                gtag('event', 'cta_appointment_click',{' '}
-                                {
-                                    // <event_parameters>
-                                }
-                                );
-                            </Script>
                         </Head>
+                        {/* <Script id="google-ads-cta-appointment-click" strategy="afterInteractive">
+                            gtag('event', 'cta_appointment_click',{' '}
+                            {
+                                // <event_parameters>
+                            }
+                            );
+                        </Script> */}
                         <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
                         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                         <Component {...pageProps} />

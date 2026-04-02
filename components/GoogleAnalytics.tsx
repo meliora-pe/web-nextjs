@@ -30,7 +30,7 @@ export default function GoogleAnalytics({ googleAnalyticsId }: { googleAnalytics
                 gtag('js', new Date());
 
                 gtag('consent', 'default', {
-                    'analytics_storage': 'denied'
+                    'analytics_storage': 'granted'
                 });
                 
                 gtag('config', '${googleAnalyticsId}', {
