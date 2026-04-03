@@ -41,7 +41,9 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                 <Provider store={store}>
                     <Suspense>
                         <Head>
-                            <title>Mejora tu sonrisa, mejora tu salud | Meliora Studio Dental | Dentista en Surco, Lima</title>
+                            <title>
+                                Meliora Studio Dental | Dentista en Surco: Viñedos, Jazmines, San Roque, Sagitario, Caminos del Inca y alrededores en Lima
+                            </title>
                             <meta charSet="UTF-8" />
                             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                             <meta httpEquiv="Content-Language" content="es" />
@@ -80,7 +82,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                             }
                             );
                         </Script> */}
-                        <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+                        {/* <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} /> */}
                         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                         <Component {...pageProps} />
                     </Suspense>
@@ -124,7 +126,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                         <link href="/assets/images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
                         <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
                     </Head>
-                    <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+                    {/* <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} /> */}
                     <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                     <DefaultLayout>
                         <Component {...pageProps} />
