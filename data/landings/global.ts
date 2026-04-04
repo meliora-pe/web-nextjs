@@ -67,7 +67,7 @@ const globalContent = {
     step2: 'Analizamos con criterio profesional',
     step3: 'Acompañamos tu cuidado dental',
     paragraph1: 'Nos tomamos el tiempo para entender tus necesidades y resolver tus dudas.',
-    paragraph2: 'Evaluamos opciones en ortodoncia, estética o restauración según tu caso.',
+    paragraph2: 'Evaluamos opciones de tratamientos según tu caso.',
     paragraph3: 'Te acompañamos para mantener tu sonrisa sana en el tiempo.',
     cta: 'Descubre cómo es nuestra atención',
   },
@@ -80,7 +80,7 @@ const globalContent = {
   racional: {
     subtitle: 'Elegir bien es parte del tratamiento',
     title: 'La salud bucal no se improvisa',
-    paragraph: 'Cada decisión impacta tu salud a largo plazo. Por eso empezamos con una evaluación rigurosa, clara y sin apuros.',
+    paragraph: 'Cada decisión impacta tu salud a largo plazo. Por eso empezamos con una evaluación clara y sin apuros.',
     bullets: [
       'Diagnóstico completo antes de cualquier intervención',
       'Criterio clínico por encima de soluciones rápidas',
@@ -90,7 +90,7 @@ const globalContent = {
 
   contacto: {
     title: 'Estamos cerca de ti',
-    subtitle: 'En Surco: Viñedos, Jazmines, San Roque, Sagitario, Caminos del Inca y alrededores',
+    subtitle: 'En Surco',
     paragraph: 'Nos encontramos en Surco y estamos listos para orientarte. Escríbenos por WhatsApp y conoce más sobre nuestro enfoque.',
     cta: 'Hablar con nuestro equipo',
     phone: {
@@ -120,8 +120,7 @@ const globalContent = {
       [
         'La información brindada en esta página tiene fines informativos. Todo tratamiento odontológico debe realizarse previa evaluación profesional.',
         'En Meliora Studio Dental priorizamos la salud bucal, la atención paciente y el trabajo clínico responsable.',
-        'La evaluación inicial permite conocer el estado bucal y las alternativas de tratamiento disponibles.',
-        'Promoción válida hasta el 30 de mayo de 2026 o hasta agotar stock de 300 evaluaciones.'
+        'La evaluación inicial permite conocer el estado bucal y las alternativas de tratamiento disponibles.'
       ]
   }
 }

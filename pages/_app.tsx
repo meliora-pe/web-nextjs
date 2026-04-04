@@ -126,7 +126,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                         <link href="/assets/images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
                         <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
                     </Head>
-                    {/* <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} /> */}
+                    <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
                     <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                     <DefaultLayout>
                         <Component {...pageProps} />
