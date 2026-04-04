@@ -20,7 +20,7 @@ const globalContent = {
     title: '¿Hace cuánto no revisas tu salud bucal?',
     subtitle: 'Muchas molestias comienzan sin dolor visible',
     paragraph: 'Problemas dentales como caries, inflamación de encías o desgaste pueden avanzar sin síntomas visibles. Una revisión dental completa permite detectarlos a tiempo y entender cómo está realmente tu salud bucal.',
-    title2: 'Una evaluación clara, tranquila y sin compromiso',
+    title2: 'Una evaluación clara, tranquila y sin apuros',
     subtitle2: 'Así trabajamos en Meliora Studio Dental',
     paragraph2: 'Realizamos una evaluación integral de tu sonrisa, te explicamos el diagnóstico con apoyo visual y resolvemos todas tus dudas con paciencia. Nuestro objetivo es que entiendas qué está pasando y qué cuidados necesita tu sonrisa.',
     bullets: [
@@ -44,7 +44,7 @@ const globalContent = {
       alt: 'porque-nos-eligen',
       title: 'porque-nos-eligen',
     },
-    foot: '* Caso real, paciente eligió blanqueamiento en consultorio'
+    foot: '* Caso blanqueamiento dental'
   },
 
   beforeAfter: {
@@ -73,18 +73,18 @@ const globalContent = {
   },
 
   testimonios: {
-    title: ['Testimonios de pacientes', 'que confiaron en nuestro trabajo'],
-    subtitle: 'Personas que valoraron la paciencia, el trato y la dedicación.',
+    title: ['Resultados que hablan por', 'nuestro trabajo'],
+    subtitle: 'Pacientes que eligieron hacerlo bien desde el inicio.',
   },
 
   racional: {
-    subtitle: 'Elegir bien también es parte del cuidado',
-    title: 'Una sonrisa se cuida con información y confianza',
-    paragraph: 'Tomar decisiones sobre tu salud bucal requiere tiempo, información clara y un equipo que trabaje con honestidad.',
+    subtitle: 'Elegir bien es parte del tratamiento',
+    title: 'La salud bucal no se improvisa',
+    paragraph: 'Cada decisión impacta tu salud a largo plazo. Por eso empezamos con una evaluación rigurosa, clara y sin apuros.',
     bullets: [
-      'Evaluaciones profesionales antes de tratar',
-      'Recomendaciones responsables y personalizadas',
-      'Enfoque en salud, estética y bienestar',
+      'Diagnóstico completo antes de cualquier intervención',
+      'Criterio clínico por encima de soluciones rápidas',
+      'Tratamientos diseñados para durar',
     ],
   },
 

@@ -53,7 +53,7 @@ const Ad = () => {
                             <h1 className="font-playfair text-4xl font-semibold md:text-5xl xl:text-[60px] xl:leading-[72px]">{AboveTheFold.title}</h1>
                             <p className="mt-8 hidden font-montserrat text-lg lg:flex">{AboveTheFold.subtitle}</p>
                             <Link
-                                href="https://wa.link/90gr3m?utm_source=google&utm_campaign=maps"
+                                href="https://wa.link/90gr3m?"
                                 className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
@@ -169,7 +169,7 @@ const Ad = () => {
                                 </ul>
                             </div>
                             <Link
-                                href="https://wa.link/90gr3m?utm_source=google&utm_campaign=maps"
+                                href="https://wa.link/90gr3m?"
                                 className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-secondary hover:text-black"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
@@ -245,7 +245,7 @@ const Ad = () => {
                                         data-aos-duration="1000"
                                     >
                                         <div className="flex flex-col gap-4 md:flex-row lg:hidden">
-                                            <img className="h-60 w-auto" src={`/assets/images/landings/ad/blanqueamiento-paso-1.png`} alt="" title="" />
+                                            <img className="h-60 w-auto rounded-2xl" src={`/assets/images/landings/global/paso-1.webp`} alt="" title="" />
                                         </div>
                                     </div>
                                     <li className="flex flex-row">
@@ -267,7 +267,7 @@ const Ad = () => {
                                         data-aos-duration="1000"
                                     >
                                         <div className="flex flex-col gap-4 md:flex-row lg:hidden">
-                                            <img className="h-60 w-auto" src={`/assets/images/landings/ad/blanqueamiento-paso-2.png`} alt="" title="" />
+                                            <img className="h-60 w-auto rounded-2xl" src={`/assets/images/landings/global/paso-2.webp`} alt="" title="" />
                                         </div>
                                     </div>
                                     <li className="flex flex-row">
@@ -289,7 +289,7 @@ const Ad = () => {
                                         data-aos-duration="1000"
                                     >
                                         <div className="flex flex-col gap-4 md:flex-row lg:hidden">
-                                            <img className="h-60 w-auto" src={`/assets/images/landings/ad/blanqueamiento-paso-3.png`} alt="" title="" />
+                                            <img className="h-60 w-auto rounded-2xl" src={`/assets/images/landings/global/paso-3.webp`} alt="" title="" />
                                         </div>
                                     </div>
                                 </ol>
@@ -297,7 +297,7 @@ const Ad = () => {
                                 <p className="text-center">{proceso.cta}</p>
                             </div>
                             <Link
-                                href="https://wa.link/90gr3m?utm_source=google&utm_campaign=maps"
+                                href="https://wa.link/90gr3m?"
                                 className="btn hover:bgvia-secondary mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
@@ -313,19 +313,19 @@ const Ad = () => {
                             {/* FOTO 1 */}
                             <div className="relative h-[280px] w-[220px] flex-shrink-0 lg:absolute lg:right-3 lg:top-2 lg:rotate-[5deg]">
                                 <div className="h-full w-full overflow-hidden rounded-2xl shadow-xl">
-                                    <img src="/assets/images/landings/ad/blanqueamiento-paso-1.png" alt="" className="h-full w-full object-cover" />
+                                    <img src="/assets/images/landings/global/paso-1.webp" alt="" className="h-full w-full object-cover" />
                                 </div>
                             </div>
                             {/* FOTO 2 */}
                             <div className="relative h-[280px] w-[220px] flex-shrink-0 lg:absolute lg:left-1/2 lg:top-36 lg:-translate-x-1/2 lg:rotate-[-3deg]">
                                 <div className="h-full w-full overflow-hidden rounded-2xl shadow-xl">
-                                    <img src="/assets/images/landings/ad/blanqueamiento-paso-2.png" alt="" className="h-full w-full object-cover" />
+                                    <img src="/assets/images/landings/global/paso-2.webp" alt="" className="h-full w-full object-cover" />
                                 </div>
                             </div>
                             {/* FOTO 3 */}
                             <div className="relative h-[280px] w-[220px] flex-shrink-0 lg:absolute lg:bottom-2 lg:left-3 lg:rotate-[4deg]">
                                 <div className="h-full w-full overflow-hidden rounded-2xl shadow-xl">
-                                    <img src="/assets/images/landings/ad/blanqueamiento-paso-3.png" alt="" className="h-full w-full object-cover" />
+                                    <img src="/assets/images/landings/global/paso-3.webp" alt="" className="h-full w-full object-cover" />
                                 </div>
                             </div>
                         </div>
@@ -414,7 +414,7 @@ const Ad = () => {
                     </div>
                     <div className="flex flex-col gap-x-8 md:flex-row">
                         <Link
-                            href="https://wa.link/90gr3m?utm_source=google&utm_campaign=maps"
+                            href="https://wa.link/90gr3m?"
                             className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-secondary hover:text-white"
                         >
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
