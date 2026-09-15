@@ -2,7 +2,6 @@ import confetti from 'canvas-confetti';
 import { useState } from 'react';
 import AnimateHeight from 'react-animate-height';
 
-// import GoogleAnalytics from '../components/GoogleAnalyticsFile';
 import TitlePage from '../components/TitlePage';
 import WidgetContact from '../components/WidgetContact';
 import WidgetCtaBanner from '../components/WidgetCtaBanner';
@@ -50,7 +49,6 @@ const Appointment = () => {
 
     return (
         <div>
-            {/* <GoogleAnalytics /> */}
             <TitlePage title={title} />
 
             <WidgetTopBackground props={sections.topArea} />
@@ -78,7 +76,6 @@ const Appointment = () => {
                         onClick={() => {
                             setActive(active === 0 ? null : 0);
                             if (active === null) handleConfetti();
-                            //trackGAEvent("key-event", "click", "open-calendar")
                         }}
                     >
                         {active === 0 ? 'Cerrar calendario' : 'Abrir calendario'}

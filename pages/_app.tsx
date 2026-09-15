@@ -1,17 +1,13 @@
 import '../styles/tailwind.css';
 
 import Head from 'next/head';
-import Script from 'next/script';
-// import { Router } from 'next/router';
-// import Script from 'next/script';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 import { Suspense } from 'react';
 import { Provider } from 'react-redux';
 
-import { GoogleTagManager } from '@next/third-parties/google';
-
-import GoogleAnalytics from '../components/GoogleAnalytics';
+// import { GoogleTagManager } from '@next/third-parties/google';
+// import GoogleAnalytics from '../components/GoogleAnalytics';
 import DefaultLayout from '../components/Layouts/DefaultLayout';
 import FacebookPixelEvents from '../components/pixel-events';
 import store from '../store/index';
@@ -75,15 +71,6 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                             <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
                             <FacebookPixelEvents />
                         </Head>
-                        {/* <Script id="google-ads-cta-appointment-click" strategy="afterInteractive">
-                            gtag('event', 'cta_appointment_click',{' '}
-                            {
-                                // <event_parameters>
-                            }
-                            );
-                        </Script> */}
-                        {/* <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} /> */}
-                        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                         <Component {...pageProps} />
                     </Suspense>
                 </Provider>
@@ -126,8 +113,6 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                         <link href="/assets/images/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
                         <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
                     </Head>
-                    <GoogleAnalytics googleAnalyticsId={process.env.NEXT_PUBLIC_GA_ID || ''} />
-                    <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''} />
                     <DefaultLayout>
                         <Component {...pageProps} />
                     </DefaultLayout>

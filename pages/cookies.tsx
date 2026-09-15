@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import TitlePage from '../components/TitlePage';
+
 import WidgetTopBackground from '../components/WidgetTopBackground';
 import { cookies } from '../data/content';
 

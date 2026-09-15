@@ -1,5 +1,3 @@
-// components/cookiebanner.tsx
-
 'use client';
 
 import Link from 'next/link';
@@ -19,12 +17,12 @@ export default function CookieBanner() {
     useEffect(() => {
         const newValue = cookieConsent ? 'granted' : 'denied';
 
-        window.gtag('consent', 'update', {
-            analytics_storage: newValue,
-            ad_storage: newValue,
-            ad_personalization: newValue,
-            ad_user_data: newValue,
-        });
+        // window.gtag('consent', 'update', {
+        //     analytics_storage: newValue,
+        //     ad_storage: newValue,
+        //     ad_personalization: newValue,
+        //     ad_user_data: newValue,
+        // });
 
         setLocalStorage('cookie_consent', cookieConsent);
 

@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
-import { FoldSectionProps } from '../../components/AboveTheFold';
+// import { FoldSectionProps } from '../../components/AboveTheFold';
 import Aos from 'aos';
-import Link from 'next/link';
-import { PhotoSlider } from '../../components/PhotoSlider';
+import { useEffect, useState } from 'react';
+
+// import Link from 'next/link';
+// import { PhotoSlider } from '../../components/PhotoSlider';
 import WidgetMap from '../../components/WidgetMap';
-import WidgetContact from '../../components/WidgetContact';
+
+// import WidgetContact from '../../components/WidgetContact';
 
 const MapLeads = () => {
     useEffect(() => {
