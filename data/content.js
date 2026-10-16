@@ -315,7 +315,7 @@ const appointment = {
                 alt: 'pareja-sonriente',
                 title: 'pareja-sonriente',
             },
-            title: 'Transforma tu sonrisa, comienza hoy',
+            title: 'Transforma tu sonrisa, empieza hoy',
             subtitle: 'Da el primer paso, recupera tu salud y confianza',
             paragraph1:
                 'En Meliora, cada tratamiento es una experiencia única diseñada para cuidar tu salud bucal y realzar tu sonrisa. Nuestro enfoque integral y conservador garantiza comodidad y resultados duraderos.',

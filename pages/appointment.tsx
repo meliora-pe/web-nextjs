@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Faq from '../components/Faq';
 import TitlePage from '../components/TitlePage';
 import WidgetContact from '../components/WidgetContact';
-import WidgetCtaBanner from '../components/WidgetCtaBanner';
+// import WidgetCtaBanner from '../components/WidgetCtaBanner';
 import WidgetTopBackground from '../components/WidgetTopBackground';
 import WidgetTwoParagraphsButton from '../components/WidgetTwoParagraphsButton';
 import { appointment } from '../data/content';
@@ -87,7 +87,7 @@ const Appointment = () => {
                             target="_blank"
                             id="message-whatsapp"
                         >
-                            Reservar cita hoy
+                            Reservar una cita hoy
                         </Link>
                         {/* {active === 0 ? 'Cerrar calendario' : 'Abrir calendario'} */}
                     </button>
@@ -176,7 +176,7 @@ const Appointment = () => {
                     </div>
                 </section> */}
 
-            <section className="overflow-x-hidden py-14 dark:bg-gray-black">
+            <section className="py-14 dark:bg-gray-black">
                 <div className="container">
                     <div className="items-center lg:flex">
                         <h4 className="flex-none border-gray/20 text-center text-xl font-black uppercase text-black dark:text-white lg:ltr:mr-12 lg:ltr:border-r-[3px] lg:ltr:pr-12 lg:ltr:text-left lg:rtl:ml-12 lg:rtl:border-l-[3px] lg:rtl:pl-12 lg:rtl:text-right">
@@ -212,37 +212,37 @@ const Appointment = () => {
                         >
                             <SwiperSlide>
                                 <div>
-                                    <img src="/assets/images/plin.png" alt="logotipo de medio de pago" title="plin" />
+                                    <img src="/assets/images/plin.png" alt="medio de pago" title="plin" />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div>
-                                    <img src="/assets/images/yape.png" alt="logotipo de medio de pago" title="yape" />
+                                    <img src="/assets/images/yape.png" alt="medio de pago" title="yape" />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div>
-                                    <img src="/assets/images/izipay.png" alt="logotipo de medio de pago" title="izipay" />
+                                    <img src="/assets/images/izipay.png" alt="medio de pago" title="izipay" />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div>
-                                    <img src="/assets/images/visa.png" alt="logotipo de medio de pago" title="visa" />
+                                    <img src="/assets/images/visa.png" alt="medio de pago" title="visa" />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div>
-                                    <img src="/assets/images/mastercard.png" alt="logotipo de medio de pago" title="mastercard" />
+                                    <img src="/assets/images/mastercard.png" alt="medio de pago" title="mastercard" />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div>
-                                    <img src="/assets/images/american-express.png" alt="logotipo de medio de pago" title="american-express" />
+                                    <img src="/assets/images/american-express.png" alt="medio de pago" title="american-express" />
                                 </div>
                             </SwiperSlide>
                         </Swiper>
