@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -106,7 +107,7 @@ const Footer = () => {
                                     Términos y condiciones
                                 </Link>
                             </li>
-                            {/* <li>
+                            <li>
                                 <Link href="/complaints" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Libro de Reclamaciones
                                     <Image
@@ -117,7 +118,7 @@ const Footer = () => {
                                         className="ml-1 inline-block md:mt-3"
                                     />
                                 </Link>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                     <div>

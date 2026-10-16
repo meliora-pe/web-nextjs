@@ -211,39 +211,27 @@ const Appointment = () => {
                             // key={true}
                         >
                             <SwiperSlide>
-                                <div>
-                                    <img src="/assets/images/plin.png" alt="medio de pago" title="plin" />
-                                </div>
+                                <img src="/assets/images/plin.png" alt="medio de pago" title="plin" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <div>
-                                    <img src="/assets/images/yape.png" alt="medio de pago" title="yape" />
-                                </div>
+                                <img src="/assets/images/yape.png" alt="medio de pago" title="yape" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <div>
-                                    <img src="/assets/images/izipay.png" alt="medio de pago" title="izipay" />
-                                </div>
+                                <img src="/assets/images/izipay.png" alt="medio de pago" title="izipay" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <div>
-                                    <img src="/assets/images/visa.png" alt="medio de pago" title="visa" />
-                                </div>
+                                <img src="/assets/images/visa.png" alt="medio de pago" title="visa" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <div>
-                                    <img src="/assets/images/mastercard.png" alt="medio de pago" title="mastercard" />
-                                </div>
+                                <img src="/assets/images/mastercard.png" alt="medio de pago" title="mastercard" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <div>
-                                    <img src="/assets/images/american-express.png" alt="medio de pago" title="american-express" />
-                                </div>
+                                <img src="/assets/images/american-express.png" alt="medio de pago" title="american-express" />
                             </SwiperSlide>
                         </Swiper>
                     </div>
