@@ -6,6 +6,7 @@ import { Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { IRootState } from '../store';
+import ClientSlider from './ClientSlider';
 import { Stars } from './Stars';
 
 const Testimonial = ({
@@ -181,7 +182,7 @@ const Testimonial = ({
                     <h4 className="font-playfair text-3xl !text-white">Reconocimiento y gratitud</h4>
                 </div>
                 <div className={`mx-auto lg:w-11/12`} data-aos="fade-right" data-aos-duration="1000">
-                    <div className="relative sm:py-12 md:py-0">
+                    {/* <div className="relative sm:py-12 md:py-0">
                         <Swiper
                             modules={[Navigation, Autoplay]}
                             slidesPerView="auto"
@@ -248,6 +249,9 @@ const Testimonial = ({
                         <div className={`bottom-0 mt-5 flex items-center justify-center gap-4 sm:absolute sm:mt-0 sm:justify-end ltr:right-1/3 rtl:left-1/3`}>
                             <img src="/assets/images/swipe-icon.svg" alt="swipe-icon" title="swipe-icon" className="h-12 w-12 animate-ping" />
                         </div>
+                    </div> */}
+                    <div style={{ zoom: 1.2 }}>
+                        <ClientSlider />
                     </div>
                 </div>
             </div>

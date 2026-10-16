@@ -20,7 +20,7 @@ const home = {
         },
         meliora: {
             definition: {
-                title: 'Preservamos tu salud con atención a los detalles y trato amable',
+                title: 'Preservamos tu salud con paciencia y trato amable',
                 subtitle: '¡Bienvenido! Somos Meliora Studio Dental',
                 paragraph1:
                     'Somos un equipo de profesionales especializados en odontología conservadora, comprometidos en brindarte una atención personalizada y de calidad para que recuperes tu salud bucal.',
@@ -50,7 +50,7 @@ const home = {
             paragraph1:
                 'Entendemos que tu sonrisa es clave para tu confianza. Por eso, ofrecemos un servicio integral y multidisciplinario, donde encontrarás:',
             paragraph2: '',
-            bullets: ['Confianza', 'Honestidad', 'Compromiso', 'Profesionalismo', 'Experiencia', 'Amabilidad', 'Empatía'],
+            bullets: ['Confianza', 'Honestidad', 'Compromiso', 'Paciencia', 'Experiencia', 'Amabilidad', 'Empatía'],
             image: {
                 src: 'porque-nos-eligen.webp',
                 alt: 'porque-nos-eligen',

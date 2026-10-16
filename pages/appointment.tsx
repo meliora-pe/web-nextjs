@@ -1,7 +1,11 @@
 import confetti from 'canvas-confetti';
+import Link from 'next/link';
 import { useState } from 'react';
 import AnimateHeight from 'react-animate-height';
+import { Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import Faq from '../components/Faq';
 import TitlePage from '../components/TitlePage';
 import WidgetContact from '../components/WidgetContact';
 import WidgetCtaBanner from '../components/WidgetCtaBanner';
@@ -73,12 +77,19 @@ const Appointment = () => {
                         id="btn-calendar"
                         type="button"
                         className="btn relative mt-4 bg-secondary font-raleway font-semibold  text-white hover:bg-primary sm:px-14 sm:py-5"
-                        onClick={() => {
-                            setActive(active === 0 ? null : 0);
-                            if (active === null) handleConfetti();
-                        }}
+                        // onClick={() => {
+                        //     setActive(active === 0 ? null : 0);
+                        //     if (active === null) handleConfetti();
+                        // }}
                     >
-                        {active === 0 ? 'Cerrar calendario' : 'Abrir calendario'}
+                        <Link
+                            href="https://api.whatsapp.com/send?phone=51969174019&text=Hola%2C%20quisiera%20reservar%20una%20cita"
+                            target="_blank"
+                            id="message-whatsapp"
+                        >
+                            Reservar cita hoy
+                        </Link>
+                        {/* {active === 0 ? 'Cerrar calendario' : 'Abrir calendario'} */}
                     </button>
                     <AnimateHeight duration={600} height={active === 0 ? 'auto' : 0}>
                         <div className="my-6 !h-[1850px] bg-white">
@@ -165,7 +176,81 @@ const Appointment = () => {
                     </div>
                 </section> */}
 
-            <WidgetCtaBanner title={sections.ctaBanner.title} cta={sections.ctaBanner.cta} />
+            <section className="overflow-x-hidden py-14 dark:bg-gray-black">
+                <div className="container">
+                    <div className="items-center lg:flex">
+                        <h4 className="flex-none border-gray/20 text-center text-xl font-black uppercase text-black dark:text-white lg:ltr:mr-12 lg:ltr:border-r-[3px] lg:ltr:pr-12 lg:ltr:text-left lg:rtl:ml-12 lg:rtl:border-l-[3px] lg:rtl:pl-12 lg:rtl:text-right">
+                            ACEPTAMOS:
+                        </h4>
+                        <Swiper
+                            className="mt-8 flex-1 lg:mt-0 xl:w-[1200px] xl:flex-none"
+                            loop={true}
+                            slidesPerView="auto"
+                            spaceBetween={8}
+                            speed={2500}
+                            autoplay={{
+                                delay: 1000,
+                                disableOnInteraction: false,
+                            }}
+                            breakpoints={{
+                                320: {
+                                    slidesPerView: 1.7,
+                                },
+                                600: {
+                                    slidesPerView: 2,
+                                },
+                                1000: {
+                                    slidesPerView: 3,
+                                },
+                                1142: {
+                                    slidesPerView: 5,
+                                },
+                            }}
+                            modules={[Autoplay]}
+                            dir={'ltr'}
+                            // key={true}
+                        >
+                            <SwiperSlide>
+                                <div>
+                                    <img src="/assets/images/plin.png" alt="logotipo de medio de pago" title="plin" />
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div>
+                                    <img src="/assets/images/yape.png" alt="logotipo de medio de pago" title="yape" />
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div>
+                                    <img src="/assets/images/izipay.png" alt="logotipo de medio de pago" title="izipay" />
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div>
+                                    <img src="/assets/images/visa.png" alt="logotipo de medio de pago" title="visa" />
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div>
+                                    <img src="/assets/images/mastercard.png" alt="logotipo de medio de pago" title="mastercard" />
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div>
+                                    <img src="/assets/images/american-express.png" alt="logotipo de medio de pago" title="american-express" />
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+                </div>
+            </section>
+
+            <Faq showTitle={true} />
         </div>
     );
 };
