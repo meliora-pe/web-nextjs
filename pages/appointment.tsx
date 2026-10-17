@@ -176,7 +176,7 @@ const Appointment = () => {
                     </div>
                 </section> */}
 
-            <section className="py-14 dark:bg-gray-black">
+            {/* <section className="py-14 dark:bg-gray-black">
                 <div className="container">
                     <div className="items-center lg:flex">
                         <h4 className="flex-none border-gray/20 text-center text-xl font-black uppercase text-black dark:text-white lg:ltr:mr-12 lg:ltr:border-r-[3px] lg:ltr:pr-12 lg:ltr:text-left lg:rtl:ml-12 lg:rtl:border-l-[3px] lg:rtl:pl-12 lg:rtl:text-right">
@@ -236,7 +236,7 @@ const Appointment = () => {
                         </Swiper>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <Faq showTitle={true} />
         </div>
