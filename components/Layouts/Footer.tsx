@@ -160,18 +160,22 @@ const Footer = () => {
                             Copyright© {new Date().getFullYear() + ' '}
                             <span className="text-secondary transition">Meliora Studio Dental</span>
                         </div>
-                        <div>
+                        {/* <div>
                             ¿Tienes dudas?{' '}
                             <Link href="/contact-us" className="text-secondary transition hover:text-black dark:hover:text-primary">
                                 Contáctanos
                             </Link>
-                        </div>
-                        {/* <div className="mt-3 text-xs">
-                            Made with 💡 and by{' '}
-                            <Link href="https://lumbre.pe" className="text-secondary transition hover:text-black dark:hover:text-primary">
-                                lumbre.pe
-                            </Link>
                         </div> */}
+                        <div>
+                            Hecho por&nbsp;
+                            <Link
+                                href="https://wa.me/51975993773?text=Hola%20Marco,%20necesito%20de%20tus%20servicios%20"
+                                target="_blank"
+                                className="text-black transition hover:text-black dark:hover:text-primary"
+                            >
+                                Marco Arias
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
