@@ -6,11 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-// import { Autoplay, Navigation } from 'swiper';
-// import { Swiper, SwiperSlide } from 'swiper/react';
 import ClientSlider from '../../components/ClientSlider2';
 import { PhotoSlider } from '../../components/PhotoSlider';
-// import { Stars } from '../../components/Stars';
 import adContent from '../../data/landings/ad';
 
 const { AboveTheFold, dolorYSolucion, benefits, beforeAfter, meliora, testimonials, offer, ctaFinal, terms } = adContent;
@@ -43,30 +40,29 @@ const Ad = () => {
                     className="z-1 absolute inset-0 opacity-50"
                     style={{ background: 'linear-gradient(90deg, rgba(8, 17, 31, 0.95) 57.29%, rgba(8, 17, 31, 0.4) 100%)' }}
                 ></div>
-                <div className="z-1 absolute inset-x-0 top-[30%] text-white md:top-1/2 lg:top-1/4">
+                <div className="z-1 absolute inset-x-0 top-[30%] text-center text-white md:top-1/2 lg:top-1/4">
                     <div className="container flex flex-col-reverse items-center gap-x-32 lg:flex-row lg:items-start">
-                        <div className="max-w-[624px] text-center">
-                            <h2 className="mb-4 font-montserrat text-xl font-semibold  md:text-2xl">{AboveTheFold.header}</h2>
+                        <div>
+                            <h2 className="mb-4 font-montserrat text-xl font-semibold opacity-60 md:text-2xl">{AboveTheFold.header}</h2>
                             <h1 className="font-playfair text-4xl font-semibold md:text-5xl xl:text-[60px] xl:leading-[72px]">{AboveTheFold.title}</h1>
-                            <p className="mt-8 hidden font-montserrat text-lg lg:flex">{AboveTheFold.subtitle}</p>
+                            <span className="mt-8 flex justify-center font-montserrat text-lg">{AboveTheFold.subtitle}</span>
                             <Link
                                 href="https://wa.link/f7jrvw"
-                                className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
+                                className="btn mx-auto mt-10 flex max-w-64 items-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
                                 <p className="pl-2 font-raleway font-semibold">{AboveTheFold.cta.text}</p>
                             </Link>
                         </div>
-                        <div className="text-right">
-                            <div className="h-auto w-full">
-                                {/* <img
-                                    src="/assets/images/landings/10 blanqueamiento dental.png"
-                                    alt=""
-                                    className="m-6 h-48 w-48 lg:m-0 lg:h-80 lg:w-80 lg:object-contain"
-                                /> */}
-                            </div>
-                        </div>
                     </div>
+                    <Image
+                        src="/assets/images/landings/10 blanqueamiento dental.png"
+                        alt="10% descuento"
+                        width={100}
+                        height={100}
+                        title="10% descuento"
+                        className="z-3 h-30 w-30 absolute -top-24 right-8 rotate-[10deg] lg:h-36 lg:w-36"
+                    />
                 </div>
             </section>
 

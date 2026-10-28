@@ -9,7 +9,7 @@ const adContent = {
       title: 'blanqueamiento-dental',
     },
     cta: {
-      text: 'Agenda tu evaluación',
+      text: 'Agenda por WhatsApp',
       href: 'https://wa.link/f7jrvw',
     }
   },

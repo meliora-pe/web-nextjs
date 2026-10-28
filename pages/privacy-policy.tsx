@@ -1,9 +1,10 @@
+import Head from 'next/head';
 import { useSelector } from 'react-redux';
-import { IRootState } from '../store';
-import TitlePage from '../components/TitlePage';
+
+// import TitlePage from '../components/TitlePage';
 import WidgetTopBackground from '../components/WidgetTopBackground';
 import { privacyPolicy } from '../data/content';
-import Head from 'next/head';
+import { IRootState } from '../store';
 
 const { title, sections } = privacyPolicy;
 
@@ -30,9 +31,9 @@ const Privacypolicy = () => {
                 <div className="container">
                     <div className="pb-12">
                         <p className="pb-5 text-lg font-medium">
-                            En Meliora Studio Dental, accesible desde www.meliora.pe, una de nuestras principales prioridades es la privacidad de nuestros
-                            visitantes. Este documento de Política de Privacidad contiene los tipos de información que se recopilan y registran en Meliora
-                            Studio Dental y cómo la utilizamos.
+                            En Meliora Studio Dental, accesible desde <strong>www.meliora.pe</strong>, una de nuestras principales prioridades es la privacidad
+                            de nuestros visitantes. Este documento de Política de Privacidad contiene los tipos de información que se recopilan y registran en
+                            Meliora Studio Dental y cómo la utilizamos.
                         </p>
                         <p className="pb-5 text-lg font-medium">
                             Si tienes preguntas adicionales o necesitas más información sobre nuestra Política de Privacidad, no dudes en ponerte en contacto
