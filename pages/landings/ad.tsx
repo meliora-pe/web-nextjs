@@ -61,7 +61,7 @@ const Ad = () => {
                         width={100}
                         height={100}
                         title="10% descuento"
-                        className="z-3 h-30 w-30 absolute -top-24 right-8 rotate-[10deg] lg:h-36 lg:w-36"
+                        className="z-3 h-30 w-30 absolute -top-24 right-8 rotate-[10deg] lg:right-40 lg:h-36 lg:w-36"
                     />
                 </div>
             </section>
