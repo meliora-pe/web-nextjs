@@ -47,7 +47,7 @@ const Ad = () => {
                             <h1 className="font-playfair text-4xl font-semibold md:text-5xl xl:text-[60px] xl:leading-[72px]">{AboveTheFold.title}</h1>
                             <span className="mt-8 flex justify-center font-montserrat text-lg">{AboveTheFold.subtitle}</span>
                             <Link
-                                href="https://wa.link/f7jrvw"
+                                href="https://wa.me/51969174019?text=Hola,%20vengo%20de%20su%20web%20por%20la%20promo%20de%20blanqueamiento%20dental&utm_source=google&utm_medium=cpc&utm_campaign=blanqueamiento_surco"
                                 className="btn mx-auto mt-10 flex max-w-64 items-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
@@ -169,7 +169,7 @@ const Ad = () => {
                                 <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>
                             </Link>
                         </div>
-                        <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0" data-aos="fade" data-aos-duration="500">
+                        <div className="mt-3 flex-1 overflow-hidden rounded-[25px] sm:mt-0">
                             <img src="/assets/images/landings/ad/blanqueamiento-2.jpg" alt="blanqueamiento dental" />
                         </div>
                     </div>
@@ -407,7 +407,7 @@ const Ad = () => {
                     </div>
                     <div className="flex flex-col gap-x-8 md:flex-row">
                         <Link
-                            href="https://wa.link/f7jrvw"
+                            href="https://wa.me/51969174019?text=Hola,%20vengo%20de%20su%20web%20por%20la%20promo%20de%20blanqueamiento%20dental&utm_source=google&utm_medium=cpc&utm_campaign=blanqueamiento_surco"
                             className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                         >
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />

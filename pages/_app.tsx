@@ -6,8 +6,6 @@ import { PostHogProvider } from 'posthog-js/react';
 import { Suspense } from 'react';
 import { Provider } from 'react-redux';
 
-// import { GoogleTagManager } from '@next/third-parties/google';
-// import GoogleAnalytics from '../components/GoogleAnalytics';
 import DefaultLayout from '../components/Layouts/DefaultLayout';
 import FacebookPixelEvents from '../components/pixel-events';
 import store from '../store/index';
@@ -46,7 +44,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                             <meta
                                 name="description"
-                                content="Mejoramos tu salud dental, para que recuperes tu confianza, con calidez, empatía y tratamientos de calidad. Dentista en Surco, Lima."
+                                content="Blanqueamiento dental profesional en Surco con resultados desde la primera sesión. Tratamiento en consultorio o en casa protegido contra la sensibilidad. ¡Separa tu evaluación personalizada y luce una sonrisa radiante!"
                             />
                             <meta name="robots" content="index,follow" />
                             <meta name="author" content="Yessica Cahuantico" />
@@ -54,10 +52,10 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                             <meta name="geo.placename" content="Surco" />
                             <meta name="geo.position" content="-12.151891;-76.989851" />
                             <meta name="ICBM" content="-12.151891, -76.989851" />
-                            <meta property="og:title" content="Meliora Studio Dental - Mejora tu sonrisa, mejora tu salud" />
+                            <meta property="og:title" content="Meliora Studio Dental - Mejora tu sonrisa" />
                             <meta property="og:type" content="website" />
                             <meta property="og:url" content="https://meliora.pe" />
-                            <meta property="og:image" content="https://meliora.pe/assets/images/meliora-studio-dental.png" />
+                            <meta property="og:image" content="https://meliora.pe/assets/images/landings/ad/blanqueamiento-2.jpg" />
                             <meta
                                 property="og:description"
                                 content="Mejoramos tu salud dental, para que recuperes tu confianza, con calidez, empatía y tratamientos de calidad. Dentista en Surco, Lima."
