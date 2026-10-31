@@ -98,7 +98,7 @@ const ClientSlider = ({
                                             <Stars points={5} />
                                         </div>
                                     </div>
-                                    <img src={feedback.place} className="inline-flex h-8 w-auto pt-4" alt="google maps logo" />
+                                    <img src={feedback.place} className="inline-flex h-9 w-auto pt-4" alt="google maps logo" />
                                 </div>
                                 <div className="border border-black/10 dark:border-white/10"></div>
                                 <div className="relative p-7">
