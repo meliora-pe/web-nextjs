@@ -67,7 +67,7 @@ const Ad = () => {
             </section>
 
             {/* dolor y solucion */}
-            <section className="bg-meliora-2 relative overflow-hidden pb-8">
+            <section className="bg-meliora-2 relative overflow-hidden pb-14">
                 <div className="container">
                     <div className="relative mx-auto max-w-6xl px-4 py-8 sm:py-12">
                         <div className="grid items-center gap-5 lg:grid-cols-2">
@@ -204,7 +204,7 @@ const Ad = () => {
                         </div>
                         <div className="" data-aos="fade" data-aos-duration="1000">
                             <PhotoSlider before={beforeAfter.before} after={beforeAfter.after} />
-                            <p className="mt-2 text-center text-xs text-gray">* Caso real, paciente eligió blanqueamiento en consultorio</p>
+                            <p className="mt-2 text-center text-sm text-gray">*{beforeAfter.case}</p>
                         </div>
                     </div>
                 </div>
@@ -352,7 +352,7 @@ const Ad = () => {
             <section className="bg-meliora-1 py-14 sm:px-5 lg:py-20">
                 <div className="container flex flex-col gap-10 lg:flex-row">
                     <div className="mx-auto lg:mx-0" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="/assets/images/paciente-mujer-sonrie-dentista-2.webp" alt="" className="h-auto w-[360px] rounded-3xl" />
+                        <img src="/assets/images/landings/10 blanqueamiento dental.png" alt="" className="h-auto w-[360px] rounded-3xl" />
                     </div>
                     <div className="text-center md:text-left" data-aos="fade-left" data-aos-duration="1000">
                         <div className="heading mb-4">

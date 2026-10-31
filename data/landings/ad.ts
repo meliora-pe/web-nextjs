@@ -28,13 +28,13 @@ const adContent = {
     ]
   },
   benefits: {
+    subtitle: 'Más que aclarar tus dientes',
     title: '¿Por qué elegir nuestro blanqueamiento dental?',
-    subtitle: 'Somos especialistas',
-    paragraph1: 'Descubre los beneficios de un tratamiento que no solo mejora tu estética, sino también tu confianza y autoestima.',
+    paragraph1: 'Buscamos mejorar el tono de tu sonrisa sin sacrificar naturalidad ni comodidad, con un tratamiento profesional supervisado de principio a fin.',
     bullets: [
-      'Protocolos profesionales que no dañan el esmalte',
-      'Control de sensibilidad incluído en el tratamiento',
-      'Resultados naturales, sin efecto "blanco artificial"',
+      'Protocolos profesionales orientados a cuidar el esmalte',
+      'Manejo de la sensibilidad durante el tratamiento',
+      'Resultados naturales, evitando el efecto de "blanco artificial"',
     ],
     image: {
       src: 'porque-nos-eligen.webp',
@@ -43,8 +43,9 @@ const adContent = {
     }
   },
   beforeAfter: {
-    title: 'Blanqueamiento dental',
-    text: 'Realzamos el color de tus dientes con técnicas seguras y personalizadas. Recupera la confianza en tu sonrisa con un tratamiento efectivo, mínimamente invasivo y diseñado para resaltar tu belleza natural.',
+    title: 'Resultados que se ven, sonrisas que se sienten naturales',
+    text: 'Cada sonrisa responde de manera diferente. Este es el resultado de un caso real tratado en Meliora, donde buscamos mejorar el tono de los dientes manteniendo una apariencia natural y armónica.',
+    case: 'Caso real de blanqueamiento elegido consultorio',
     before: {
       src: '/assets/images/before.webp',
       alt: 'before',
@@ -72,13 +73,16 @@ const adContent = {
     subtitle: 'Ellos ya transformaron sus sonrisas, ¡tú también puedes hacerlo!',
   },
   offer: {
-    subtitle: 'Una decisión simple que cambiará tu sonrisa',
-    title: 'Tu evaluación es el primer paso a una sonrisa radiante',
-    paragraph: 'Asesoría profesional para que decidas la mejor opción según tu caso. Sin compromisos.',
+    subtitle: 'Beneficio especial por tiempo limitado',
+
+    title: 'Obtén 10% de descuento ahora mismo',
+
+    paragraph: 'Agenda tu evaluación y descubre qué opción de blanqueamiento es la más adecuada para ti. Si decides realizar el tratamiento, accede al descuento de esta campaña.',
+
     bullets: [
-      'Evaluación personalizada por un profesional',
-      'Te explicamos qué resultado es posible en tu caso',
-      'Acompañamiento y recomendaciones para mantener el resultado',
+      'Evaluación personalizada antes de iniciar el tratamiento',
+      '10% de descuento en tu blanqueamiento dental',
+      'Recomendaciones profesionales para prolongar tus resultados',
     ],
   },
   ctaFinal: {
