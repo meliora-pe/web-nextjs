@@ -19,7 +19,6 @@ const adContent = {
     title: '¿Dientes amarillos u opacos?',
     subtitle: 'Un problema muy común',
     paragraph: 'Manchas por café, té, vino o tabaco, dientes amarillos que no se arreglan con “cepillado fuerte”. Si tu sonrisa se ve apagada, esto te interesa',
-    title2: 'Blanqueamiento dental seguro y personalizado',
     subtitle2: 'Una solución pensada para tu sonrisa',
     title2: 'Aclara el tono de tus dientes de forma segura y natural',
     paragraph2: 'Evaluamos el tono de tus dientes, el estado de tus encías y tu sensibilidad para recomendarte el tipo de blanqueamiento más adecuado y conseguir un resultado natural, cuidando tu esmalte durante todo el proceso.',
