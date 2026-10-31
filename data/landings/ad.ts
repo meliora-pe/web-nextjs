@@ -119,8 +119,9 @@ const adContent = {
     mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.4179093162934!2d-76.99228778891906!3d-12.151926143818944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b90829b6e561%3A0xd2160ffba0651ce0!2sConsultorio%20odontol%C3%B3gico%20Asiri!5e0!3m2!1ses-419!2spe!4v1731362600461!5m2!1ses-419!2spe',
   },
   ctaFinal: {
-    title: 'Da el primer paso. Mejora tu sonrisa',
-    subtitle: 'Escríbenos por WhatsApp y agenda tu evaluación. Te responderemos rápido.',
+    title: 'Tu nueva sonrisa empieza con una cita',
+    subtitle: 'Agenda tu evaluación por WhatsApp y aprovecha el 10% de descuento en tu blanqueamiento dental.',
+    button: 'Quiero agendar mi evaluación',
   },
   terms: [
     'Elegir un blanqueamiento dental es una decisión que debe basarse en resultados comprobados y en la seguridad del procedimiento. En Meliora Studio Dental, ofrecemos tres opciones: blanqueamiento en consultorio, con resultados visibles desde la primera sesión y un proceso de una semana a semana y media; blanqueamiento en casa, que permite mayor flexibilidad y alcanza su efecto máximo en aproximadamente tres semanas y el mixto. Nuestros métodos están diseñados para lograr un blanqueamiento uniforme y duradero.',

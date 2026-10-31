@@ -397,7 +397,7 @@ const Ad = () => {
                             className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] text-black hover:bg-black hover:text-white"
                         >
                             <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
-                            <p className="pl-2 font-raleway font-semibold">{AboveTheFold.cta.text}</p>
+                            <p className="pl-2 font-raleway font-semibold">{ctaFinal.button}</p>
                         </Link>
                     </div>
                 </div>
