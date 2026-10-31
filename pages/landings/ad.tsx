@@ -162,8 +162,10 @@ const Ad = () => {
                                 </ul>
                             </div>
                             <Link
-                                href="https://wa.link/f7jrvw"
+                                href="https://wa.me/51969174019?text=Hola,%20vengo%20de%20su%20web%20por%20la%20promo%20de%20blanqueamiento%20dental&utm_source=google&utm_medium=cpc&utm_campaign=blanqueamiento_surco"
                                 className="btn mx-auto mt-10 flex max-w-64 items-center justify-center bg-white px-5 py-[12px] hover:bg-secondary hover:text-black"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <Image src="/assets/images/whatsapp.png" alt="whatsapp" width={20} height={20} className="h-8 w-8" />
                                 <p className="pl-2 font-raleway font-semibold text-black">{AboveTheFold.cta.text}</p>

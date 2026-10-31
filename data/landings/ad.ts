@@ -18,14 +18,14 @@ const adContent = {
     subtitle: 'Un problema muy común',
     paragraph: 'Manchas por café, té, vino o tabaco, dientes amarillos que no se arreglan con “cepillado fuerte”. Si tu sonrisa se ve apagada, esto te interesa',
     title2: 'Blanqueamiento dental seguro y personalizado',
-    subtitle2: 'Tenemos la solucion',
-    paragraph2: 'Analizamos tu caso, protegemos la sensibilidad y buscamos un tono natural, sin efecto artificial ni desgaste del esmalte.',
+    subtitle2: 'Una solución pensada para tu sonrisa',
+    title2: 'Aclara el tono de tus dientes de forma segura y natural',
+    paragraph2: 'Evaluamos el tono de tus dientes, el estado de tus encías y tu sensibilidad para recomendarte el tipo de blanqueamiento más adecuado y conseguir un resultado natural, cuidando tu esmalte durante todo el proceso.',
     bullets: [
-      'Resultados visibles desde la primera sesión (según evaluación)',
-      'Tratamiento en consultorio o en casa, según tu preferencia',
-      'Ideal si tienes un evento, entrevista o sesión de fotos cerca',
+      'Resultados visibles desde la primera sesión, según cada caso',
+      'Opciones en consultorio, en casa o combinadas según tus necesidades',
+      'Control de sensibilidad antes, durante y después del tratamiento',
     ]
-
   },
   benefits: {
     title: '¿Por qué elegir nuestro blanqueamiento dental?',
@@ -59,10 +59,10 @@ const adContent = {
   meliora: {
     title: 'Un proceso simple y efectivo en 3 pasos',
     subtitle: '¿Cómo funciona?',
-    step1: 'Evaluación dental personalizada',
+    step1: 'Evaluación y diagnóstico',
     step2: 'Blanqueamiento en consultorio o en casa',
     step3: 'Resultados y seguimiento',
-    paragraph1: 'Revisamos tono, encías y sensibilidad antes de empezar.',
+    paragraph1: 'Primero revisamos tus encías y también el tono y los resultados que esperas',
     paragraph2: 'Elegimos el método ideal según tu objetivo y tiempo',
     paragraph3: 'Te damos indicaciones para prolongar el resultado por más tiempo',
     cta: '¡Agénda ahora y reserva un turno!',

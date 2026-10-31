@@ -58,7 +58,7 @@ export default function App({ Component, pageProps, ...appProps }: AppProps) {
                             <meta property="og:image" content="https://meliora.pe/assets/images/landings/ad/blanqueamiento-2.jpg" />
                             <meta
                                 property="og:description"
-                                content="Mejoramos tu salud dental, para que recuperes tu confianza, con calidez, empatía y tratamientos de calidad. Dentista en Surco, Lima."
+                                content="Blanqueamiento dental profesional en Surco con resultados desde la primera sesión. Tratamiento en consultorio o en casa protegido contra la sensibilidad. ¡Separa tu evaluación personalizada y luce una sonrisa radiante!"
                             />
                             <meta property="og:locale" content="es_PE" />
                             <meta property="og:locale:alternate" content="es_ES" />

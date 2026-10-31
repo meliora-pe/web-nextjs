@@ -10,21 +10,21 @@ const ClientSlider = ({
     feedbacks = [
         {
             id: 2,
-            name: 'Yuri V.',
+            name: 'Fiorella M.',
             role: '',
             time: 'Hace 4 días',
             place: '/assets/images/google-maps.png',
-            thumbnail: '/assets/images/2-YV.png',
-            message: `"Desde la primera vez que llegué a su consultorio tuve una experiencia satisfactoria, desde 2014. Gracias por su paciencia al explicarme, animarme a cuidar mis dientes, también por recordarme el tiempo debido para el control."`,
+            thumbnail: '/assets/images/avatar-FM.png',
+            message: `"Muy buena profesional. Se tomó el tiempo de tomar fotos y explicarme con la imagen y con calma lo que encontraba y lo que necesitaba. Recomendada ✨️"`,
         },
         {
             id: 4,
-            name: 'Aaron A.',
+            name: 'Adriana A.',
             role: '',
             time: 'Hace 1 semana',
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/4-AA.png',
-            message: `“Una consulta agradable, una increíble atención y rápida solución a mi problema, recomendadísimo."`,
+            message: `“Excelente atención y servicio profesional. Superaron mis expectativas"`,
         },
         {
             id: 5,
@@ -52,6 +52,15 @@ const ClientSlider = ({
             place: '/assets/images/google-maps.png',
             thumbnail: '/assets/images/6-LR.png',
             message: `"Desde mi primera visita, he recibido una atención de primera calidad, profesionales especializados en distintas áreas y un servicio de alta calidad. En especial el trato amable y paciencia para explicar cada procedimiento. Definitivamente, lo recomiendo ¡Una excelente experiencia!"`,
+        },
+        {
+            id: 6,
+            name: 'Roque A.',
+            role: '',
+            time: `Hace 4 semanas`,
+            place: '/assets/images/google-maps.png',
+            thumbnail: '/assets/images/avatar-RA.png',
+            message: `"Excelente atención🙂 me he realizado varios procedimientos y recomiendo al 100% 😎🙃"`,
         },
     ],
 }) => {
