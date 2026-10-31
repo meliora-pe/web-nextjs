@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import { facebookSvg, instagramSvg } from '../data/svg';
 
-const WidgetSocial = () => {
+export interface WidgetContactProps {
+    href: string;
+    color: string;
+    targetRel?: boolean;
+    svg: ReactNode;
+    title: string;
+    subtitle?: string;
+}
+
+const WidgetSocial = ({ props }: { props: WidgetContactProps }) => {
     return (
         <div className="rounded-[32px] bg-white px-4 py-6 dark:bg-gray-dark md:w-full md:p-7" data-aos="fade-up" data-aos-duration="1000">
             <div className="mb-4 flex items-center justify-center gap-2 text-secondary">
