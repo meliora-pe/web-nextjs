@@ -8,9 +8,12 @@ import { useEffect } from 'react';
 
 import ClientSlider from '../../components/ClientSlider2';
 import { PhotoSlider } from '../../components/PhotoSlider';
+import WidgetContact from '../../components/WidgetContact';
+import WidgetMap from '../../components/WidgetMap';
+import WidgetSocial from '../../components/WidgetSocial';
 import adContent from '../../data/landings/ad';
 
-const { AboveTheFold, dolorYSolucion, benefits, beforeAfter, meliora, testimonials, offer, ctaFinal, terms } = adContent;
+const { AboveTheFold, dolorYSolucion, benefits, beforeAfter, meliora, testimonials, offer, ctaFinal, contact, terms } = adContent;
 
 const Ad = () => {
     useEffect(() => {
@@ -375,7 +378,7 @@ const Ad = () => {
             </section>
 
             {/* contacto y ubicación */}
-            {/* <section className="bg-meliora py-14 sm:px-5 lg:py-20">
+            <section className="bg-black py-14 sm:px-5 lg:py-20">
                 <div className="container">
                     <div className="heading mb-9" data-aos="fade-right" data-aos-duration="1000">
                         <h6 className="font-montserrat !font-semibold !text-secondary">Contacto y ubicación</h6>
@@ -386,13 +389,13 @@ const Ad = () => {
                             <WidgetMap src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.4179093162934!2d-76.99228778891906!3d-12.151926143818944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b90829b6e561%3A0xd2160ffba0651ce0!2sConsultorio%20odontol%C3%B3gico%20Asiri!5e0!3m2!1ses-419!2spe!4v1731362600461!5m2!1ses-419!2spe" />
                         </div>
                         <div className="flex-1 pb-7 sm:gap-8 md:gap-12">
-                            <WidgetContact props={sections.contact.location} />
+                            <WidgetContact props={contact.location} />
                             <div className="mb-6"></div>
-                            <WidgetContact props={sections.contact.phone} />
+                            <WidgetSocial props={contact.social} />
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
 
             {/* cta final */}
             <section className="bg-meliora py-14 sm:px-5 lg:py-20">

@@ -1,3 +1,5 @@
+import { emailSvg, locationSvg, phoneSvg } from '../svg';
+
 const adContent = {
   AboveTheFold: {
     header: 'Resultados visibles desde la primera sesión',
@@ -45,7 +47,7 @@ const adContent = {
   beforeAfter: {
     title: 'Resultados que se ven, sonrisas que se sienten naturales',
     text: 'Cada sonrisa responde de manera diferente. Este es el resultado de un caso real tratado en Meliora, donde buscamos mejorar el tono de los dientes manteniendo una apariencia natural y armónica.',
-    case: 'Caso real de blanqueamiento elegido consultorio',
+    case: 'Caso real de blanqueamiento realizado en consultorio',
     before: {
       src: '/assets/images/before.webp',
       alt: 'before',
@@ -69,8 +71,9 @@ const adContent = {
     cta: '¡Agénda ahora y reserva un turno!',
   },
   testimonials: {
-    title: ['Testimonios de pacientes', 'felices con su nueva sonrisa'],
-    subtitle: 'Ellos ya transformaron sus sonrisas, ¡tú también puedes hacerlo!',
+    title: ['Experiencias reales,', 'contadas por nuestros pacientes'],
+
+    subtitle: 'Conoce cómo fue su experiencia en Meliora y qué significó para ellos volver a sonreír con confianza.',
   },
   offer: {
     subtitle: 'Beneficio especial por tiempo limitado',
@@ -84,6 +87,37 @@ const adContent = {
       '10% de descuento en tu blanqueamiento dental',
       'Recomendaciones profesionales para prolongar tus resultados',
     ],
+  },
+  contact: {
+    title: 'Contáctanos',
+    subtitle: '¿Te quedan dudas? ¡Estamos aquí para ayudarte!',
+    phone: {
+      href: 'tel:+51969174019',
+      svg: phoneSvg,
+      color: 'text-secondary',
+      title: 'Llámanos',
+    },
+    email: {
+      href: 'mailto:hola@meliora.pe',
+      svg: emailSvg,
+      color: 'text-primary',
+      title: 'Envía un correo',
+    },
+    location: {
+      href: 'https://maps.google.com/maps/dir//Meliora+Studio+Dental+R2X6%2B73G+Lima+15054/@-12.1519314,-76.9897075,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105b90829b6e561:0xd2160ffba0651ce0',
+      targetRel: true,
+      svg: locationSvg,
+      color: 'text-secondary',
+      title: 'Dirección',
+      subtitle: 'Av. Los Próceres Mz. B Lt. 16 - Urb. Sánchez Cerro - Surco',
+    },
+    social: {
+      href: 'mailto:hola@meliora.pe',
+      svg: emailSvg,
+      color: 'text-primary',
+      title: 'Envía un correo',
+    },
+    mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.4179093162934!2d-76.99228778891906!3d-12.151926143818944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b90829b6e561%3A0xd2160ffba0651ce0!2sConsultorio%20odontol%C3%B3gico%20Asiri!5e0!3m2!1ses-419!2spe!4v1731362600461!5m2!1ses-419!2spe',
   },
   ctaFinal: {
     title: 'Da el primer paso. Mejora tu sonrisa',

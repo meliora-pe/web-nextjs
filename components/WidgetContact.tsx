@@ -13,7 +13,7 @@ const WidgetContact = ({ props }: { props: WidgetContactProps }) => {
     return (
         <a href={props.href} target={props.targetRel ? '_blank' : ''} rel={props.targetRel ? 'noreferrer' : ''}>
             <div
-                className="items-center justify-center rounded-[32px] bg-white px-4 py-6 hover:bg-secondary/20 dark:bg-gray-black md:p-7"
+                className="items-center justify-center rounded-[32px] bg-white px-4 py-6  dark:bg-gray-black md:p-7"
                 data-aos="fade-up"
                 data-aos-duration="1000"
             >
