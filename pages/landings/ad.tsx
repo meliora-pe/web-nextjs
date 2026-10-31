@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 
 import ClientSlider from '../../components/ClientSlider2';
+import Footer from '../../components/Layouts/Footer';
 import { PhotoSlider } from '../../components/PhotoSlider';
 import WidgetContact from '../../components/WidgetContact';
 import WidgetMap from '../../components/WidgetMap';
@@ -443,6 +444,28 @@ const Ad = () => {
                     </div>
                 </div>
             </section>
+
+            {/* copyright and hecho por */}
+            <div className="bg-meliora-2 py-5 dark:border-t-2 dark:border-white/5 dark:bg-gray-dark dark:bg-none">
+                <div className="container">
+                    <div className="items-center justify-between text-center font-bold dark:text-white md:flex">
+                        <div>
+                            Copyright© {new Date().getFullYear() + ' '}
+                            <span className="text-secondary transition">Meliora Studio Dental</span>
+                        </div>
+                        <div>
+                            Hecho por&nbsp;
+                            <Link
+                                href="https://wa.me/51975993773?text=Hola%20Marco,%20necesito%20de%20tus%20servicios%20"
+                                target="_blank"
+                                className="text-black transition hover:text-black dark:hover:text-primary"
+                            >
+                                Marco Arias
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };

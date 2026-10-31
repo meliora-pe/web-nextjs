@@ -160,12 +160,6 @@ const Footer = () => {
                             Copyright© {new Date().getFullYear() + ' '}
                             <span className="text-secondary transition">Meliora Studio Dental</span>
                         </div>
-                        {/* <div>
-                            ¿Tienes dudas?{' '}
-                            <Link href="/contact-us" className="text-secondary transition hover:text-black dark:hover:text-primary">
-                                Contáctanos
-                            </Link>
-                        </div> */}
                         <div>
                             Hecho por&nbsp;
                             <Link
