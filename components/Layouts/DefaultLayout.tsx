@@ -146,7 +146,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
                         </span>
                     </div>
                     <Link
-                        href="https://api.whatsapp.com/send?phone=51969174019&text=Hola%2C%20quiero%20reservar%20mi%20nombre%20es"
+                        href="https://wa.me/51969174019?text=Hola,%20vengo%20de%20su%20web%20por%20la%20promo%20de%20blanqueamiento%20dental&utm_source=website&utm_medium=page"
                         target="_blank"
                         id="message-whatsapp"
                     >
